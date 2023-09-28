@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>प्रशिक्षण - मॅक वर ऑड्यासिटी माहितीपुस्तिका वर ध्वनिमुद्रण संगणक प्लेबॅक</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Recording_Computer_Playback_on_Mac rootpage-Tutorial_-_Recording_Computer_Playback_on_Mac skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">प्रशिक्षण - मॅक वर ध्वनिमुद्रण संगणक प्लेबॅक</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Recording_Computer_Playback_on_Mac#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"></li></ul>
+
+<div class="intro">मॅक कॉम्प्युटरमध्ये ध्वनि उपकरणवर स्ट्रीमिंग ध्वनि ध्वनीमुद्रित करण्याची अंगभूत क्षमता नसते.  ऑड्यासिटीमध्ये थेट संगणक प्लेबॅक ध्वनीमुद्रित करण्यासाठी तुम्ही अतिरिक्त सॉफ्टवेअर वापरू शकता किंवा काही Macs वर उपलब्ध असलेल्या वेगळ्या ध्वनि इनपुटला ध्वनि आउटमधून <a href="#loopback">लूपबॅक केबल</a> कनेक्ट करून करू शकता. <p>वैकल्पिकरित्या असे <a href="#commercial">व्यावसायिक</a> अनुप्रयोग आहेत जे ऑड्यासिटीमध्ये आयात करण्यायोग्य धारिकावर संगणक प्लेबॅक ध्वनीमुद्रित करू शकतात किंवा ध्वनिफ्लॉवर सारखे अतिरिक्त ध्वनि उपकरण देऊ शकतात ज्यामधून ऑड्यासिटी संगणक प्लेबॅक ध्वनीमुद्रित करू शकते.</p></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"><i><b>कॉपीराइट किंवा वेबसाइट निर्बंध तुम्हाला सामग्री ध्वनीमुद्रित करणे किंवा वितरित करणे प्रतिबंधित करू शकतात. प्रथम तपासा.</b></i>
+</td></tr></table></div>
+<h2><span class="mw-headline" id="Contents">सामग्री</span></h2>
+<ol><li><a href="#loopback">लूपबॅक केबल </a> - संगणकावर काय चालले आहे ते ध्वनीमुद्रित करण्याची एक सोपी आणि प्रभावी पद्धत</li>
+<li><a href="#Software">सॉफ्टवेअर</a> - मोफत आणि व्यावसायिक ध्वनीमुद्रण ऍप्लिकेशन्स ज्यात संगणक प्लेबॅक ध्वनीमुद्रित करण्याची क्षमता समाविष्ट आहे </li></ol>
+<div id="loopback"></div>
+<h2><span class="mw-headline" id="Use_a_loopback_cable">लूपबॅक केबल वापरा</span></h2>
+<p>संगणकावर काय चालले आहे ते ध्वनीमुद्रित करण्याची ही एक सोपी आणि प्रभावी पद्धत आहे. डिजिटल डोमेनमध्ये राहण्याऐवजी ध्वनि सिग्नल डिजिटलमधून अॅनालॉगमध्ये, नंतर अॅनालॉगमधून डिजिटलमध्ये रूपांतरित केला जातो हा गैरसोय आहे. यामुळे आवाज आणि विकृतीमध्ये थोडीशी वाढ होऊ शकते.
+</p>
+<ol><li> प्रत्येक टोकाला स्टिरीओ मिनी-प्लग (1/8") असलेली केबल वापरून, हेडफोन आउटपुट पोर्ट लाइन इनपुट पोर्टशी कनेक्ट करा.
+<ul><li> या टप्प्यावर आपण यापुढे संगणकावर काय प्ले होत आहे ते ऐकण्यास सक्षम असणार नाही. वर्कअराउंड म्हणून, तुम्ही आउटपुट पोर्टवर सिंगल ते डबल स्टीरिओ कनेक्टर जोडू शकता, स्पीकर किंवा हेडफोनसाठी अतिरिक्त जॅक प्रदान करू शकता.</li></ul>
+<li> <span class="menu">Apple यादी &gt; सिस्टम प्राधान्ये</span> निवडा आणि ध्वनि प्राधान्ये पटल निवडा.
+<li> ध्वनि प्राधान्य पटलमध्ये:
+<ol><li> आउटपुट टॅबवर क्लिक करा, त्यानंतर "ध्वनी आउटपुटसाठी उपकरण निवडा" सूचीमधून "लाइन आउट" निवडा.
+<li> इनपुट टॅबवर क्लिक करा, त्यानंतर "ध्वनी इनपुटसाठी उपकरण निवडा" सूचीमधून "लाइन इनपुट" निवडा.
+<li> ध्वनि प्राधान्ये पटल उघडे ठेवून, संगणकावर ध्वनि ध्वनि प्ले करणे सुरू करा (हे iTunes, किंवा स्ट्रीमिंग ध्वनि किंवा इतर स्त्रोतांकडून असू शकते).
+<li> इनपुट व्हॉल्यूम स्लाइडर समायोजित करा जेणेकरून इनपुट स्तर मीटरचे शीर्ष 3 पट्टी सर्वात मोठ्या पॅसेजवर उजळणार नाहीत, परंतु उर्वरित पट्टी उजळतील.
+<li> सिस्टम प्राधान्ये विंडो बंद करा.</ol>
+<li> ऑड्यासिटीच्या उपकरण साधनपट्टीमध्ये <span class="button">बिल्ट-इन इनपुट &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> किंवा ध्वनीमुद्रण उपकरण सारखे निवडा. लक्षात ठेवा, चार-स्थान पोर्ट नाही फक्त हेडसेट कनेक्ट करण्यासाठी तुम्हाला एक लाइन-इन निवडण्याची आवश्यकता आहे.<br />
+<dl><dd><span title="Audacity Device Toolbar with Built-in Input as chosen Recording Device"><img alt="DeviceToolbarMac01.png" src="../m/images/7/78/devicetoolbarmac01.png" width="789" height="29" /></span></dd></dl>
+<li> ट्रान्सपोर्ट यादीवर क्लिक करा आणि "सॉफ्टवेअर प्लेथ्रू" तपासलेले <b>नाही</b> याची खात्री करा.
+</ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">
+<p>या पद्धतीचा वापर करून ईमेल आणि अॅप्लिकेशन अॅलर्टसारखे सर्व सिस्टम अलर्ट ध्वनि ध्वनीमुद्रित केले जातील. तुमच्याकडे iCal अलर्ट असल्यास किंवा मेलमध्ये इव्हेंट ध्वनि चालू केले असल्यास, तुम्ही ते बंद करू शकता. तुम्ही ध्वनीमुद्रण करत असताना अॅलर्ट आवाज देणारा कोणताही अॅप्लिकेशन देखील सोडला पाहिजे.
+</p>
+</td></tr></table></div>
+<div id="Software"></div>
+<h2><span class="mw-headline" id="Use_additional_software">अतिरिक्त सॉफ्टवेअर वापरा</span></h2>
+<p>वैकल्पिकरित्या असे सॉफ्टवेअर ऍप्लिकेशन्स आहेत जे ऑड्यासिटीमध्ये आयात करण्यायोग्य धारिकावर संगणक प्लेबॅक ध्वनीमुद्रित करू शकतात किंवा ते अतिरिक्त ध्वनि उपकरण प्रदान करू शकतात ज्यामधून ऑड्यासिटी संगणक प्लेबॅक ध्वनीमुद्रित करू शकते.
+</p><p>तपशिलांसाठी ऑड्यासिटी विकीमध्ये <b><a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Recording_Computer_Playback_on_Mac">हे पान</a></b> पहा.
+</p>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="tutorial_recording_audio_playing_on_the_computer.html#setup" title="Tutorial - Recording audio playing on the computer"><b>|&lt;</b> ट्यूटोरियल - संगणकावर ध्वनिमुद्रण करणे</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

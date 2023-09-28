@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>मॅक वर स्थापित करीत आहे आणि अद्यतनित करीत आहे - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installing_and_updating_Audacity_on_Mac_OS_X rootpage-Installing_and_updating_Audacity_on_Mac_OS_X skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">मॅक वर स्थापित करीत आहे आणि अद्यतनित करीत आहे</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथून जा : <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Installing_and_updating_Audacity_on_Mac_OS_X#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
+<div class="intro">हे पृष्ठ मॅक ओएस एक्स आणि मॅकओएस संगणक प्लॅटफॉर्मवर ऑड्यासिटी स्थापित आणि अद्यतनित करण्यासाठी सूचना प्रदान करते.
+<ul><li> <a href="#lamein"><b>लेम</b></a> लायब्ररी आता ऑड्यासिटीचा भाग म्हणून समाविष्ट केली आहे, हे <i><b><a href="glossary.html#mp3" title="Glossary">एमपी३</a></b></i> निर्यात सक्षम करण्यासाठी एन्कोडिंग सॉफ्टवेअर आहे.</li>
+<li>तुम्हाला पर्यायी <a href="#macff"><b>एफएफएमपीईजी</b></a> लायब्ररी डाउनलोड करण्याची इच्छा असू शकते जी ऑड्यासिटीला एसी३,  एएमआर (रुंद बँड) आणि <i><b><a href="glossary.html#wma" title="Glossary">डब्ल्यूएमए</a></b></i> सह ध्वनि फॉरमॅट्सची खूप मोठी श्रेणी आयात आणि निर्यात करण्यास आणि बहुतेक व्हिडिओ धारिकामधून ध्वनि आयात करण्यास अनुमती देते.  </li></ul>
+<div class="note">सॉफ्टवेअर पेटंटमुळे, ऑड्यासिटी FFmpeg एन्कोडिंग सॉफ्टवेअर समाविष्ट करू शकत नाही किंवा असे सॉफ्टवेअर स्वतःच्या वेबसाइटवरून वितरित करू शकत नाही. त्याऐवजी, <a href="#macff">एफएफएमपीईजीसाठी</a> विनामूल्य आणि शिफारस केलेली तृतीय-पक्ष लायब्ररी डाउनलोड आणि स्थापित करण्यासाठी <a href="#macff">खालील सूचना</a> वापरा.</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">सावधगिरीने लक्षात घ्या की केवळ ऑड्यासिटी पुन्हा स्थापित करणे, प्राधान्ये आणि प्लगइनसाठी आपली ऑड्यासिटी समयोजन साफ आणि पुर्वनिर्धारित करणार <i><b>नाही</b></i> . हे कसे मिळवायचे या सूचनांसाठी कृपया <a href="#purge"> ऑड्यासिटी समयोजन पुर्वनिर्धारित करा </a> पहा.
+</td></tr></table></div> </div>
+<h2><span class="mw-headline" id="Contents">सामग्री</span></h2>
+<ol><li><a href="#install">मॅकवर ऑड्यासिटी स्थापित करत आहे</a></li>
+<li><a href="#updates">अद्यतनांसाठी तपासा</a></li>
+<li><a href="#plugins">मागील ऑड्यासिटी इंस्टॉलेशन्समधील प्लग-इन</a></li>
+<li><a href="#macff">मॅकवर एफएफएमपीइजी आयात / निर्यात ग्रंथालय स्थापित करीत आहे</a></li>
+<li><a href="#purge">ऑड्यासिटी समयोजन पुर्वनिर्धारित करा</a></li></ol>
+<p><br />
+</p>
+<div id="install"></div>
+<h2><span class="mw-headline" id="Installing_Audacity_on_Mac">मॅकवर ऑड्यासिटी स्थापित करत आहे</span></h2>
+<p>ऑड्यासिटी साइटच्या <a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/mac/"><b>मॅक डाउनलोड पृष्ठावर</b></a> जा.
+</p>
+<ol><li>डाउनलोड पृष्ठावर, "इंस्टॉलर" दुव्यावर, .dmg धारिकावर डावे-क्लिक करा (उजवे-क्लिक करू नका). हे तुम्हाला फॉसहब साइटवर घेऊन जाईल जिथे आमचे डाउनलोड होस्ट केले जातात. </li>
+<li>फॉसहब ऑड्यासिटी पृष्ठावर <b>ऑड्यासिटी मॅकओएस डीएमजी लिंकवर</b> डावे-क्लिक करा. हे डाउनलोड सुरू करेल.</li>
+<li>;)</li>
+<li>ऑड्यासिटी.एपीपी चिन्ह उजवीकडे <b>ऍप्लिकेशन</b> फोल्डर सोपा मार्गवर ड्रॅग करा.  
+<ul><li>तुम्ही ऑड्यासिटी.एपीपी ला  डीएमजीच्या बाहेर इतर कोणत्याही ठिकाणी ड्रॅग करू शकता. <i>ऑड्यासिटी अॅप्लिकेशन्समध्ये कॉपी करण्यासाठी तुम्हाला अॅडमिनिस्ट्रेटर पासवर्डची आवश्यकता आहे.</i></li></ul></li>
+<li>ऑड्यासिटी.एपीपी <b>ऍप्लिकेशन्समधून</b> किंवा तुमच्या निवडलेल्या स्थानावरून लाँच करा.  </li></ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FFCCCC; color:black; border:1px solid #CC0000; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Stopicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/6/6c/stopicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">डीएमजी विंडोमधील “ऑड्यासिटी.एपीपी” अ‍ॅप्लिकेशनवर डबल-क्लिक करू <b>नका</b>, डीएमजी कडून ऑड्यासिटी चालवली जाऊ <b>नये</b>.
+</td></tr></table>
+</div>
+<div class="note">तुमच्या फाइंडर प्राधान्यांनुसार, ऑड्यासिटी आयकॉनचे शीर्षक "ऑड्यासिटी" किंवा "ऑड्यासिटी. अॅप" असू शकते.
+</div>
+<div class="note">
+<p>ऑड्यासिटी लाँच करताना तुम्हाला काही एरर मेसेज दिसल्यास, कृपया <a href="faq_installation_and_plug_ins.html#mac_launch" title="FAQ:Installation and Plug-Ins"> मॅक लॉन्च </a> बद्दल आमचे FAQ पहा.
+</p>
+</div>
+<div id="sysreq"></div>
+<h3><span class="mw-headline" id="System_Requirements">यंत्रणेची आवश्यकता</span></h3>
+<p>मॅक साठी ऑड्यासिटी  <b>OS X 10.6 आणि नंतरच्या </b> आवृत्तीसाठी आहे . ऑड्यासिटी किमान <b>1 GB RAM आणि  1 GHz प्रोसेसर (OS X 10.7 आणि नंतरच्या आवृत्त्यांसाठी 2 GB RAM/2 GHz) सह उत्तम चालते.</b>
+</p><p>लांबलचक मल्टी-गीतपट्टाप्रकल्पांसाठी, आम्ही किमान 2 GB RAM आणि 2 GHz प्रोसेसर (OS X 10.7 आणि नंतरच्या वर 4 GB RAM) ची शिफारस करतो.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">2.1.1 प्रकाशन हे PPC Macs साठी अंतिम प्रकाशन होते.
+</td></tr></table></div>
+<div id="compatible_projects"></div>
+<h3><span class="mw-headline" id="Projects_saved_by_old_versions_of_Audacity">ऑड्यासिटीच्या जुन्या आवृत्त्यांद्वारे जतन केलेले प्रकल्प</span></h3>
+<p>वर्तमान ऑड्यासिटी ऑड्यासिटी 1.3.x आणि नंतरच्या आवृत्तींद्वारे जतन केलेल्या प्रकल्प धारिकाशी सुसंगत आहे, 2.xx सह. 
+</p>
+<div id="lamein"></div>
+<h3><span class="mw-headline" id="LAME_is_now_built-in_as_part_of_Audacity">LAME आता ऑड्यासिटीचा भाग म्हणून अंगभूत आहे</span></h3>
+<p> <i><b><a href="glossary.html#lame" title="Glossary">LAME</a></b></i> एन्कोडिंग लायब्ररीवरील सॉफ्टवेअर पेटंट कालबाह्य झाले आहे, त्यामुळे आता <i><b><a href="glossary.html#mp3" title="Glossary">MP3</a></b></i> निर्यातीसाठी <b>LAME</b> लायब्ररी मॅकसाठी ऑड्यासिटीसह अंगभूत आहे.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">जर तुम्हाला कर्सर प्लेबॅक किंवा ध्वनीमुद्रितिंग बिंदूच्या मागे असल्याचे आढळल्यास किंवा जेथे निवड ड्रॅग करण्यासारख्या क्रियांना प्रतिसाद देण्यासाठी इंटरफेस धीमा आहे, कृपया हे <a href="faq_installation_and_plug_ins.html#lag" title="FAQ:Installation and Plug-Ins"><b>एफएक्यू</b></a> पहा.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="updates"></div>
+<h2><span class="mw-headline" id="Check_for_Updates">अद्यतनांसाठी तपासा</span></h2>
+<p>तुमच्याकडे ऑड्यासिटीची नवीनतम आवृत्ती आहे का ते  <span class="menu">मदत &gt; अद्यतनांसाठी तपासा...</span> वापरुन तपासू शकता.
+</p><p>हे तुम्हाला ऑड्यासिटी वेबसाइटच्या <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">डाउनलोड पृष्ठावर</a> घेऊन जाईल जिथे तुम्ही ऑड्यासिटीची नवीनतम रिलीझ आवृत्ती काय आहे हे तपासू शकता. 
+</p><p>त्यानंतर तुम्ही <span class="menu">ऑड्यासिटी &gt; ऑड्यासिटी बद्दल...</span> वापरून तुमच्याकडे दाखवल्याप्रमाणे नवीनतम रिलीझची तुलना करू शकता. 
+</p><p><br />
+</p>
+<div id="plugins"></div>
+<h2><span class="mw-headline" id="Plug-ins_from_previous_Audacity_installations">मागील ऑड्यासिटी इंस्टॉलेशनमधील प्लग-इन</span></h2>
+<p>तुमच्याकडे ऑड्यासिटी 2.1.2 किंवा त्यापूर्वीची पूर्वीची स्थापना असल्यास, त्याचे शिप केलेले प्लग-इन "प्लग-इन" फोल्डरमध्ये होते जेथे ऑड्यासिटी स्थापित केली गेली होती. 2.1.3 पूर्वीच्या ऑड्यासिटीच्या आवृत्त्या <i>सामान्यतः </i> ऑड्यासिटी" नावाच्या फोल्डरमध्ये स्थापित केल्या गेल्या होत्या जे "अॅप्लिकेशन्स" फोल्डरमध्ये होते. कारण ऑड्यासिटीचे शिप केलेले प्लग-इन आता ऍप्लिकेशनमध्ये एकत्रित केले आहेत, पूर्वीच्या ऑड्यासिटीसह आलेले कोणतेही अद्याप अस्तित्वात असलेले <a href="effect_menu_nyquist.html" title="Effect Menu: Nyquist">Nyquist</a> प्लग-इन जनरेट, प्रभाव किंवा विश्लेषण यादीमध्ये प्लग-इनची  <i>दुसरी</i> प्रत म्हणून दिसून येतील. इतर पूर्वी पाठवलेल्या प्लग-इनचे डुप्लिकेट यापुढे अस्तित्वात नसले तरीही दिसू शकतात, अशा परिस्थितीत ते चालविण्यात अयशस्वी होतील. 
+</p>
+<ul><li> <span class="menu">प्रभाव &gt; <a href="effect_menu.html#add_remove_plugins" title="Effect Menu"> प्लग-इन जोडा/काढून टाका...</a></span> नंतर <span class="button">ठीक आहे</span>  क्लिक करून तुम्ही कोणतेही डुप्लिकेट काढू शकता . हे प्लग-इन व्यवस्थापकाच्या सूचीमधून डुप्लिकेट काढत नाही, परंतु त्यांना अक्षम करते जेणेकरून ते यादीमध्ये दिसत नाहीत.</li>
+<li> वैकल्पिकरित्या तुम्ही <b>~/Library/Application Support/audacity/</b> मधील <b>pluginregistry.cfg</b> धारिका हटवून जुने ऑड्यासिटी इंस्टॉलेशन फोल्डर हटवले असेल किंवा नसले तरीही तुम्ही सर्व अवांछित डुप्लिकेट काढून टाकू शकता .
+<ul><li> तुम्ही मागील इंस्टॉलेशनमधून ऑड्यासिटी फोल्डर हटविल्यास, तुम्ही प्लग-इन फोल्डरमध्ये जोडलेले कोणतेही पर्यायी प्लग-इन <b>~/Library/Application Support/audacity/Plug-Ins</b> येथे नवीन ऑड्यासिटी प्लग-इन फोल्डरमध्ये हलविण्याचे लक्षात ठेवा.      </li></ul></li></ul>
+<p><br />
+</p>
+<div id="macff"></div>
+<h2><span class="mw-headline" id="Installing_the_FFmpeg_Import.2FExport_Library_on_Mac"><a href="installing_ffmpeg_for_mac.html" title="Installing FFmpeg for Mac">Mac वर FFmpeg आयात/निर्यात लायब्ररी स्थापित करत आहे</a></span></h2>
+<div class="note">पर्यायी  <a href="faq_opening_and_saving_files.html#foreign" title="FAQ:Opening and Saving Files">FFmpeg लायब्ररी</a> ऑड्यासिटीला <i><b><a href="glossary.html#aac" title="Glossary">M4A (AAC)</a></b></i>, AC3, AMR (अरुंद बँड) आणि <i><b><a href="glossary.html#wma" title="Glossary">WMA</a></b></i> यासह ध्वनि फॉरमॅट्सची खूप मोठी श्रेणी आयात आणि निर्यात करण्याची आणि बहुतेक व्हिडिओ धारिकामधून ध्वनि आयात करण्याची परवानगी देते. 
+<ul><li> सॉफ्टवेअर पेटंट्समुळे, ऑड्यासिटी FFmpeg सॉफ्टवेअर समाविष्ट करू शकत नाही किंवा ते त्याच्या स्वतःच्या वेबसाइटवरून वितरित करू शकत नाही. त्याऐवजी, विनामूल्य आणि शिफारस केलेली FFmpeg तृतीय-पक्ष लायब्ररी डाउनलोड आणि स्थापित करण्यासाठी खालील सूचना वापरा.</li>
+<li><b>प्रगत वापर :</b> तुमच्याकडे आधीपासून PATH प्रणालीमध्ये 64-बिट ऑड्यासिटी-सुसंगत FFmpeg 2.2.x किंवा 2.3.x सामायिक लायब्ररी असल्यास, जोपर्यंत तुम्ही खालील दुवेवरून FFmpeg स्थापित करत नाही आणि जोपर्यंत तुम्ही करत नाही तोपर्यंत ऑड्यासिटी त्या वापरेल. तुम्हाला ऑड्यासिटी <a href="libraries_preferences.html" title="Libraries Preferences"> लायब्ररी प्राधान्यांमध्ये</a> वापरायचे आहे ते FFmpeg निर्दिष्ट करू नका . </div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">मॅक वरील ऑड्यासिटी 2.3.1 आता 64-बिट ऍप्लिकेशन आहे. <p>याचा अर्थ असा की जर तुम्ही Mac वर मागील ऑड्यासिटी आवृत्त्यांचे वापरकर्ते असाल आणि पर्यायी FFmpeg लायब्ररी स्थापित केली असेल तर तुम्ही आता FFmpeg लायब्ररीच्या 64-बिट आवृत्त्या स्थापित केल्या <i><b>पाहिजेत</b></i> , अन्यथा FFmpeg वर अवलंबून असलेली तुमची आयात आणि निर्यात यापुढे कार्य करणार नाही.</p><p>64-बिट FFmpeg लायब्ररी स्थापित केल्याने तुमची 32-बिट FFmpeg लायब्ररी स्थापित केली असल्यास ती ओव्हरराइट होणार नाही किंवा हटवली जाणार नाही.</p>
+</td></tr></table></div>
+<p>संपूर्ण सूचनांसाठी कृपया <a href="installing_ffmpeg_for_mac.html" title="Installing FFmpeg for Mac">मॅक साठी FFmpeg स्थापित करणे</a> पहा.
+</p><p><br />
+</p>
+<div id="purge"></div>
+<h2><span class="mw-headline" id="Reset_Audacity_Settings_on_Mac">मॅकवर ऑड्यासिटी सेटिंग्ज रीसेट करा</span></h2>
+<p>या पृष्ठावरील प्रस्तावनेमध्ये सांगितल्याप्रमाणे, फक्त ऑड्यासिटी पुन्हा स्थापित केल्याने प्राधान्ये आणि प्लग-इनसाठी तुमची ऑड्यासिटी सेटिंग्ज साफ होणार नाहीत आणि रीसेट होणार नाहीत.
+</p><p>यासाठीचा माहिती तुमच्या वापरकर्ता निर्देशिकेतील <i>Library/Application Support</i> फोल्डरमध्ये  <b>ऑड्यासिटी </b> नावाच्या फोल्डरमध्ये संग्रहित केला जातो.  
+</p><p>macOS वर पूर्ण पथनाव असे आहे :  <b> <i>your username</i>/Library/Application Support/audacity</b>
+</p><p> <b>ऑड्यासिटी </b> सेटिंग्ज फोल्डर उघडण्यासाठी :
+</p>
+<ol><li>शोधक उघडा आणि Go वर क्लिक करा  &gt; फोल्डरवर जा...</li>
+<li>संवाद बॉक्समध्ये <b>~/Library/Application Support/audacity</b> टाईप करा </li>
+<li> <span class="button">Go</span> बटणावर क्लिक करा</li></ol>
+<div class="note"><b>वैकल्पिकरित्या :</b> macOS वर वापरकर्ता लायब्ररी फोल्डर सहसा पूर्वनियोजितनुसार लपवलेले असते. भविष्यातील वापरासाठी ते उघड करण्यासाठी : 
+<ul><li>शोधक विंडोच्या साइडपट्टीमध्ये, तुमच्या होम आयकॉनवर क्लिक करा (त्याच्या बाजूला तुमचे वापरकर्तानाव असलेले 'घर' चिन्ह आहे)</li>
+<li>दृश्य यादीवर क्लिक करा आणि दृश्य पर्याय दर्शवा निवडा</li>
+<li> "लायब्ररी फोल्डर दाखवा" हे "चालू" आहे का तपासा</li>
+<li>लायब्ररी फोल्डर नंतर तुमच्या होम फोल्डरमध्ये दिसेल</li></ul>
+</div>
+<p><br />
+</p>
+<h3><span class="mw-headline" id="To_completely_reset_your_Audacity_settings">तुमची ऑड्यासिटी सेटिंग्ज पूर्णपणे रीसेट करण्यासाठी</span></h3>
+<p>प्रथम तुम्हाला ऑड्यासिटी सोडणे आवश्यक आहे.
+</p><p>शोधकासह त्या  <b>ऑड्यासिटी </b> फोल्डरवर नेव्हिगेट करा आणि संपूर्ण सामग्री हटवा. मग ऑड्यासिटी पुन्हा सुरू करा.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">तुम्ही  <i> प्लग-इन</i> फोल्डरमध्ये अतिरिक्त प्लग-इन जोडले असल्यास आणि ते ठेवू इच्छित असल्यास, ते फोल्डर हटवू नका.
+</td></tr></table></div>
+<h3><span class="mw-headline" id="To_reset_just_your_Audacity_preferences">फक्त तुमची ऑड्यासिटी प्राधान्ये रीसेट करण्यासाठी</span></h3>
+<p>फाइंडरसह त्या  <b>ऑड्यासिटी </b> फोल्डरवर नेव्हिगेट करा आणि <b>audacity.cfg</b> धारिका हटवा. मग ऑड्यासिटी पुन्हा सुरू करा.
+</p>
+<h3><span class="mw-headline" id="To_reset_just_your_plug-ins">फक्त तुमचे प्लग-इन रीसेट करण्यासाठी</span></h3>
+<p>फाइंडरसह त्या <b>ऑड्यासिटी</b> फोल्डरवर नेव्हिगेट करा आणि हटवा :
+</p>
+<ul><li><b>pluginregistry.cfg</b> धारिका</li>
+<li><b>pluginsettings.cfg</b> धारिका</li>
+<li><b>प्लग-इन</b> फोल्डर</li></ul>
+<p>मग ऑड्यासिटी पुन्हा सुरू करा
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">तुम्‍हाला तुमच्‍या प्लग-इन सेटिंग्‍ज रीसेट करायच्‍या असल्‍यास, परंतु तुम्‍ही  <i><b>प्लग-इन</b></i> फोल्‍डरमध्‍ये जोडलेले कोणतेही अतिरिक्त प्लग-इन गमावू इच्छित नसल्‍यास , ते फोल्‍डर हटवू नका.
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="links"></div>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="installing_effect_generator_and_analyzer_plug_ins_on_mac_os_x.html" title="Installing Effect, Generator and Analyzer plug-ins on MAC OS X"><b>&gt;</b>&#160; मॅक वर प्रभाव, जनरेटर आणि विश्लेषक प्लग-इन स्थापित करणे</a> <br />
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>लिमिटर - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Limiter rootpage-Limiter skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">लिमिटर</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरुन</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथून जा : <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Limiter#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro"> या थ्रेशोल्डपेक्षा अधिक मजबूत सिग्नलच्या शिखरांना प्रतिबंधित करताना, निर्दिष्ट इनपुट पातळीच्या खाली अप्रभावित किंवा हळूवारपणे कमी केलेले सिग्नल पास करण्यासाठी <i><b>लिमिटर</b></i> प्रभाव वापरा . ध्वनि मास्टरिंग प्रक्रियेदरम्यान ध्वनि ध्वनीमुद्रितिंगचा समजलेला लाउडनेस वाढवण्यासाठी मास्टरिंग इंजिनीअर अनेकदा मेक-अप गेनसह लिमिटिंगचा वापर करतात.
+<p>हा लिमिटर प्रभाव दोन मूलभूत प्रकारचा प्रभाव प्रदान करतो; "मर्यादित करणे" आणि "क्लिपिंग". "मर्यादित" प्रभाव हा एक विशेष प्रकारचा <a href="compressor.html" title="Compressor">गतिमान संक्षेप</a> आहे जो तरंगांमधील शिखरांना खूप वेगाने प्रतिसाद देतो. "क्लिपिंग" प्रभाव हा एक प्रकारची <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Distortion_%28music%29">विकृती</a> आहे जो उंच आणि खालच्या शिखरांवर "क्लिपिंग" करून लाटांचा आकार बदलतो.</p></div>
+<dl><dd><b>याद्वारे प्रवेश :</b> <span class="menu">प्रभाव &gt; लिमिटर...</span></dd>
+<dd><span title="Limiter dialog"><img alt="Limiter.png" src="../m/images/0/0b/limiter.png" width="474" height="308" /></span></dd></dl>
+<div id="type"></div>
+<h2><span class="mw-headline" id="Type">प्रकार</span></h2>
+<p><b>सॉफ्ट लिमिट</b> (पूर्वनियोजित) हळूहळू <a href="glossary.html#gain" title="Glossary">वाढ</a> वाढ कमी करते कारण तरंगांचा मोठेपणा  <a href="#limit_to">"(dB) पर्यंत मर्यादा"</a> थ्रेशोल्डच्या जवळ येते आणि वेव्हफॉर्मला ती पातळी ओलांडण्यापासून प्रतिबंधित करते. 
+</p><p> जोपर्यंत शिखरे "मर्यादा (dB)" थ्रेशोल्डपर्यंत पोहोचत नाहीत तोपर्यंत <b>हार्ड लिमिट</b> ध्वनिमध्ये कोणताही बदल करत नाही. जेथे इनपुट पातळी (पर्यायी <a href="#Input_Gain"> इनपुट लाभ</a>) लागू केल्यानंतर ) थ्रेशोल्ड ओलांडते, त्याच प्रमाणात ऋण लाभ लागू केला जातो जेणेकरून शिखर कधीही थ्रेशोल्ड ओलांडू नये.
+</p><p> शिखरे कमी करण्यासाठी <b>हार्ड क्लिपिंग</b> ही सर्वात सोपी पद्धत आहे. हे फक्त "मर्यादा" थ्रेशोल्डवर शिखरे तोडते. लक्षात घ्या की <a href="glossary.html#clipping" title="Glossary">क्लिपिंगमुळे</a> विकृती येते. उच्च शिखरांवर हेतुपुरस्सर विकृती आणण्यासाठी हार्ड क्लिपिंग उपयुक्त ठरू शकते, उदाहरणार्थ पर्क्युसिव्ह आवाजांमध्ये उच्च हार्मोनिक्स जोडण्यासाठी. हार्ड क्लिपिंगचा जास्त वापर केल्याने एक कठोर विकृती निर्माण होते जी सहसा अप्रिय असते. विकृतीच्या अधिक वापरासाठी "सॉफ्ट क्लिपिंग" पर्याय श्रेयस्कर असू शकतो. वैज्ञानिक हेतूंसाठी कृत्रिम सिग्नल तयार करण्यासाठी हार्ड क्लिपिंग देखील उपयुक्त असू शकते.
+</p><p><b>सॉफ्ट क्लिपिंग</b> "हार्ड क्लिपिंग" प्रमाणेच कार्य करते, परंतु ते कमी तीव्र आहे कारण ते शिखरांना सपाट कापण्याऐवजी "स्क्वॅश" करते. सॉफ्ट क्लिपिंग थ्रेशोल्ड पातळीच्या खाली असलेल्या शिखरांना कमी करण्यास सुरवात करते आणि हळूहळू त्याचा प्रभाव वाढवते कारण इनपुट पातळी थ्रेशोल्ड कधीही ओलांडली जात नाही. जोरदारपणे लागू केल्यावर, प्रभाव "फझ बॉक्स" प्रभावासारखाच असतो.
+</p><p><br />
+</p>
+<div class="note">"हार्ड" आणि "सॉफ्ट" क्लिपिंगमधील फरक असा आहे की "हार्ड" क्लिपिंग शिखरांना सपाट कापते, तर "सॉफ्ट" क्लिपिंग ज्या कोपऱ्यात तरंगक्लिप केले गेले आहे त्या कोपऱ्यांना गोल करते, परिणामी मऊ आवाजाची विकृती होते.</div>
+<div id="igain"></div>
+<h2><span class="mw-headline" id="Input_Gain">इनपुट लाभ</span></h2>
+<p>लिमिटर लागू करण्यापूर्वी ध्वनि वाढवते.
+</p><p>लिमिटर <a href="#limit_to">(dB) पर्यंत मर्यादा</a> थ्रेशोल्डची मर्यादा ओलांडणाऱ्या ध्वनि शिखरांवर काम करत असल्याने, ज्या ध्वनि ट्रॅकमध्ये सर्व ध्वनि थ्रेशोल्ड पातळीच्या खाली आहेत त्यावर त्याचा स्पष्टपणे कमी किंवा कोणताही प्रभाव पडणार नाही. अशा प्रकरणांमध्ये, ध्वनि मर्यादित करण्याआधी विस्तारित केले पाहिजे जेणेकरून लिमिटर योग्यरित्या कार्य करू शकेल. ऑड्यासिटीच्या <a href="amplify.html" title="Amplify">विस्तार</a> प्रभावाचा वापर करून किंवा "इनपुट गेन" नियंत्रणे वापरून अधिक सोयीस्करपणे अॅम्प्लिफिकेशन लागू केले जाऊ शकते.
+</p><p>मोनो ट्रॅकसाठी, फक्त "मोनो/लेफ्ट" नियंत्रण मिळवण्याचा कोणताही परिणाम होतो. स्टिरिओ ट्रॅकसाठी डाव्या आणि उजव्या चॅनेलचे लाभ एकमेकांपासून स्वतंत्रपणे समायोजित केले जाऊ शकतात.
+</p>
+<div id="limit_to"></div>
+<h2><span class="mw-headline" id="Limit_to_.28dB.29">(dB) पर्यंत मर्यादा</span></h2>
+<p>या पातळीपर्यंत मोठेपणा (पर्यायी वाढविल्यानंतर) मर्यादित करते.
+</p><p>कोणताही <a href="#type">प्रकार</a> निवडला असला तरी, लिमिटर वेव्हफॉर्मला ही पातळी ओलांडण्यापासून प्रतिबंधित करते. (लक्षात ठेवा की <a href="#mugain">मेकअप लाभ</a>  , जर वापरला असेल तर, तो मर्यादित  <i>झाल्यानंतर </i> वेव्हफॉर्मवर लागू केला जातो.)
+</p>
+<div id="hold"></div>
+<h2><span class="mw-headline" id="Hold">धरून ठेवा</span></h2>
+<div class="note">हे केवळ "हार्ड लिमिटर" आणि "सॉफ्ट लिमिटर" रचनेवर लागू होते. कोणत्याही "क्लिप" रचना वापरताना याचा काहीही परिणाम होत नाही..</div>
+<p>अगदी आकस्मिक शिखर देखील पकडण्यासाठी, लिमिटर पुढचे शिखर कधी येत आहे हे पाहण्यासाठी "पुढे पाहतो" आणि शिखराच्या थोडे अगोदर फायदा कमी करण्यास सुरवात करतो. नंतर सामान्य स्तरावर परत जाण्याआधी लाभाची पातळी कमी झालेल्या स्तरावर थोड्या काळासाठी ठेवली जाते. पुढे पाहणे आणि लाभ पातळी धारण केल्याने लाभ अधिक सहजतेने समायोजित होऊ शकतो आणि विकृतीचे प्रमाण कमी होते. "होल्ड" कालावधी जितका कमी असेल तितक्या लवकर लिमिटर इनपुट स्तरावरील बदलांना प्रतिसाद देतो. लिमिटरने अतिशय जलद प्रतिसाद देणे सामान्यत: इष्ट असते, परंतु <i>खूप</i> वेगाने प्रतिसाद दिल्याने विकृती निर्माण होते, विशेषत: दुहेरी बास सारख्या कमी वारंवारतेच्या आवाजांवर प्रक्रिया करताना.
+</p><p>सामान्यत: हे नियंत्रण पुर्वनिर्धारित (10 एमएस) सेटिंगवर सोडले जाऊ शकते.
+</p>
+<div id="mugain"></div>
+<h2><span class="mw-headline" id="Apply_makeup_gain">मेकअप लाभ लागू करा</span></h2>
+<p>आउटपुट (पोस्ट लिमिटर) 0 dB च्या जवळ वाढवते (सामान्यतः 0 dB पेक्षा थोडे खाली). मोठा आवाज करण्यासाठी लिमिटर वापरताना हे उपयुक्त आहे.
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">बटणे</span></h2>
+<p>आज्ञा बटणावर क्लिक केल्याने खालील परिणाम मिळतात :
+</p>
+<ul><li><span class="button">'व्यवस्थापित करा'</span> या ड्रॉपडाउन यादी आपल्याला साधनाचे प्रीसेट स्थापित करण्यास आणि साधनेबद्दल काही तपशील पाहण्यास आपणाला सक्षम करते. तपशीलांसाठी <a href="manage_presets.html" title="Manage presets">'प्रीसेट्स व्यवस्थापित करा'</a> पहा. </li>
+<li><span class="button">'पूर्वावलोकन' </span> ध्वनिमध्ये वास्तविक बदल न करता, आत्ताच्या रचनेतील सेटिंगनुसार ध्वनि कसा ऐकू येईल याचे एक लहान पूर्वावलोकन चालू करते.  पूर्वावलोकनाची लांबी <span class="menu">संपादन &gt; प्राधान्ये &gt; <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a></span> मधील आपल्या सेटिंगद्वारे निश्चित केली जाते, पूर्वनियोजित सेटिंग ६ सेकंद असते.</li>
+<li><span class="button">'ठीक आहे' </span> हे निवड केलेल्या ध्वनिला आत्ताच्या सेटिंगचे प्रभाव लागू करून संवाद बंद करते. </li>
+<li><span class="button">'रद्द करा' </span> हे दिलेले प्रभाव रद्द करून ध्वनि काहीही बदल न करता सोडून देते आणि संवाद बंद करते. </li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> हे पान माहितीपुस्तिकेमधील योग्य पानावर आपल्याला आणते  </li></ul>
+<p><br />
+</p>
+<div class="note">मूलतः, जेव्हा ध्वनि "थ्रेशोल्ड" ("मर्यादा") पातळी ओलांडतो तेव्हा लिमिटर लाभ (नकारात्मक प्रवर्धन) कमी करतो. "होल्ड" वेळ म्हणजे नफा सामान्य स्थितीत परत येण्यापूर्वी किती काळ (मिलिसेकंदमध्ये) कमी पातळीवर राहते. सामान्यत: शिखर पार केल्यानंतर तुम्हाला फायदा लवकरात लवकर सामान्य स्थितीत परत यावा असे वाटते कारण तुम्हाला साधारणपणे फक्त शिखरे मर्यादित करायची असतात आणि नंतर शक्य तितक्या लवकर सामान्य स्थितीत परत यायचे असते. तथापि, लिमिटरने खूप लवकर प्रतिसाद दिल्यास एक समस्या आहे आणि बास उपकरणांवर प्रक्रिया करताना हे सर्वात लक्षणीय आहे
+<p>जर खूप कमी नोंद असेल तर, 100 Hz च्या खाली म्हणा, तर एका शिखरापासून दुसऱ्या शिखरापर्यंतचा वेळ "होल्ड" वेळेपेक्षा जास्त असू शकतो. अशाप्रकारे शिखर पातळी वाढल्यावर नफा कमी होण्यास सुरुवात होईल, नंतर एक शिखर आणि पुढच्या दरम्यान "रिलीझ" (सामान्य नफ्यावर परत जा) सुरू होईल. लाभ पातळीचे हे जलद "फ्लटरिंग" तरंगविकृत करते, जे सहसा अवांछित असते. समस्येचे निराकरण सोपे आहे - फक्त कमी झालेल्या स्तरावर फायदा थोडा वेळ धरून ठेवा जेणेकरून वैयक्तिक तरंगशिखरांना प्रतिसाद न देता लिमिटर नोटच्या एकूण आकाराला प्रतिसाद देईल.  
+</p>
+</div>
+<p><br />
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> प्रभाव, जनरेटर आणि विश्लेषकांची अनुक्रमणिका</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> प्रभाव यादी</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

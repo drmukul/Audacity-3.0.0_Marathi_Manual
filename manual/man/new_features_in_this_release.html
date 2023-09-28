@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>या आवृत्तीमधील नवीन वैशिष्ट्ये - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-New_features_in_this_release rootpage-New_features_in_this_release skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">या आवृत्तीमधील नवीन वैशिष्ट्ये</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/New_features_in_this_release#searchInput">शोध</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><center><a href="http://audacityteam.org/" title="size=50%" rel="nofollow"><img alt="size=50%" src="../m/images/8/88/audacity_logo_signika_512_transparent.png" width="512" height="138" /></a></center>
+<div class="intro"><span style="font-size:120%"><b>हे पृष्ठ ऑड्यासिटी 3.0.0 मध्ये सादर केलेल्या प्रमुख नवीन कार्यक्षमतेचे विहंगावलोकन आहे </b>
+<p><b>आवृत्ती 3.0.0 ही मुख्यत: एकात्मक, एकल स्वयंपूर्ण, प्रकल्प धारिकासाठी रिलीज आहे. </b></span>
+</p>
+<ul><li> <span style="font-size:110%">2.4.2 पासून सर्व प्रमुख बदलांचे तपशील <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.0">ऑड्यासिटी रिलीज नोट्स 3.0.0</a> मध्ये आढळू शकतात.</span></div></li></ul>
+<h2><span class="mw-headline" id="Contents">सामग्री</span></h2>
+<ol><li><a href="#aup3"><b>एकात्मक प्रकल्प</b></a>
+<ul><li><a href="#size">प्रकल्प आकार</a></li>
+<li><a href="#performance">कामगिरी</a></li>
+<li><a href="#recovery">स्वयंचलित पुनर्प्राप्ती</a></li>
+<li><a href="#temp">तात्पुरत्या कामाच्या धारिका</a></li></ul></li>
+<li><a href="#backup"><b>तुमच्या प्रकल्पाचा बॅकअप घेत आहे</b></a></li>
+<li><a href="#languages">दोन नवीन भाषा जोडल्या</a></li>
+<li><a href="#sounds">लेबल ध्वनि्स ध्वनि फाइंडर आणि सायलेन्स फाइंडरची जागा घेते</a></li>
+<li><a href="#directories">वर्धित निर्देशिका प्राधान्ये</a></li>
+<li><a href="#macros">मॅक्रोमध्ये सुधारणा</a>
+<ul><li><a href="#io">मॅक्रोची आयात आणि निर्यात</a></li>
+<li><a href="#comments">मॅक्रोमध्ये टिप्पण्या</a></li></ul></li>
+<li><a href="#gate">नॉइज गेट सुधारले</a></li>
+<li><a href="#multi">बहु-दृश्य वापरकर्ता-पूर्वनियोजित दृश्य म्हणून सेट केले जाऊ शकते</a></li>
+<li><a href="#edits">प्राधान्य सेटिंग्ज जे वर्तन संपादित करतात</a></li>
+<li><a href="#mixer">मिक्सर बोर्ड सुधारणा</a></li>
+<li><a href="#repeat">शेवटचे जनरेटर, विश्लेषक किंवा साधन पुन्हा करा</a></li>
+<li><a href="#nyquist">Nyquist अपग्रेड</a></li>
+<li><a href="#bugs">दोष निराकरणे</a></li></ol>
+<p><br />
+</p>
+<div id="aup3"></div>
+<h2><span class="mw-headline" id="Unitary_Project">एकात्मक प्रकल्प</span></h2>
+<p>ऑड्यासिटी 3.0.0 नवीन AUP3 प्रकल्प फॉरमॅट सादर करते. या आवृत्तीसह जतन केलेल्या प्रकल्प धारिकामध्ये <b>aup3</b> विस्तार असेल, उदाहरणार्थ <b>My-Project.aup3</b>. आम्हाला विश्वास आहे की हे नवीन प्रकल्प फॉरमॅट ऑड्यासिटी वापरकर्त्यांसाठी आयुष्य सोपे करेल, कारण ते मागील प्रकल्प स्टोरेज फॉरमॅटची जागा घेते - ज्यामध्ये AUP फाईल आणि त्याच्याशी संबंधित _माहिती फोल्डर लहान ध्वनि क्लिपने भरलेले होते - एकाच प्रकल्प धारिकासह जे त्या दोन भागांना एकत्रित करते.
+</p><p>जुन्या संरचनेमुळे अनेक वापरकर्त्यांनी प्रकल्प घटक हलवून किंवा हटवून त्यांचे प्रकल्प गमावले किंवा नुकसान केले. नवीन सिंगल प्रकल्प धारिका स्ट्रक्चर हे घडण्यापासून प्रतिबंधित करते.
+</p><p><br />
+</p>
+<div class="note">ऑड्यासिटीच्या मागील आवृत्त्यांमधील AUP प्रकल्प ऑड्यासिटी 3.0.0 मध्ये उघडले किंवा आयात केले जाऊ शकतात <i>(ऑड्यासिटी त्यांना नवीन युनिफाइड धारिका फॉरमॅटमध्ये रूपांतरित करते)</i>.
+<ul><li>लक्षात ठेवा की AUP3 म्हणून जतन केल्याने जुनी <b>AUP</b> फाईल आणि त्याच्याशी संबंधित <b>_data</b> फोल्डर मागे जाईल जे तुम्हाला डिस्क स्पेस पुनर्प्राप्त करण्यासाठी हटवायचे असेल.</div></li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">एकदा तुम्ही नवीन AUP3 फॉरमॅटमध्ये प्रकल्प जतन केल्यानंतर ते यापुढे <b>ऑड्यासिटीच्या मागील आवृत्त्यांमध्ये उघडले जाऊ शकत नाहीत</b>.
+<ul><li>वर्कअराउंड म्हणजे WAV धारिका म्हणून निर्यात करणे, <span class="menu"> धारिका &gt; <a href="export_multiple.html" title="Export Multiple">Export Multiple</a> वापरून वैयक्तिक गीतपट्टानिर्यात करणे आणि नंतर जुन्या ऑड्यासिटी आवृत्त्यांमध्ये आयात करणे. </li>
+<li>तपशिलांसाठी कृपया <a href="moving_aup3_projects_from_audacity_3.x_to_audacity_2.html" title="Moving AUP3 projects from Audacity 3.x to Audacity 2.x">ऑड्यासिटी 3.x वरून ऑड्यासिटी 2.x वर AUP3 प्रकल्प हलवणे</a> पहा </span></li></ul>
+</td></tr></table></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">सक्रिय प्रकल्प FAT/FAT32 फॉरमॅटेड ड्राइव्हवर जतन केले जाऊ <i><b>शकत नाहीत</b></i> कारण FAT 4GB च्या कमाल धारिका आकाराच्या अधीन आहे जे संपादन करताना सहजपणे तात्पुरते ओलांडले जाऊ शकते.
+</td></tr></table></div>
+<p>अधिक तपशीलांसाठी कृपया <a href="audacity_projects.html" title="Audacity Projects">ऑड्यासिटी प्रकल्पा्सचे व्यवस्थापन</a> पहा
+</p><p><br />
+</p>
+<div id="size"></div>
+<h3><span class="mw-headline" id="Project_size">प्रकल्प आकार</span></h3>
+<p>नवीन युनिफाइड धारिका स्ट्रक्चरसह जतन केलेले प्रकल्प जुन्या मल्टिपल धारिका स्ट्रक्चरसह समान प्रकल्पा्सपेक्षा मोठे नसावेत.
+</p><p>तुम्ही प्रकल्पावर काम करत असताना, ऑड्यासिटी अतिरिक्त तात्पुरती डिस्क स्पेस वापरेल. हे सहसा प्रकल्प बंद केल्यावर सोडले जाते.  <i>युनिटरी प्रकल्प धारिकामध्ये हे नवीन नाही, ऑड्यासिटीच्या मागील आवृत्त्या देखील हे करण्यासाठी वापरल्या जात होत्या.</i>
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">तुमची इच्छा असल्यास, तुम्ही तात्पुरते स्टोरेज काढून टाकून तुमचा प्रकल्प कॉम्प्रेस करू शकता:
+<ol><li> <span class="menu">धारिका &gt; प्रकल्प जतन करा</span></li>
+<li> <span class="menu">धारिका &gt; बाहेर पडा</span></li>
+<li> ऑड्यासिटी पुन्हा लाँच करा</li>
+<li> <span class="menu">धारिका &gt; उघडा...</span></li></ol>
+<p>परंतु काळजीपूर्वक लक्षात घ्या की यामुळे तुमचा <a href="undo_redo_and_history.html" title="Undo, Redo and History">पूर्ववत इतिहास</a> आणि तुमच्या ऑड्यासिटी क्लिपबोर्डवरील सामग्री काढून टाकली जाईल.
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="performance"></div>
+<h3><span class="mw-headline" id="Performance">कामगिरी</span></h3>
+<p>विस्तृत गती चाचणीने हे दाखवून दिले आहे की ऑड्यासिटीमधील बहुतेक कामांसाठी नवीन प्रकल्प धारिका जुन्या प्रकल्पाच्या संरचनेपेक्षा थोडी वेगवान असू शकते.
+</p><p>हे विशेषतः प्रभाव आणि जनरेटर वापरताना खरे आहे जे नवीन प्रकल्प धारिकासह जलद चालतात.
+</p>
+<div class="note">ऑड्यासिटी फाईलमधील न वापरलेली तात्पुरती डिस्क स्पेस साफ करते म्हणून प्रकल्प बंद करण्यास आता थोडा जास्त वेळ लागू शकतो.<p>तुम्हाला कॉम्पॅक्शन प्रगतीबद्दल माहिती देणारा प्रोग्रेस संवाद मिळेल.</p> </div>
+<p><br />
+</p>
+<div id="recovery"></div>
+<h3><span class="mw-headline" id="Automatic_Recovery"><a href="recovery.html" title="Recovery">स्वयंचलित पुनर्प्राप्ती</a></span></h3>
+<p>ऑड्यासिटी 3.0.0 मध्ये स्वयंचलित पुनर्प्राप्ती (क्रॅशनंतर) वेगळी आहे. <i>अनाथ ब्लॉक-फाईल्स किंवा गहाळ ब्लॉक-फायलींशिवाय काळजी करणे सोपे आहे</i>
+</p>
+<ul><li>जेव्हा क्रॅश झाल्यानंतर ऑड्यासिटी लॉन्च केली जाते तेव्हा ते क्रॅश झालेले प्रकल्प पुनर्प्राप्त करण्याची ऑफर देते.  </li>
+<li>तुम्ही एकतर पुनर्प्राप्ती स्वीकारणे किंवा प्रकल्प टाकून देणे निवडू शकता.</li>
+<li>तुम्ही एकतर कृतीसाठी त्यांच्या चेकबॉक्सवर क्लिक करून प्रकल्प निवडू शकता किंवा तुम्ही <b>निवडा</b> वर क्लिक करून सर्व निवडू शकता. </li>
+<li>तुम्ही फक्त काही टाकून देऊ शकता आणि नंतर पुनर्प्राप्ती संवाद खुला राहील आणि तुम्हाला इतरांना पुनर्प्राप्तीसाठी निवडता येईल. </li></ul>
+<p>अधिक तपशीलांसाठी कृपया <a href="recovery.html" title="Recovery">स्वयंचलित क्रॅश पुनर्प्राप्ती</a> पहा
+</p><p><br />
+</p>
+<div id="temp"></div>
+<h3><span class="mw-headline" id="Temporary_work_files">तात्पुरत्या कामाच्या धारिका</span></h3>
+<p>सिंगल माहितीबेस प्रकल्प धारिका व्यतिरिक्त माहितीबेस दोन तात्पुरत्या कामाच्या धारिका <b>WAL</b> आणि <b>SHM</b> धारिका देखील तयार करतो. उदाहरणार्थ <b>My-Project.aup3-wal</b>आणि <b>My-Project.aup3-shm</b>.  Mac वर फक्त <b>WAL</b> धारिका आहे .
+</p><p>हे प्रकल्प बंद झाल्यावर किंवा ऑड्यासिटीमधून बाहेर पडल्यावर हटवले जातात.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top">प्रकल्प उघडे असताना त्या हटवू <i><b>नका</b></i> किंवा या तात्पुरत्या धारिका हलवू नका कारण यामुळे प्रकल्प नष्ट होईल.<p>विंडोज तुम्हाला हे करण्यापासून ब्लॉक करते पण macOS आणि Linux करत नाहीत.</p>
+</td></tr></table></div>
+<p><br />
+</p>
+<div id="backup"></div>
+<h2><span class="mw-headline" id="Backing_up_your_project"><a href="audacity_projects.html#copies" title="Audacity Projects">तुमच्या प्रकल्पाचा बॅकअप घेणे</a></span></h2>
+<p>प्रकल्पांसाठी नवीन बॅकअप आज्ञा आहे: <span class="menu">धारिका &gt; जतन प्रकल्प &gt; <a href="audacity_projects.html#copies" title="Audacity Projects">बॅकअप प्रकल्पा</a></span>.
+</p><p>हे सध्याच्या प्रकल्पाची एक प्रत AUP3 धारिका म्हणून जतन करते, परंतु नवीन नावासह. तुम्ही एखाद्या प्रकल्पावर काम करत असताना त्याची सुरक्षितता बॅकअप प्रत बनवण्याचा हा सुरक्षित आणि शिफारस केलेला मार्ग आहे. 
+</p>
+<ul><li>हे एकतर प्रकल्पाची एकल बॅकअप प्रत म्हणून किंवा विशिष्ट तारखेला आणि वेळी असलेल्या राज्यातील प्रकल्पाच्या अनेक वाढीव प्रतींपैकी एक म्हणून काम करू शकते.</li>
+<li>या आदेशाचा वापर करून "प्रकल्प म्हणून जतन करा..." च्या विपरीत तुमचा सध्याचा प्रकल्प खुला राहील आणि तुम्हाला त्यावर काम सुरू ठेवता येईल.</li></ul>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">तुम्हाला तुमच्या प्रकल्पाच्या मुख्य टप्प्यांवर तुमच्या प्रकल्पाच्या बॅकअप आवृत्त्या बनवण्याचा <b>ठळक</b> सल्ला दिला जातो जेणेकरून तुम्ही गोंधळ केल्यास तुम्ही त्या टप्प्यावर परत येऊ शकता.
+</td></tr></table>
+</div>
+<div class="note">ही नवीन आज्ञा मागील दोन आज्ञा बदलते:
+<ul><li><span class="menu">धारिका &gt; जतन प्रकल्प &gt; प्रकल्पाची लॉसलेस कॉपी जतन करा</span></li>
+<li><span class="menu">धारिका &gt; जतन प्रकल्प &gt; प्रकल्पाची कॉम्प्रेस्ड कॉपी जतन करा</span></li></ul>
+<p>तुम्ही Zip, WinZip किंवा 7-Zip सारख्या मानक युटिलिटीजसह AUP3 प्रकल्प हानीरहितपणे कॉम्प्रेस करू शकता.
+</p>
+</div>
+<p><br />
+</p>
+<div id="languages"></div>
+<h2><span class="mw-headline" id="Two_new_Languages_added">दोन नवीन भाषा जोडल्या</span></h2>
+<ul><li> 3.0.0 साठी कॉर्सिकन भाषा जोडली गेली आहे, <i>पॅट्रिककोलूचे आभार.</i></li>
+<li> 3.0.0 साठी मराठी भाषा जोडली गेली आहे, <i>मुकुल कुलकर्णी यांचे आभार.</i></li></ul>
+<p>3.0.0 साठी अद्ययावत भाषांतर आणणाऱ्या आमच्या सर्व नियमित अनुवादकांचे देखील आभार.
+</p><p><br />
+</p>
+<div id="sounds"></div>
+<h2><span class="mw-headline" id="Label_Sounds_replaces_Sound_Finder_and_Silence_Finder"><a href="label_sounds.html" title="Label Sounds">लेबल ध्वनि्स</a> <b>ध्वनि फाइंडर</b> आणि <b>सायलेन्स फाइंडरची</b> जागा घेते</span></h2>
+<p><b><a href="label_sounds.html" title="Label Sounds">लेबल ध्वनि्स</a></b> नावाचे एक नवीन विश्लेषक सादर केले गेले आहे . हे जुने <a href="sound_finder.html" title="Sound Finder">ध्वनि फाइंडर</a> आणि <a href="silence_finder.html" title="Silence Finder">सायलेन्स फाइंडर</a> विश्लेषकांची जागा घेते आणि पुनर्स्थित करते.
+</p><p>लेबल ध्वनि्स हे एक साधन आहे जे लांब ध्वनीमुद्रितिंगमधील भिन्न गाणी किंवा विभाग (किंवा शांतता) लेबल करण्यासाठी उपयुक्त ठरू शकते, जसे की LP किंवा कॅसेटमधील ट्रॅक. 
+</p><p>हे विश्लेषक ऑड्यासिटीच्या मागील आवृत्त्यांमधील जुन्या <b>ध्वनि फाइंडरचे</b> अपग्रेड आहे . हे अधिक अचूक आणि मागील आवृत्त्यांपेक्षा अधिक बहुमुखी आहे, दोन्ही प्रदेश नावपट्ट्या आणि पॉइंट लेबल्सना समर्थन देते.
+</p>
+<dl><dd><b>द्वारे प्रवेश केला:</b> <span class="menu">विश्लेषण &gt; लेबल ध्वनी...</span></dd>
+<dd><span title="Label Sounds effect dialog"><img alt="Label Sounds.png" src="../m/images/8/8a/label_sounds.png" width="571" height="360" /></span></dd></dl>
+हे निवडलेल्या ट्रॅकमधील ध्वनि पातळी शोधते. जेव्हा गीतपट्टापातळी निर्दिष्ट थ्रेशोल्ड पातळी ओलांडते, तेव्हा ध्वनि "ध्वनी" मानला जातो आणि जेव्हा पातळी खाली असतो तेव्हा तो "शांतता" मानला जातो.<p> प्रत्येक ध्वनीच्या आधी किंवा नंतर बिंदू नावपट्ट्या जोडण्याचे पर्याय आहेत, प्रत्येक ध्वनीभोवती प्रदेश नावपट्ट्या किंवा प्रत्येक ध्वनि दरम्यान प्रदेश नावपट्ट्या (प्रभावीपणे शांततेला लेबल करणे). </p>
+<div class="note">आधीच्या ऑड्यासिटी आवृत्तीच्या डाउनलोडच्या परिणामी हा ध्वनि फाइंडर तुमच्या ऑड्यासिटी अॅपमध्ये असल्यास तुम्ही अजूनही वापरणे सुरू ठेवू शकता. </div>
+<p><br />
+</p>
+<div id="directories"></div>
+<h2><span class="mw-headline" id="Enhanced_Directories_preferences"><a href="directories_preferences.html" title="Directories Preferences">वर्धित निर्देशिका प्राधान्ये</a></span></h2>
+<p>पूर्वनियोजित फोल्डर स्थाने जोडली गेली आहेत ज्यामुळे तुम्हाला प्रत्येक ऑड्यासिटी कृतीसाठी फोल्डर निर्दिष्ट करता येतील: उघडा, जतन करा, आयात करा आणि निर्यात करा.
+</p>
+<dl><dd><span title="Directories preferences with I/O defaults"><img alt="Preferences Directories trimmed.png" src="../m/images/a/aa/preferences_directories_trimmed.png" width="638" height="305" /></span></dd></dl>
+<p>तुम्ही यापैकी कोणत्याही कृतीसाठी पूर्वनियोजित फोल्डर सेट केल्यास ऑड्यासिटी <i><b>नेहमी</b></i> त्या फोल्डरचे स्थान ऑफर करेल जेव्हा तुम्ही ती क्रिया सुरू करता.
+</p><p>एखाद्या विशिष्ट क्रियेचे पूर्वनियोजित फोल्डर रिक्त <i>(पूर्वनियोजित सेटिंग)</i> सोडल्यास ऑड्यासिटी त्या क्रियेसाठी शेवटचे-वापरलेले स्थान ऑफर करेल.
+</p><p>पूर्वनियोजित सेटिंग सर्व रिक्त राहण्यासाठी आहे.
+</p><p>अधिक तपशीलांसाठी <a href="directories_preferences.html" title="Directories Preferences">निर्देशिका प्राधान्ये</a> पहा.
+</p><p><br />
+</p>
+<div id="macros"></div>
+<h2><span class="mw-headline" id="Improvements_to_Macros">मॅक्रोमध्ये सुधारणा</span></h2>
+<div id="io"></div>
+<h3><span class="mw-headline" id="Import_and_Export_of_Macros">मॅक्रोची आयात आणि निर्यात</span></h3>
+<p><a href="manage_macros.html" title="Manage Macros">मॅक्रो मॅनेज</a> संवादमध्ये मॅक्रोची आयात आणि निर्यात जोडली गेली आहे.
+</p>
+<dl><dd><span title="Manage Macros dialog showing Macro list (left) and command list for selected Macro (right)"><img alt="Manage Macros 3-0-0.png" src="../m/images/a/a0/manage_macros_3_0_0.png" width="831" height="331" /></span></dd></dl>
+<p>एका वेळी फक्त एक मॅक्रो आयात किंवा निर्यात केला जाऊ शकतो.
+</p>
+<div id="comments"></div>
+<h3><span class="mw-headline" id="Comments_in_Macros">मॅक्रोमध्ये टिप्पण्या</span></h3>
+<p>मॅक्रोमध्ये काय घडत आहे ते दस्तऐवजीकरण करण्यास सक्षम करण्यासाठी टिप्पण्या आता मॅक्रोमध्ये जोडल्या जाऊ शकतात.
+</p><p>मॅक्रो आज्ञा सेटमध्ये एक नवीन आज्ञा "<b>Comment</b>" आहे . त्याचे पॅरामीटर्स संपादित केल्याने तुम्ही तुमच्या टिप्पणीचा मजकूर टाइप करू शकता.
+</p>
+<dl><dd><span title="Adding a comment to a Macro"><img alt="Macros comments.png" src="../m/images/c/ce/macros_comments.png" width="679" height="387" /></span></dd></dl>
+<p><br />
+</p>
+<div id="gate"></div>
+<h2><span class="mw-headline" id="Noise_Gate_improved"><a href="noise_gate.html" title="Noise Gate">नॉइज गेट</a> सुधारले</span></h2>
+<p>ऑड्यासिटीच्या आवृत्ती 3.0.0 साठी <a href="noise_gate.html" title="Noise Gate">नॉईज गेट</a> प्रभाव सुधारला गेला आहे . हे आता वेगवान हल्ल्याच्या वेळेस (1ms पर्यंत) समर्थन देते आणि आक्रमण, होल्ड आणि क्षय यासाठी स्वतंत्र नियंत्रणे प्रदान करते. प्रभाव एका पासमध्ये जास्त लांब निवडींवर प्रक्रिया देखील करू शकतो (44,100 Hz च्या नमुना दराने 13.5 तासांपर्यंत.)
+</p>
+<dl><dd><span title="Audacity 3.0.0 Noise Gate dialog"><img alt="Noise Gate.png" src="../m/images/9/9e/noise_gate.png" width="465" height="360" /></span></dd></dl>
+<p><br />
+</p>
+<div id="multi"></div>
+<h2><span class="mw-headline" id="Multi-view_can_be_set_as_user-default_view">बहु-दृश्य वापरकर्ता-पूर्वनियोजित दृश्य म्हणून सेट केले जाऊ शकते</span></h2>
+<p><a href="tracks_preferences.html" title="Tracks Preferences">गीतपट्टाप्राधान्यांमध्ये</a> तुम्ही आता ट्रॅकसाठी तुमच्या पसंतीचे वापरकर्ता-पूर्वनियोजित दृश्य म्हणून मल्टी-व्ह्यू सेट करू शकता.
+</p>
+<dl><dd><span title="Multi-view user-default in Tracks preferences"><img alt="Multi-view user-default in Tracks preferences.png" src="../m/images/0/00/multi_view_user_default_in_tracks_preferences.png" width="512" height="259" /></span></dd></dl>
+<p><br />
+</p>
+<div id="edits"></div>
+<h2><span class="mw-headline" id="Preferences_settings_that_affect_Edit_behavior"><a href="preferences_settings_that_affect_edit_behavior.html" title="Preferences settings that affect Edit behavior">प्राधान्य सेटिंग्ज जे वर्तन संपादित करतात</a></span></h2>
+<p>आम्हाला कळले की आमच्याकडे <a href="tracks_behaviors_preferences.html" title="Tracks Behaviors Preferences">गीतपट्टावर्तन प्राधान्यांमध्ये</a> काही सेटिंग्ज आहेत ज्या कदाचित अनपेक्षित मार्गांनी <i>कट, पेस्ट</i> आणि <i>हटवा</i> संपादन आदेशांच्या ऑपरेशनवर परिणाम करतात:
+</p>
+<ul><li><a href="preferences_settings_that_affect_edit_behavior.html#move_clips" title="Preferences settings that affect Edit behavior">क्लिप संपादित केल्याने इतर क्लिप हलवू शकतात</a></li>
+<li><a href="preferences_settings_that_affect_edit_behavior.html#cut_lines" title="Preferences settings that affect Edit behavior">कट लाईन्स सक्षम करा</a></li></ul>
+<dl><dd><span title="Tracks Behaviors preferences with two items highlighted"><img alt="Tracks Behaviors tricksy settings.png" src="../m/images/5/51/tracks_behaviors_tricksy_settings.png" width="535" height="191" /></span></dd></dl>
+<p>त्यामुळे या वर्तनातील पट्टीकावे समजावून सांगण्यासाठी माहितीपुस्तिकामध्ये एक नवीन पृष्ठ जोडले गेले आहे, कृपया <a href="preferences_settings_that_affect_edit_behavior.html" title="Preferences settings that affect Edit behavior">वर्तन संपादनावर परिणाम करणाऱ्या प्राधान्य सेटिंग्ज</a> पहा.
+</p><p><br />
+</p>
+<div id="mixer"></div>
+<h2><span class="mw-headline" id="Mixer_Board_improvement"><a href="mixer_board.html" title="Mixer Board">मिक्सर बोर्ड सुधारणा</a></span></h2>
+<p>आम्ही <a href="mixer_board.html" title="Mixer Board">मिक्सर बोर्ड</a> बदलला आहे जेणेकरून वापरात असताना त्याची विंडो नेहमी वर राहील.
+</p><p>बर्‍याच वापरकर्त्यांनी याची विनंती केली आहे आणि मूळ विकसक नेहमी हे करू इच्छित होते परंतु या वैशिष्ट्यासाठी वापरल्या जाणार्‍या लायब्ररींच्या समस्यांमुळे ते करू शकले नाहीत.
+</p><p>ही लायब्ररी प्रदात्याद्वारे अद्ययावत केली गेली आहे आणि आम्ही आता मिक्सर बोर्डला तिन्ही प्लॅटफॉर्मवर शीर्ष विंडो बनवू शकतो.
+</p><p><br />
+</p><p><br />
+</p>
+<div id="repeat"></div>
+<h2><span class="mw-headline" id="Repeat_last_Generator.2C_Analyzer_or_Tool">शेवटचे जनरेटर, विश्लेषक किंवा साधन पुन्हा करा</span></h2>
+<p>जनरेटर, विश्लेषक आणि साधनांसाठी <b>शेवटची पुनरावृत्ती</b> आज्ञा जोडली गेली आहे. हे यादीमध्ये नाहीत परंतु "भूत" आज्ञा आहेत ज्यांना तुम्ही सानुकूल सोपा मार्ग नियुक्त करू शकता.
+</p><p>हे तुम्हाला सानुकूल सोपा मार्ग वापरून तुम्ही वापरलेल्या शेवटच्या सेटिंग्जसह तुम्ही वापरलेले शेवटचे जनरेटर, विश्लेषक किंवा साधन रिपीट करण्यास सक्षम करते.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">पूर्वनियोजितनुसार, <b>मॅक्रो'<i> आज्ञा्स एकतर मुख्य यादीमधून किंवा सोपा मार्गवरून लागू करता येत नाहीत. ते "साधन यादी" आयटम नाहीत आणि ते </i>रिपीट लास्ट साधनला</b> प्रतिसाद देत नाहीत.
+<p>तथापि, जर मॅक्रोमध्ये सोपा मार्ग असेल, तर तो <span class="menu">प्राधान्ये &gt; कीबोर्ड: साधन्स यादी &gt; मॅक्रो लागू करा</span> मध्ये सूचीबद्ध होईल आणि तो आता "रिपीट लास्ट साधन" ला प्रतिसाद देईल, परंतु तो सोपा मार्गद्वारे लॉन्च केला गेला असेल तरच. सोपा मार्ग प्रभावीपणे असला तरीही मॅक्रो अजूनही "साधन यादी आयटम" नाही.
+</p>
+</td></tr></table>
+</div>
+<p><br />
+</p><p><br />
+</p>
+<div id="nyquist"></div>
+<h2><span class="mw-headline" id="Nyquist_Upgrade"><a href="nyquist.html" title="Nyquist">Nyquist अपग्रेड</a></span></h2>
+<p><a href="nyquist.html" title="Nyquist">Nyquist</a> नवीनतम Nyquist आवृत्ती 3.16 वर अद्यतनित केले गेले आहे
+</p><p>यामुळे आम्हाला बर्याच काळापासून Nyquist-संबंधित ऑड्यासिटी बग साफ करण्यास सक्षम केले आहे.
+</p><p><br />
+</p>
+<div id="bugs"></div>
+<h2><span class="mw-headline" id="Bug_Fixes">दोष निराकरणे</span></h2>
+<p>या रिलीझसाठी मोठ्या प्रमाणात बग निश्चित करण्यात आले होते.
+</p><p>येथे सर्वात महत्वाच्या काहींची एक छोटी निवड आहे.
+</p>
+<h3><span class="mw-headline" id="Key_P1_bugs_fixed">की P1 दोष निराकरणे</span></h3>
+<ul><li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=208">208</a> - काही प्रभाव (समीकरण प्रभावांसह) लिफाफा नियंत्रण बिंदू हटवा, किंवा टाइमलाइन बदलत असताना ते हलवू नका</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2367">2367</a> - बदला पिच प्रभाव शेवटी बनावट क्लिप तयार करू शकतो</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2492">2492</a> - Linux: स्टिरिओ गीतपट्ट्यावर स्लाइडिंग स्ट्रेच प्रभाव लागू करताना किंवा पूर्वावलोकन करताना क्रॅश</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2544">2544</a> -  "क्लिप संपादित केल्याने इतर क्लिप हलवू शकतात" बंद केल्याने ध्वनि कॉपी आणि पेस्ट करताना भ्रष्टाचार होऊ शकतो</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2630">2630</a> - युनिकोड मेटामाहितीसह आयातित MP3 सह जतन केलेला प्रकल्प उघडता येत नाही</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2656">2656</a> - प्ले-एट-स्पीडमध्ये विराम दिल्यावर क्षैतिज स्क्रोल करू शकत नाही</li>
+<li>P1 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2669">2669</a> - Win: Save As चा वापर चेतावणीशिवाय विद्यमान प्रकल्प ओव्हरराइट करण्यासाठी केला जाऊ शकतो</li></ul>
+<h3><span class="mw-headline" id="Key_P2_bugs_fixed">की P2 दोष निराकरणे</span></h3>
+<ul><li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1300">1300</a> - मॅक: मानक धारिका जतन संवादांमध्ये COMMAND + V पेस्ट मर्यादा</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1579">1579</a> - मॅक: सोपा मार्ग वापरून धारिका जतन संवाद्समधून कट/कॉपी काम करत नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2187">2187</a> - गहाळ उपनाम ध्वनि धारिका वापरताना कोणतीही त्रुटी/चेतावणी संदेश नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2296">2296</a> - मॅक्रोसाठी कोणतेही आयात किंवा निर्यात नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2464">2464</a> - टाइम शिफ्ट साधनसह फक्त निवडलेला ध्वनि आणि लेबल ड्रॅग करू शकत नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2437">2437</a> - मॅक: ऑड्यासिटी चालू असताना "ओपन विथ" अयशस्वी होते</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2473">2473</a> - Linux: मीटरवरील क्रमांकांची पार्श्वभूमी अपारदर्शक असते</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2487">2487</a> - नॉन-वास्तविक वेळ प्रभावच्या पूर्वावलोकनादरम्यान प्लेबॅक मीटर प्रतिसाद देत नाहीत</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2491">2491</a> - रीसेट कॉन्फिगरेशन विस्तारित आयात प्राधान्ये रीसेट करत नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2509">2509</a> - फिल्टर वक्र आणि ग्राफिक EQ मदत दुवे रिलीज आवृत्तीमध्ये तुटलेले आहेत</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2527">2527</a> - कॉन्फिगरेशन रीसेट करणे प्रकल्प दर किंवा निवड टाइमर रीसेट करत नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2573">2573</a> - उच्च/निम्न पास फिल्टर्स 44100 Hz वर ~94 मिनिटे स्टिरिओ पर्यंत मर्यादित</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2581">2581</a> - पेस्ट करताना विसंगत वर्तन आणि पुरेशी जागा नाही </li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2593">2593</a> - तुम्ही आधी सामान्य प्ले वापरल्याशिवाय प्ले-एट-स्पीड प्ले होत नाही</li>
+<li>P2 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2616">2616</a> - लेबल केलेले ध्वनि कट आणि हटवा सिंक-लॉकद्वारे अक्षम केले</li></ul>
+<h3><span class="mw-headline" id="Key_P3_bugs_fixed">की P3 दोष निराकरणे</span></h3>
+<ul><li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=852">852</a> - गीतपट्टादर प्रकल्प दरापेक्षा वेगळा असताना आवाज कमी करणे पूर्वावलोकन अपयश</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1592">1592</a> - ध्वनीमुद्रितिंग मीटर अक्षम असताना ध्वनि सक्रिय ध्वनीमुद्रितिंग अयशस्वी होते</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=1686">1686</a> - समीकरण प्रभाव दुर्लक्ष करतात आणि कोणतेही मोठेपणा लिफाफा काढून टाकतात</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2295">2295</a> - ENH: ऑड्यासिटीसह मॅक्रोमध्ये टिप्पणी जोडू शकत नाही</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2366">2366</a> - मॅक्रो: गीतपट्टावर्तणूक प्राधान्यांमधील सेटिंगकडे दुर्लक्ष करून "सर्व निवडा" चालवा</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2460">2460</a> - Enh: गीतपट्टाप्राधान्यांमध्ये पूर्वनियोजित दृश्य मोड म्हणून "मल्टी-व्ह्यू" निवडू शकत नाही</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2510">2510</a> - मॅक: अॅप्स पट्टीमध्ये ऑड्यासिटीवर प्रकल्प धारिका ड्रॅग &amp; ड्रॉप करा नाहीतर अॅप्स पट्टीमध्ये ऑड्यासिटी सक्रिय असल्यास फाइंडर अयशस्वी झाला</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2534">2534</a> - चेंज स्पीड निवडलेल्या क्लिपला समीप क्लिपसह विलीन करते - <i><b>अवशिष्ट निराकरण चाचणी केली जाईल</b></i></li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2564">2564</a> - मेटामाहिती: M4A(AAC) निर्यातीवर कलाकार आणि वर्षाचे टॅग गहाळ आहेत</li>
+<li>P3 <a rel="nofollow" class="external text" href="https://bugzilla.audacityteam.org/show_bug.cgi?id=2611">2611</a> - मिक्सर बोर्ड मुख्य खिडकीच्या वर राहत नाही</li></ul>
+<p><br />
+</p><p><br />
+</p>
+<div id="appendix"></div>
+
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Release_Notes_3.0.0"><b>&gt;</b>ऑड्यासिटी रिलीज नोट्स 3.0.0</a> <i>- ऑड्यासिटीच्या या प्रकाशनासाठी तपशीलवार प्रकाशन नोट्स</i>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>नॉच फिल्टर - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Notch_Filter rootpage-Notch_Filter skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">नॉच फिल्टर</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Notch_Filter#searchInput">शोध</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+
+<div class="intro"><i><b>नॉच फिल्टर</b></i> त्या ठिकाणी वारंवारता <i><b><a href="glossary.html#spectrum" title="Glossary">स्पेक्ट्रममधून</a></b></i> "नॉच" कापून, उर्वरित ध्वनीला कमीत कमी हानीसह मेन हम किंवा इलेक्ट्रिकल व्हिसल सारख्या वारंवारता-विशिष्ट आवाजाला तीव्रपणे कमी करते.</div> 
+<dl><dd><b>द्वारे प्रवेश केला:</b> <span class="menu">प्रभाव &gt; नॉच फिल्टर...</span></dd>
+<dd><span title="Notch Filter effect dialog"><img alt="Notch Filter.png" src="../m/images/6/6f/notch_filter.png" width="474" height="178" /></span></dd></dl>
+<div id="frequency"></div>
+<h2><span class="mw-headline" id="Frequency">वारंवारता</span></h2>
+<p>अर्धा <a href="glossary.html#sample_rate" title="Glossary">नमुना दरापर्यंत</a> कोणताही वारंवारता मजकूर बॉक्समध्ये प्रविष्ट करा (पुर्वनिर्धारित 60 हर्ट्ज आहे). गीतपट्ट्याच्या नमुन्यापेक्षा निम्म्या दरापेक्षा जास्त वारंवारता वैध नाही कारण एखाद्या गीतपट्ट्यामध्ये  केवळ त्याच्या नमुन्यापेक्षा निम्म्या दरापर्यंत वारंवारता असू शकते.
+</p>
+<h2><span class="mw-headline" id="Q_factor">क्यू फॅक्टर</span></h2>
+<p>हे तुमच्या ध्वनीमधून नॉच कटची रुंदी निर्धारित करते (पूर्वनियोजित मूल्य १ आहे). १ वरील मूल्ये एक अरुंद खाच तयार करतात आणि १ पेक्षा कमी मूल्ये अधिक विस्तृत खाच तयार करतात. Q घटक किमान ०.१ असणे आवश्यक आहे).
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">बटणे</span></h2>
+<p>आज्ञा बटणावर क्लिक केल्याने खालील परिणाम मिळतात:
+</p>
+<ul><li><span class="button">व्यवस्थापित करा</span> ड्रॉपडाउन यादी आपल्याला साधनाचे प्रीसेट सेट करण्यास आणि साधनबद्दल काही तपशील पाहण्यास सक्षम करते. तपशीलांसाठी <a href="manage_presets.html" title="Manage presets">प्रीसेट्स व्यवस्थापित करा</a> पहा</li>
+<li><span class="button">पूर्वावलोकन</span> ध्वनीमध्ये वास्तविक बदल न करता, वर्तमान रचनासह प्रभाव लागू केल्यास ध्वनि कसा वाटेल याचे लहान पूर्वावलोकन प्ले करते. पूर्वावलोकनाची लांबी तुमच्या <span class="menu">संपादन &gt; प्राधान्ये &gt; <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a></span> मधील सेटिंगद्वारे निर्धारित केली जाते, पूर्वनियोजित सेटिंग 6 सेकंद आहे.</li>
+<li><span class="button">ठीक आहे</span> वर्तमान प्रभाव रचनासह निवडलेल्या ध्वनीवर प्रभाव लागू करते आणि संवाद बंद करते</li>
+<li><span class="button">रद्द करा</span> प्रभाव रद्द करते आणि ध्वनि अपरिवर्तित ठेवते, संवाद बंद करते</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> तुम्हाला माहितीपुस्तिकामधील योग्य पानावर, या पृष्ठावर आणते</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Examples">उदाहरणे</span></h2>
+<div class="example"><h3><span class="mw-headline" id="Example_1:_Mains_Hum_Removal">उदाहरण 1: मुख्य हुंकार काढणे</span></h3>
+उत्तर अमेरिकेसाठी "फ्रिक्वेंसी" म्हणून ६० हर्ट्झ किंवा युनायटेड किंगडम आणि इतर बहुतेक देशांसाठी ५० हर्ट्झ निवडा. देशानुसार मुख्य फ्रिक्वेन्सीचे सारणी <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/List_of_countries_with_mains_power_plugs,_voltages_and_frequencies#Table_of_mains_voltages_and_frequencies">येथे</a> आहे. <p>ध्वनीमुद्रित केलेल्या हममध्ये अनेकदा गुंजनच्या मूलभूत वारंवारतेच्या वरच्या गोंगाटयुक्त हार्मोनिक वारंवारता असतात. अशा प्रकारे नॉच फिल्टरला मूलभूत हम वारंवारता (उदाहरणार्थ, ५० हर्ट्झ किंवा ६० हर्ट्झ) लागू करणे हा एक चांगला दृष्टीकोन आहे, त्यानंतर इतर ब्रॉड नॉइज स्पाइक्स ओळखण्यासाठी <span class="menu">विश्लेषण &gt; <a href="plot_spectrum.html" title="Plot Spectrum">प्लॉट स्पेक्ट्रम...</a></span> वापरा (उदाहरणार्थ, १८० हर्ट्झ आणि ३०० हर्ट्झवर. ). अधिक स्पष्टपणे पाहण्यासाठी तुम्हाला स्पेक्ट्रमचा <i>आकार</i> वाढवावा लागेल आणि "लॉग" <i>अक्ष</i> वापरावा लागेल. इतर प्रत्येक नॉइज फ्रिक्वेन्सीवर पुन्हा नॉच फिल्टर चालवा, नंतर कोणतेही अवशिष्ट हार्मोनिक्स काढण्यासाठी सौम्य रचनेवर <span class="menu">प्रभाव &gt; <a href="noise_reduction.html" title="Noise Reduction">नॉइज रिडक्शन</a></span> वापरा. </p>
+<ul><li> उच्च हार्मोनिक्स काढताना क्यू फॅक्टर वाढवण्याची शिफारस केली जाते जेणेकरून संभाव्य ध्वनि आर्टिफॅक्ट्स कमी करता येतील. साधारणपणे, २ ते १० च्या दरम्यानचा क्यू हा मेन हुंकार काढण्यासाठी चांगले काम करतो. प्लॉट स्पेक्ट्रममधील नॉइज स्पाइक्समधून योग्य वारंवारता आणि क्यू फॅक्टर रचना निवडणे हे अंदाजे आहे, कोणत्याही "विंडोइंग" फंक्शनमधून अपरिहार्य <i><b><a href="glossary.html#interpolate" title="Glossary">इंटरपोलेशन</a></b></i> त्रुटींमुळे. तथापि, प्लॉट स्पेक्ट्रममधून वारंवारता आणि क्यू घटकांची गणना करण्यासाठी एक चांगली पद्धत या <a rel="nofollow" class="external text" href="https://forum.audacityteam.org/viewtopic.php?f=39&amp;t=40592&amp;start=20#p123749">ऑड्यासिटी फोरम विषयामध्ये</a> आढळू शकते.</li></ul>
+<p>खालील प्रतिमा काही संगीताचा स्पेक्ट्रम प्लॉट दाखवते ज्यातून 60 Hz hum चा नॉच कापला गेला आहे. प्रभाव लागू करण्यापूर्वी, या फ्रिक्वेन्सीवर हम एक प्रमुख स्पाइक दाखवते, आलेखाच्या वरच्या बाजूला विस्तारते.
+</p>
+<dl><dd><span title="Image of spectrum with 60 Hz notch removed"><img alt="Spectrum 60Hz notched W10.png" src="../m/images/6/67/spectrum_60hz_notched_w10.png" width="590" height="513" /></span></dd></dl>
+ध्वनीच्या आधारावर, आपल्याला या प्रकरणात आढळेल की स्पेक्ट्रम खूप खोलवर खोचला गेला आहे, ज्यामुळे सामग्रीवर परिणाम होईल आणि उच्च क्यू घटकांना प्राधान्य दिले गेले असेल. आपणास अंदाजे १०० आणि ३५० हर्ट्झ येथे दृश्यमान स्पाइक्सदेखील प्राप्त होऊ शकतात. ऑड्यासिटी प्रमाणेच, आपण <span class="menu">संपादन &gt; <a href="edit_menu.html#undo" title="Edit Menu">पूर्ववत करा</a></span> वापरू शकता आणि भिन्न खाच गाळून रचनासह प्रयोग करू शकता.</div>
+<div class="example"><h3><span class="mw-headline" id="Example_2:_High_pitched_whistle">उदाहरण २: उच्च पिच असलेली शिट्टी</span></h3>
+<dl><dd><span title="Frequency Analysis spectrum with a 18,996 Hz whistle"><img alt="Spectrum with whistle W10.png" src="../m/images/3/34/spectrum_with_whistle_w10.png" width="590" height="513" /></span></dd></dl>
+या प्रकरणात, <span class="menu">विश्लेषण &gt; <a href="plot_spectrum.html" title="Plot Spectrum">प्लॉट स्पेक्ट्रम...</a></span> येथे वारंवारता विश्लेषण उजवीकडे उंच टोक वगळता बर्‍यापैकी गुळगुळीत आहे. त्या शिखरावर माउसचा क्रॉस-हेअर पॉइंटर ठेवा. ऑड्यासिटी हे शिखर १८९९६ हर्ट्झ वर अधिक अचूकपणे दाखवते जे नॉच फिल्टरमध्ये प्रवेश करण्याची वारंवारता असेल.</div>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> प्रभाव, जनरेटर आणि विश्लेषकांची अनुक्रमणिका</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> प्रभाव यादी</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

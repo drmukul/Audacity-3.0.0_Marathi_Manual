@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>गोंगाट कमी करणे -ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Noise_Reduction rootpage-Noise_Reduction skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">गोंगाट कमी करणे</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Noise_Reduction#searchInput">शोध</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">गोंगाट कमी करण्या मुळे सतत पार्श्वभूमीचे आवाज जसे की हम, शिट्टी, आवाज, बझ आणि "हिस", जसे की टेप हिस, फॅन नॉइज किंवा एफएम/वेबकास्ट वाहक आवाज कमी करू शकतात. हे वैयक्तिक क्लिक आणि पॉप, किंवा अनियमित पार्श्वभूमी आवाज जसे की रहदारी किंवा प्रेक्षकांसाठी योग्य नाही.
+<p>गोंगाट कमी करणे वापरण्‍यासाठी, तुम्‍हाला <a href="audacity_waveform.html" title="Audacity Waveform">वेव्हफॉर्ममध्ये</a> एक प्रदेश हवा आहे ज्यामध्‍ये तुम्‍हाला कमी करायचा असलेला आवाज असेल.
+</p><p>हे लक्षात ठेवा की जेव्हा आवाज खूप मोठा असतो, जेव्हा आवाज बदलत असतो, जेव्हा संगीत किंवा भाषण आवाजापेक्षा जास्त मोठा नसतो किंवा जेव्हा आवाजाची वारंवारता संगीताच्या किंवा भाषणाच्या सारखीच असते तेव्हा समाधानकारकरित्या  काढणे अशक्य असू शकते. 
+</p>
+जर तुमची समस्या मुख्य गुंजन किंवा उच्च-पिच शिट्टी असेल तर,  <a href="notch_filter.html" title="Notch Filter">नॉच फिल्टरचा</a> वापर मदत करू शकतो, जो गोंगाट कमी करणे लागू <b>करण्यापूर्वी</b> केला पाहिजे.</div>
+<dl><dd><b>द्वारे प्रवेश केला:</b> <span class="menu">प्रभाव &gt; आवाज कमी...</span></dd>
+<dd><span title="Noise Reduction effect dialog"><img alt="Noise Reduction.png" src="../m/images/3/3c/noise_reduction.png" width="474" height="406" /></span></dd></dl>
+<div id="profile"></div>
+<h2><span class="mw-headline" id="Step_1_-_Get_Noise_Profile">पायरी 1 - नॉइज प्रोधारिका मिळवा</span></h2>
+<p>ही पहिली पायरी ध्वनि निर्माण करणाऱ्या वेगवेगळ्या <i><b><a href="glossary.html#frequency" title="Glossary">फ्रिक्वेन्सीचा</a></b></i> <i><b><a href="glossary.html#noise_floor" title="Glossary">नॉइज फ्लोअर</a></b></i> ओळखून तुम्हाला जो आवाज काढायचा आहे त्याबद्दल ऑड्यासिटी शिकवते.
+</p>
+<ol><li><i><a href="audacity_waveform.html" title="Audacity Waveform">वेव्हफॉर्मचा</a></i> एक प्रदेश निवडा ज्यामध्ये <b>फक्त आवाज आहे</b>. किमान २०४८ नमुने (०.०५ से. ४४१०० हर्ट्ज <i><b><a href="glossary.html#sample_rate" title="Glossary">नमूना दराने</a></b></i>) आवश्यक आहेत, ज्याच्या खाली एक त्रुटी दर्शविली जाईल. एक लांब प्रोधारिका चांगले आहे. गीतपट्ट्यामध्ये वेगवेगळ्या ठिकाणी खूप भिन्न प्रकारचा आवाज असल्यास, पहिल्या प्रकारासाठी प्रोफाईल पकडणे, त्यासाठी आवाज कमी करणे, त्यानंतर पुढील प्रकारच्या आवाजाचे प्रोधारिका पकडणे आणि ते कमी करणे हे उत्तम प्रकारे हाताळले जाते. </li>
+<li><span class="menu">प्रभाव &gt; आवाज कमी...</span> क्लिक करा.</li>
+<li><b>गोंगाट प्रोधारिका मिळवा</b> क्लिक करा.</li></ol>
+<div class="note">ध्वनी प्रोधारिकासाठी पुरेसा लांब नमुना मिळविण्यासाठी आवाजाच्या अगदी लहान नमुन्याची प्रतकरणे मदत करणार नाही. नॉइज रिडक्शन आवाजाच्या आकडेवारीची गणना करते. त्याच आवाजाच्या वारंवार ब्लॉक्सचे परीक्षण केल्याने आकडेवारी बदलणार नाही. </div> 
+<div id="remove"></div>
+<h2><span class="mw-headline" id="Step_2_-_Reduce_the_Noise">पायरी 2 - आवाज कमी करा</span></h2>
+<ol><li> <a href="audacity_waveform.html" title="Audacity Waveform">वेव्हफॉर्मचा</a> संपूर्ण प्रदेश <a href="audacity_selection.html" title="Audacity Selection">निवडा</a> <b>ज्यातून तुम्हाला आवाज कमी करायचा आहे</b> त्यानंतर नॉइज रिडक्शन मापदंड सेट करा. हे बर्‍याचदा चाचणी आणि त्रुटीद्वारे केले जाते, स्लाइडर समायोजित करणे आणि आवाज कमी केल्यानंतर काही सेकंदांचा ध्वनि ऐकण्यासाठी पूर्वावलोकन बटण वापरणे. <i>अवशेष</i> ऐकणे (तुम्ही "कमी करा" लागू केल्यावर जो आवाज फिल्टर केला जाईल) इच्छित (आवाज नसलेल्या) आवाजाचे किती नुकसान होत आहे हे निर्धारित करण्यासाठी देखील उपयुक्त ठरू शकते.</li>
+<li><span class="menu">प्रभाव &gt; आवाज कमी...</span> क्लिक करा.
+<ul><li><b>गोंगाट कमी करणे (डीबी):</b> ओळखलेल्या गोंगाटासाठी आवाज कमी करण्याचे प्रमाण नियंत्रित करते. सर्वात कमी मूल्याचा वापर करा ज्यामुळे आवाज स्वीकार्य पातळीपर्यंत कमी होईल. आवश्यकतेपेक्षा उच्च मूल्ये आवाज अधिक शांत करू शकतात परंतु परिणामी त्या ध्वनीची हानी होईल.  </li>
+<li><b>संवेदनशीलता:</b> 0 (बंद) ते 24 (जास्तीत जास्त) च्या पट्टीवर किती ध्वनि आवाज म्हणून विचारात घेतला जाईल हे नियंत्रित करते. अधिक संवेदनशीलतेचा अर्थ असा आहे की अधिक आवाज काढला जाईल, शक्यतो काही इच्छित सिग्नल काढून टाकण्याच्या खर्चावर. कमी मूल्यांमुळे आवाज-कमी ध्वनीमध्ये <a href="#artifacts">कलाकृती</a> दिसू शकतात. हे नियंत्रण सर्वात कमी मूल्यावर सेट करा जे कलाकृतींचा परिचय न करता प्रभावी आवाज काढणे प्राप्त करते. </li>
+<li><b>वारंवारता स्मूथिंग (बँड):</b> 1 किंवा त्याहून अधिक मूल्यांवर, हे नियंत्रण शेजारच्या बँडच्या निर्दिष्ट संख्येमध्ये आवाज कमी करते. हे तुम्‍हाला ठेवण्‍याच्‍या इच्‍छा असलेल्‍या सिग्नलमध्‍ये बदल करते, परंतु जर <a href="#artifacts">कलाकृती</a> ध्वनी-कमी ध्वनीमध्‍ये राहिल्‍या तर स्मूथिंगमुळे त्या कलाकृतींचा आवाज अधिक स्‍वीकार्य होऊ शकतो. स्मूथिंग केल्याने इच्छित ध्वनि कमी स्पष्ट होण्याची शक्यता आहे, म्हणून जिथे तुमचा इच्छित सिग्नल मजबूत आणि विस्तृत वारंवारता श्रेणीचा आहे आणि आवाज हलका आहे, तेव्हा हे नियंत्रण 0 (बंद) वर ठेवण्याचा प्रयत्न करा.<p> इच्छित ध्वनि काढून टाकल्याशिवाय शक्य तितक्या उच्च संवेदनशीलता सेट केल्यानंतर तुम्हाला आवाज-कमी केलेल्या ध्वनीमध्ये <a href="#artifacts">कलाकृती</a> ऐकू येत असल्यास, 1 आणि 6 बँडमधील मूल्यावर वारंवारता स्मूथिंग सेट करण्याचा प्रयत्न करा. वारंवारता बँडची रुंदी (हर्ट्झमध्ये) गीतपट्ट्याच्या सॅम्पलिंग वारंवारतेवर अवलंबून असते. रुंदी&#160;=&#160;सॅम्पलिंग&#160;फ्रिक्वेंसी&#160;/&#160;2048&#160;=&#160;21.53&#160;Hz 44,100 Hz सॅम्पलिंग रेटवर.</p><p><i>वेळ स्मूथिंग</i> नेहमी नॉइज रिडक्शन (20 मिलीसेकंदचा हल्ला आणि 100 मिलीसेकंद सोडणे) द्वारे लागू केले जाते परंतु रचना कॉन्फिगर करण्यायोग्य नाहीत. तुम्ही विनंती केलेली कोणतीही वारंवारता स्मूथिंग वेळ स्मूथिंग केल्यानंतर लागू केली जाते.</p> <p>पूर्वनियोजित सेटिंग 3 आहे, यापेक्षा कमी रचना संगीताला पसंती देतात आणि उच्च रचना बोललेल्या शब्दाला अनुकूल करतात.</p></li>
+<li><b>गोंगाट:</b>
+<ul><li><b>कमी करा:</b> निवडीमधून ध्वनि फिल्टर करण्यासाठी हा पर्याय निवडा.</li>
+<li><b>अवशेष:</b> तुम्ही "कमी करा" निवडल्यास फिल्टर होणारा आवाज ऐकण्यासाठी हा पर्याय निवडा. ध्वनि खराब न करणाऱ्या इष्टतम रचना शोधण्यासाठी हे उपयुक्त आहे. जर तुम्ही अवशेषांमध्ये इच्छित आवाजाचे ओळखण्यायोग्य बिट्स ऐकू शकत असाल, तर तुम्ही नॉइज रिडक्शन खूप जास्त किंवा संवेदनशीलता खूप जास्त सेट केली असण्याची शक्यता आहे.</li></ul></li></ul></li></ol>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="The_buttons">बटणे</span></h2>
+<p>आज्ञा बटणावर क्लिक केल्याने खालील परिणाम मिळतात:
+</p>
+<ul><li><span class="button">पूर्वावलोकन</span> ध्वनीमध्ये वास्तविक बदल न करता, प्रभाव सध्याच्या समयोजनासह लागू केल्यास ध्वनीला काय वाटेल हे एक लहान पूर्वावलोकन प्ले करते. पूर्वावलोकनाची लांबी <span class="menu">संपादन &gt; प्राधान्ये &gt; <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a></span> मधील समयोजन द्वारे निश्चित केली जाते , पुर्वनिर्धारित समयोजन 6 सेकंद असते.</li>
+<li><span class="button">ठीक आहे</span> सध्याच्या प्रभाव समयोजनासह निवडलेला ध्वनीवर प्रभाव लागू करते आणि संवाद बंद करते</li>
+<li><span class="button">रद्द करा</span> प्रभाव सोडतो आणि संवाद बंद केल्यामुळे ध्वनीमध्ये कोणताही बदल होत नाही</li></ul>
+<div id="artifacts"></div>
+<div class="note"><b><a href="glossary.html#artifact" title="Glossary">आर्टिफॅक्ट्स</a>:</b> यामध्ये सामान्यत: यादृच्छिक फ्रिक्वेन्सीवर अगदी लहान टोनचे यादृच्छिक स्फोट असतात, ज्याला कधीकधी "संगीत आवाज", "पक्षी गाणे" किंवा "टिंकली-बेल्स" असे म्हणतात. हे <a href="audio_track_dropdown_menu.html#spgram" title="Audio Track Dropdown Menu">स्पेक्ट्रोग्राम</a> दृश्यात दृश्यमान असू शकतात.<p> जर आवाजाचा मजला अंदाजापेक्षा जास्त असेल तर, एकतर <i>संवेदनशीलता</i> खूप कमी असल्यामुळे किंवा संपूर्ण गीतपट्ट्यामध्ये आवाजाचे प्रोफाईल नॉइजचे प्रतिनिधीत्व न केल्यामुळे कलाकृती घडू शकतात. जरी बहुतेक वेळा आवाज दाबला जाईल, यादृच्छिक कलाकृती उद्भवू शकतात, जे मूळ आवाजापेक्षाही अधिक आक्षेपार्ह असू शकतात. कलाकृतींच्या अधिक तांत्रिक स्पष्टीकरणासाठी, विकीवर <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#artifacts">ऑड्यासिटी नॉइज रिडक्शन कसे कार्य करते</a> ते पहा.</p>
+</div>
+<div id="tips"></div>
+<h2><span class="mw-headline" id="Tips">टिपा</span></h2>
+<p>नॉइज प्रोफाईल तयार केल्यानंतर, <span class="kbrd" style="background-color: #d0d0f8">Ctrl + R</span> किंवा <span class="menu">प्रभाव &gt; रिपीट नॉइज रिडक्शन</span> त्याच्या सध्याच्या रचनामध्ये नॉइज रिडक्शन <b>लागू</b> करेल.
+</p><p>आवाज कमी केल्याने सहसा काही विरूपण निर्माण होते. हे सामान्य आहे आणि आपण याबद्दल काहीही करू शकत नाही. जेव्हा फक्त थोडासा आवाज असतो आणि सिग्नल (म्हणजे आवाज, संगीत किंवा इतर इच्छित आवाज) आवाजापेक्षा खूप मोठा असतो, तेव्हा हा प्रभाव चांगला कार्य करतो आणि ऐकण्यायोग्य विरूपण फारच कमी असते. दुर्दैवाने, जेव्हा आवाज खूप परिवर्तनीय किंवा खूप मोठा असतो (सिग्नल आवाजापेक्षा जास्त मोठा नसतो) परिणाम खूप विरूपित होऊ शकतो.
+</p><p>आपल्याला अद्याप समस्या येत असल्यास खालील टिप्स मदत करू शकतात.
+</p>
+<ul><i>नॉइज:</i>मधून <li><span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;अवशेष</span> निवडा, निवडा, <span class="button">पूर्वावलोकन</span>, क्लिक करा, इच्छित सिग्नलच्या नको असलेला ट्रेससाठी ऐका. <i>संवेदनशीलता</i> कमी करून किंवा <i>नॉइज रिडक्शन</i> कमी करून तुम्ही सामान्यतः अवशेषांमधील इच्छित आवाजाचे प्रमाण कमी करू शकता.
+<ul><li><i>संवेदनशीलता</i> कमी केल्याने तुम्हाला ठेवायचा असलेला ध्वनि गमावण्याची शक्यता कमी होते (अवशेषांमधील इच्छित ध्वनि ऐकून दाखविल्याप्रमाणे), परंतु <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;रिड्यूस</span> सिलेक्टसह प्रभाव लागू करताना "टिंकली बेल्स" सारख्या कलाकृती असण्याची शक्यता वाढते. </li>
+<li><i>नॉइज रिडक्शन</i> कमी केल्याने तुम्ही ठेवू इच्छित असलेला आवाज गमावण्याची शक्यता देखील कमी होते (अवशेषांमधील इच्छित ध्वनीच्या ऐकण्याच्या बिट्सद्वारे दर्शविल्याप्रमाणे), परंतु <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;रिड्यूस</span> सिलेक्‍टसह प्रभाव लागू करताना परिणामात उरलेल्या आवाजाचे प्रमाण वाढेल.</li></ul></li>
+<li>जेव्हा तुम्हाला <i>संवेदनशीलता</i> आणि <i>नॉइज रिडक्शनची</i> रचना सापडतील जी इच्छित ध्वनीला कमीत कमी नुकसान करतात असे दिसते (अवशेषांमध्ये तो आवाज कमी आहे यावर आधारित), <span class="button"><img alt="selected radio button" src="../m/images/7/7e/radioselected.png" width="12" height="12" style="vertical-align: text-top" />&#160;कमी करा</span> रेडिओ बटण क्लिक करा आणि प्रभाव लागू करण्यासाठी <span class="button">ठीक आहे</span> क्लिक करा.</li>
+<li>नॉइज रिडक्शनच्या आधी किंवा नंतर <a href="amplify.html" title="Amplify">एम्प्लीफाय</a> किंवा <a href="normalize.html" title="Normalize">नॉर्मलाइज</a> केले जाऊ शकते. </li>
+<li>आवाज कमी <b>करण्यापूर्वी</b> कोणतेही <a href="notch_filter.html" title="Notch Filter">नॉच फिल्टरिंग</a> किंवा <a href="click_removal.html" title="Click Removal">क्लिक रिमूव्हल</a>  करा.</li>
+<li>आवाज कमी <b>केल्यानंतर</b> वर उल्लेख न केलेले कोणतेही <a href="compressor.html" title="Compressor">कॉम्प्रेशन</a> किंवा इतर कोणतेही <a href="effect_menu.html" title="Effect Menu">प्रभाव</a> करा, आधी नाही.  </li></ul>
+<div id="chains"></div>
+<div id="macros"></div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b><a href="macros.html" title="Macros">मॅक्रोमध्‍ये</a> नॉइज रिडक्शन वापरताना</b> खालीलप्रमाणे प्रोफाईल कॅप्चर केले जाते.
+<ul><li> नॉइज प्रोफाईल अस्तित्वात असल्‍यास, तो नॉइज प्रोफाईल वापरला जाईल. मॅक्रो चालवण्याआधी योग्य नॉइज प्रोफाईल कॅप्चर करणे अनेकदा चांगले असते.</li>
+<li> नॉइज प्रोफाईल अस्तित्वात नसल्यास:
+<ul><li>सध्याच्या प्रकल्पवर मॅक्रो लागू केले असल्यास, सध्याच्या निवडीचा वापर नॉइज प्रोधारिका तयार करण्यासाठी केला जातो. त्यामुळे, मॅक्रोमधील इतर प्रभाव आदेश देखील फक्त त्या निवडीवर लागू होतील. निर्यात आदेश जोडल्यास, संपूर्ण धारिका निर्यात केली जाईल. </li>
+<li> जर मॅक्रो धारिकावर लागू केले असेल, तर पहिली धारिका (ते सर्व) नॉइज प्रोधारिका तयार करण्यासाठी वापरली जाते. योग्य नॉइज प्रोफाईल असलेली फाईल तयार करणे आणि तिला नाव देणे उपयुक्त ठरू शकते जेणेकरून मॅक्रोमध्ये चालवल्या जाणार्‍या धारिकापैकी ती वर्णक्रमानुसार पहिली धारिका असेल. </li></ul></li></ul>
+</td></tr></table>
+</div>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>कॅसेट टेपसह आवाज कमी करणे:</b> कॅसेट इतर स्त्रोतांपेक्षा थोड्या वेगळ्या आहेत कारण टेपच्या डोक्यावर घाण साचल्यामुळे, प्ले दरम्यान किंवा ध्वनीमुद्रित दरम्यान किंवा दोन्हीमुळे, टेपच्या दरम्यान आवाज प्रोधारिका बदलणे असामान्य नाही.
+<p>ऑड्यासिटीच्या नॉइज रिडक्शनची कार्यक्षमता ऑप्टिमाइझ करण्यासाठी टेपच्या सुरवातीला शेवटच्या ऐवजी आवाजाचा नमुना वापरणे चांगले. टेपमध्ये उशीरा नमुना वापरल्याने काहीवेळा आवाज आणि सिग्नल यांच्यात कमी भेदभाव होतो, कारण काही उच्च वारंवारता आवाज गहाळ किंवा विस्तारमध्ये कमी होईल.
+</p>
+</td></tr></table>
+</div>
+<div id="advanced"></div>
+<div class="note">
+<h3><span class="mw-headline" id="Advanced_Tips">प्रगत टिपा</span></h3>
+<ul><li>नॉइस रिडक्शनमध्ये वापरल्या जाणार्‍या <i><b><a href="glossary.html#algorithm" title="Glossary">अल्गोरिदमच्या</a></b></i> अधिक तांत्रिक स्पष्टीकरणासाठी विकीमध्ये <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/How_Audacity_Noise_Reduction_Works#algorithm">नॉईज रिडक्शन अल्गोरिदम</a> पहा. </li>
+<li><a href="sample_workflow_for_lp_digitization.html" title="Sample workflow for LP digitization">एलपी डिजिटलायझेशनसाठी नमुना वर्कफ्लो</a> देखील पहा जे आपल्या ध्वनि पुनर्संचयनाच्या नियमिततेचा भाग म्हणून वापरू शकतील अशा काही <a href="sample_workflow_for_lp_digitization.html#alternative" title="Sample workflow for LP digitization">पर्यायी आवाज कमी करण्याच्या सॉफ्टवेअरची</a> यादी करतात.</li></ul>
+</div>
+<h2><span class="mw-headline" id="Limitations">मर्यादा</span></h2>
+<ul><li> गीतपट्ट्यामध्ये नॉइज प्रोफाईल एका नमुना दराने घेतल्याने दुसर्‍या गीतपट्ट्यामधील आवाज वेगळ्या दराने काढून टाकल्यास खराब परिणाम मिळतील आणि त्यामुळे "नॉईस प्रोफाईलचा नमुना दर प्रक्रिया करण्याच्या ध्वनीशी जुळला पाहिजे" या त्रुटीसह प्रतिबंधित आहे.</li>
+<li> सर्व नॉईज प्रोफाईल माहितीमध्ये समान नमुना दर असणे आवश्यक आहे या त्रुटीसह भिन्न नमुना दरांवर दोन किंवा अधिक गीतपट्ट्यावर नॉईज प्रोधारिका घेणे प्रतिबंधित आहे.  </li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Alternative_Noise_Reduction_Techniques"><a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">पर्यायी आवाज कमी करण्याचे तंत्र</a></span></h2>
+<p>कृपया काही अतिरिक्त आवाज कमी करण्याच्या तंत्रांसाठी <a href="alternative_noise_reduction_techniques.html" title="Alternative Noise Reduction Techniques">हे पृष्ठ</a> पहा.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> प्रभाव, जनरेटर आणि विश्लेषकांची अनुक्रमणिका</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> प्रभाव यादी</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

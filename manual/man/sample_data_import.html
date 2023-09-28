@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>नमुना माहिती आयात - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Sample_Data_Import rootpage-Sample_Data_Import skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">नमुना माहिती आयात</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Sample_Data_Import#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+<div class="intro"><i><b>नमुना माहिती आयात</b></i><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Plain_text">साध्या ASCII मजकूर</a> धारिकामधून अंकीय मूल्ये वाचतो आणि वाचलेल्या प्रत्येक अंकीय मूल्यासाठी <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Pulse-code_modulation">PCM</a> नमुना तयार करतो. मूल्ये 32-बिट <a rel="nofollow" class="external text" href="http://www.webopedia.com/TERM/F/floating_point_number.html">फ्लोटिंग पॉइंट संख्या</a> म्हणून वाचली जातात, जिथे +/- 1.0 ची श्रेणी 0 dB (पूर्ण पट्टी) दर्शवते.
+<ul><li> धारिका साधा ASCII मजकूर असणे आवश्यक आहे आणि मूल्ये स्पेस, टॅब किंवा लाइन-ब्रेकद्वारे विभक्त केली जावीत.</li>
+<li> धारिका नावामध्ये '.txt' धारिका विस्तार असणे आवश्यक आहे.</li></ul>
+सहचर साधन <a href="sample_data_export.html" title="Sample Data Export">नमुना माहिती निर्यात</a> देखील पहा.</div>
+<dl><dd><b>द्वारा प्रवेश:</b> <span class="menu">साधने &gt;  नमुना माहिती आयात...</span></dd>
+<dd><span title="Sample Data Import generator dialog"><img alt="Sample Data Import.png" src="../m/images/2/2c/sample_data_import.png" width="573" height="182" /></span></dd></dl>
+<h2><span class="mw-headline" id="Select_file">धारिका निवडा</span></h2>
+<p>नमुना माहिती आयात करण्यासाठी वापरण्यासाठी धारिका नाव आणि धारिका स्थान निवडण्यासाठी याचा वापर करा
+</p>
+<h3><span class="mw-headline" id="File_name">धारिकेचे नाव</span></h3>
+<p>वरून माहिती आयात करण्यासाठी धारिकेचे नाव. धारिकेचे नाव <i><b><a href="glossary.html#extension" title="Glossary">विस्तार</a></b></i> <b>.txt</b> ची आवश्यक आहे.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Warningicon.png" class="image" title="Warning icon"><img alt="Warning icon" src="../m/images/b/ba/warningicon.png" width="24" height="24" /></a>
+</td>
+<td align="left" valign="top"> आयात करण्यासाठी धारिकेमध्ये फक्त साधा ASCII मजकूर असणे आवश्यक आहे. साध्या एएससीआयआय मजकूरशिवाय इतर धारिका समर्थित नाहीत.
+</td></tr></table></div>
+<h3><span class="mw-headline" id="File_location_.28path_to_file.29">धारिका स्थान (धारिकेचा मार्ग)</span></h3>
+<p>ही निर्देशिका (फोल्डर) आहे जेथे नमुना माहिती आयात नामित मजकूर धारिका शोधेल. धारिका सापडली नाही तर प्लग-इन रद्द होईल आणि एक त्रुटी दर्शविली जाईल.
+</p>
+<h3><span class="mw-headline" id="Default_file_name_and_path">पूर्वनिर्धारित धारिका नाव आणि पथ</span></h3>
+<p>पूर्वनिर्धारित धारिकानाव / धारिकापथ सामान्यत: असते:
+</p>
+<ul><li> <b>विंडोज</b>: C:\\Users\\&lt;username&gt;\\Documents\\Audacity\\sample-data.txt</li>
+<li> <b>मॅक</b>: /Users/&lt;username&gt;/Documents/sample-data.txt</li>
+<li> <b>लिनक्स</b>: /home/&lt;username&gt;/Documents/sample-data.txt</li></ul>
+<p><span class="button">धारिका निवडा</span> बटण वापरणे हा इनपुट धारिका निवडण्याचा शिफारस केलेला मार्ग आहे. धारिका पथ मजकूर स्वतः टाइप किंवा संपादित केला जाऊ शकतो, तरीही त्रुटी टाळण्यासाठी काळजी घेणे आवश्यक आहे.
+</p>
+<h2><span class="mw-headline" id="Invalid_data_handling">अवैध माहिती हाताळणी</span></h2>
+<p>निर्दिष्ट मजकूर फाईलमध्ये सामान्यतः फक्त संख्या असणे आवश्यक आहे (खाली पहा: <i><b><a href="#data-format">माहिती स्वरूप</a></b></i>). फाईलमध्ये अवैध माहिती असल्यास (नॉन-न्यूमेरिक टेक्स्ट), हा अवैध माहिती हाताळला जाऊ शकतो असे दोन मार्ग आहेत:
+</p>
+<ol><li> <b> त्रुटी काढून टाका(पूर्वनियोजित):</b>
+<dl><dd> अंकीय मूल्य म्हणून वाचता येणार नाही असा कोणताही मजकूर प्रभाव रद्द करेल आणि त्रुटी संदेश प्रदर्शित करेल. त्रुटी संदेश अवैध मजकूर प्रदर्शित करण्याचा प्रयत्न करेल.</dd></dl></li>
+<li> <b>शून्य म्हणून वाचा:</b>
+<dl><dd> अंकीय मूल्य म्हणून वाचता येणार नाही असा कोणताही मजकूर शून्य (मूक) नमुना मूल्य तयार करेल. तृतीय पक्ष अनुप्रयोगाद्वारे व्युत्पन्न केलेला माहिती वाचण्याचा प्रयत्न करताना हे उपयुक्त ठरू शकते जे उदाहरणार्थ, "अनंत" मूल्ये निर्माण करू शकतात.</dd></dl></li></ol>
+<p><br />
+</p>
+<div id="data-format"></div>
+<h2><span class="mw-headline" id="Data_format">माहिती स्वरूप</span></h2>
+<p>नमुना माहिती केवळ साधा ASCII मजकूर असावा आणि केवळ संख्यात्मक मूल्ये असावीत. दशांश विभाजक कालावधी असणे आवश्यक आहे. मूल्ये 32-बिट फ्लोट संख्या म्हणून वाचली जातात, जिथे +/- 1.0 ची श्रेणी 0 dB (पूर्ण पट्टी) दर्शवते.
+</p><p>मूल्ये यापैकी एकाने विभक्त करणे आवश्यक आहे:
+</p>
+<ol><li> एक किंवा अधिक जागा.</li>
+<li> एक किंवा अधिक टॅब.</li>
+<li> एक किंवा अधिक रेषा तुटतात.</li>
+<li> वरीलपैकी कोणतेही संयोजन.</li></ol>
+<p>कोणत्याही त्रुटी आढळल्या नाहीत असे गृहीत धरून, <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/End-of-file">फाईलच्या शेवटी</a> माहिती आयात समाप्त होते.
+</p>
+<h3><span class="mw-headline" id="Number_of_channels">चॅनेलची संख्या</span></h3>
+<p>जर प्रभाव उघडण्यापूर्वी स्टिरिओ गीतपट्टा निवडला असेल, तर माहिती स्टिरिओ आहे असे गृहीत धरले जाईल, अन्यथा माहिती मोनो मानला जाईल.
+</p><p>स्टिरीओ माहिती इंटरलीव्ह केलेला असणे आवश्यक आहे (वैकल्पिक डावे/उजवे नमुना मूल्य).
+</p>
+<h3><span class="mw-headline" id="Data_comments">माहिती टिप्पण्या</span></h3>
+<p>फाईलमध्ये सेमीकोलनसह टिप्पणीच्या आधी टिप्पण्या समाविष्ट केल्या जाऊ शकतात. अर्धविराम आणि ओळीच्या शेवटी सर्व मजकूर दुर्लक्षित केला जातो. "नमुना माहिती निर्यात" मधून आधीच निर्यात केलेल्या फायली ज्या त्यांच्या मजकूर शीर्षलेखांशिवाय नमुना माहिती आयातशी <a href="#sde_data">सुसंगत</a> आहेत अशा प्रकारे अर्धविरामासह प्रत्येक शीर्षलेख ओळीच्या आधी पूर्वनियोजित "त्रुटी काढून टाका" हाताळणीसह उत्तम प्रकारे आयात केल्या जाऊ शकतात.
+</p><p><br />
+</p>
+<h2><span class="mw-headline" id="Obtaining_suitable_data">योग्य माहिती मिळवत आहे</span></h2>
+<p>योग्य फॉरमॅटमध्ये माहिती तयार करण्याचा एक सोपा मार्ग म्हणजे <a href="sample_data_export.html" title="Sample Data Export">सॅम्पल माहिती निर्यात</a> प्रभाव वापरणे. वैकल्पिकरित्या, माहिती तृतीय पक्ष अनुप्रयोगांमधून, स्प्रेडशीट माहितीवरून किंवा मजकूर संपादकात माहितीपुस्तिकाी टाइप केला जाऊ शकतो.
+</p>
+<div id="sde_data"></div>
+<h3><span class="mw-headline" id="Obtain_data_from_.27Sample_Data_Export.27">'नमुना माहिती निर्यात' मधून माहिती मिळवा</span></h3>
+<p><a href="sample_data_export.html" title="Sample Data Export">नमुना माहिती निर्यात</a> कडून योग्य माहिती मिळविण्यासाठी, खालील समायोजन सुनिश्चित करा:
+</p>
+<ul><li> <b>मापन मोजमाप:</b> "रेखीय"</li>
+<li> <b>धारिका माहिती स्वरूप:</b> "नमुना यादी (txt)"</li>
+<li> <b>शीर्षलेख माहिती समाविष्ट करा:</b> "काहीही नाही"</li>
+<li> <b>पर्यायी शीर्षलेख मजकूर:</b> काहीही नाही (रिक्त)</li>
+<li> <b>स्टिरिओसाठी चॅनल लेआउट:</b> "एल-आर ऑन सेम लाईन" किंवा "पर्यायी रेषा"</li>
+<li> <b>फाईलचे नाव:</b>  ".txt" ने समाप्त होणे आवश्यक आहे किंवा ".txt" स्वयंचलितपणे जोडले जाण्यासाठी रिक्त सोडले पाहिजे</li></ul>
+<p><br />
+</p>
+<h2><span class="mw-headline" id="Buttons">बटणे</span></h2>
+<p>आज्ञा बटणावर क्लिक केल्याने खालील परिणाम मिळतात:
+</p>
+<ul><li><span class="button">व्यवस्थापित करा</span> एक ड्रॉपडाउन यादी देते जे तुम्हाला साधनसाठी प्रीसेट व्यवस्थापित करण्यास आणि साधनबद्दल काही तपशील पाहण्यास सक्षम करते. तपशीलांसाठी <a href="manage_presets.html" title="Manage presets">प्रीसेट व्यवस्थापित करा</a>पहा </li>
+<li><span class="button">डीबग करा</span> वर्तमान प्रभाव सेटिंग्जसह निवडलेल्या ध्वनिवर प्रभाव लागू करते, परंतु <span class="button">ठीक आहे</span> च्या विपरीत प्रभाव डीबग मोडमध्ये चालतो. <a rel="nofollow" class="external text" href="http://wiki.audacityteam.org/wiki/Nyquist_Plug-ins_Reference">Nyquist प्लग-इन</a> लिहिताना किंवा संपादित करताना हे प्रामुख्याने वापरले जाते.
+<ul><li>सामान्य प्लग-इन वर्तनाव्यतिरिक्त, त्रुटी संदेश प्रदर्शित करण्यासाठी "डीबग विंडो" उघडते, सामान्यतः डीबग विंडो रिकामी असेल</li></ul></li>
+<li><span class="button">ठीक आहे</span> वर्तमान प्रभाव रचनासह निवडलेल्या ध्वनीवर प्रभाव लागू करते आणि संवाद बंद करते</li>
+<li><span class="button">रद्द करा</span> प्रभाव रद्द करते आणि ध्वनि अपरिवर्तित ठेवते, संवाद बंद करते</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> तुम्हाला माहितीपुस्तिकामधील योग्य पानावर, या पृष्ठावर आणते</li></ul>
+<p><br />
+</p>
+<div id="example"></div>
+<h2><span class="mw-headline" id="Examples">उदाहरणे</span></h2>
+<div class="example"><br />
+<p>खालील माहिती 1000 Hz मोनो <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Sine_wave">साइन वेव्ह</a>च्या दोन चक्रांचे प्रतिनिधित्व करतो, विस्तार 0.5:
+</p>
+<div class="codenew">
+<p>&#59;ही एक टिप्पणी आहे आणि त्याकडे दुर्लक्ष केले जाईल.<br />
+0.07100 0.14056 0.20727 0.26978 0.32682 0.37724 0.42001 0.45428 0.47933 0.49468 0.50000 0.49518 0.48034 0.45575 0.42193 0.37957 0.32951 0.27277 0.21050 0.14397 0.07452 0.00356 -0.06747 -0.13713 -0.20402 -0.26677 -0.32411 -0.37489 -0.41807 -0.45278 -0.47831 -0.49415 -0.49997 -0.49566 -0.48131 -0.45721 -0.42384 -0.38188 -0.33218 -0.27575 -0.21373 -0.14738 -0.07804 -0.00712 0.06394 0.13370 0.20076 0.26375 0.32139 0.37252 0.41611 0.45125 0.47726 0.49359 0.49992 0.49612 0.48226 0.45864 0.42571 0.38416 0.33483 0.27871 0.21694 0.15078 0.08156 0.01068 -0.06040 -0.13027 -0.19749 -0.26072 -0.31866 -0.37014 -0.41412 -0.44971 -0.47618 -0.49301 -0.49984 -0.49655 -0.48319 -0.46004 -0.42757 -0.38643 -0.33747 -0.28166 -0.22015 -0.15417 -0.08507 -0.01425 
+</p>
+</div>
+<p><br />
+खाली दिलेला माहिती डावीकडील वाहिनीमधील ० ते १ पर्यंत रॅम्प आणि उजव्या वाहिनीमधील ० ते -१पर्यंतचा रॅम्प असलेल्या स्टीरिओ गीतपट्ट्याचे प्रतिनिधित्व करतो:
+</p>
+<div class="codenew">
+<p>0.00000	-0.00000<br />
+0.10000	-0.10000<br />
+0.20000	-0.20000<br />
+0.30000	-0.30000<br />
+0.40000	-0.40000<br />
+0.50000	-0.50000<br />
+0.60000	-0.60000<br />
+0.70000	-0.70000<br />
+0.80000	-0.80000<br />
+0.90000	-0.90000<br />
+1.00000 -1.00000<br />
+</p>
+</div>
+<br /></div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

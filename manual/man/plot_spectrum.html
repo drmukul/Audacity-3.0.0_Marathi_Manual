@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>प्लॉट स्पेक्ट्रम - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Plot_Spectrum rootpage-Plot_Spectrum skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">प्लॉट स्पेक्ट्रम</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Plot_Spectrum#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+
+<div class="intro"><i><b>प्लॉट स्पेक्ट्रम</b></i> निवडलेला ध्वनि (जे वेळेनुसार बिंदूंवर ध्वनि दाब मूल्यांचा एक संच आहे) घेते आणि त्याचे <i><b><a href="glossary.html#amplitude" title="Glossary">विस्तार</a></b></i> (<i><b><a href="glossary.html#decibel" title="Glossary">dB</a></b></i> मधील उभी पट्टी) विरुद्ध फ्रिक्वेन्सीच्या आलेखामध्ये (<i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> मध्ये आडवे पट्टी) रूपांतरित करते.</div>
+<dl><dd><b>द्वारे प्रवेश:</b> <span class="menu">विश्लेषण &gt; प्लॉट स्पेक्ट्रम...</span></dd>
+<dd><span title="Plot Spectrum effect dialog"><img alt="Plot Spectrum.png" src="../m/images/b/b7/plot_spectrum.png" width="496" height="562" /></span></dd></dl>
+<p> <i><b><a href="glossary.html#ft" title="Glossary">फास्ट फूरियर ट्रान्सफॉर्म</a></b></i> किंवा <i><b><a href="glossary.html#fft" title="Glossary">एफएफटी</a></b></i> म्हणून ओळखले जाणारे गणिती <i><b><a href="glossary.html#algorithm" title="Glossary">अल्गोरिदम</a></b></i> वापरून भूखंड तयार केले जातात. हे फ्रिक्वेन्सीच्या प्रत्येक अरुंद बँडसाठी मूल्य देते जे त्या वारंवारताकिती उपस्थित आहे हे दर्शवते. त्यानंतर आलेख तयार करण्यासाठी सर्व मूल्ये इंटरपोलेट केली जातात.
+</p><p>प्लॉट स्पेक्ट्रम 'आकार' नमुन्यांच्या ब्लॉकमध्ये ध्वनि घेते, एफएफटी करते आणि सर्व ब्लॉक्सची सरासरी एकत्र करतात.
+</p>
+<div id="algorithm"></div>
+<h2><span class="mw-headline" id="Algorithm">अल्गोरिदम</span></h2>
+<p>ध्वनी माहितीवर कोणत्या प्रकारची प्रक्रिया केली जाते ते निर्धारित करते.
+</p>
+<ul><li><b>स्पेक्ट्रम:</b> (पुर्वनिर्धारित) - वर वर्णन केल्यानुसार माहितीची एफएफटी प्लॉट करा. मोठेपणा अशा प्रकारे सामान्य केले जातात की आलेखावर 0 dB साइन (शुद्ध टोन) (अंदाजे) 0 dB असेल.</li>
+<li><b>स्वयंचलित रचना:</b> हे पर्याय ध्वनीची पुनरावृत्ती किती प्रमाणात करतात हे मोजतात. ध्वनीच्या दोन प्रती घेऊन आणि एकास एका नमुन्याद्वारे पुढे नेऊन हे केले जाते. त्यानंतर दोन प्रती एकत्र केल्या आणि सर्व मूल्ये जोडली जातात. हे <b>आकार</b> पर्यायातील नमुन्यांच्या संख्येपर्यंत दोन नमुन्यांच्या भिन्नतेसाठी पुनरावृत्ती होते. जर लहरींचे स्वरूप यादृच्छिक असेल तर एक छोटासा निकाल (उदाहरणार्थ, आवाज) आणि पुनरावृत्तीचा असल्यास मोठा परिणाम (संगीतमय नोट प्रमाणे). कथानकामधील शिखरे पाहून, तेथे असलेल्या मुख्य आवृत्त्यांवरून पुष्कळ आवाज येत असला तरीही निश्चित केले जाऊ शकते.</li>
+<li><b>सेपस्ट्रम</b>: ध्वनि सिग्नलचा सेपस्ट्रम स्पेक्ट्रमशी संबंधित आहे, परंतु वेगवेगळ्या स्पेक्ट्रम बँडमधील बदलाचा दर सादर करतो. हे विशेषतः व्होकल गीतपट्ट्याच्या गुणधर्मांसाठी उपयुक्त आहे आणि वापरले जाते, उदाहरणार्थ, सॉफ्टवेअरमध्ये स्पीकर्सना त्यांच्या आवाजाच्या वैशिष्ट्यांनुसार ओळखण्यासाठी.</li></ul>
+<div id="size"></div>
+<h2><span class="mw-headline" id="Size">आकार</span></h2>
+<p>हे स्पेक्ट्रमसाठी किती फ्रिक्वेंसी डिव्हिजन वापरले जातात किंवा किती नमुने ऑटोकॉरिलेशनसाठी वापरले जातात हे नियंत्रित करते. स्पेक्ट्रममध्ये, मोठा आकार अधिक अचूक वारंवारतारिझोल्यूशन (अरुंद बँड) देतो, परंतु दीर्घ कालावधीसाठी निकालाची सरासरी काढतो (कारण गणनासाठी अधिक नमुने आवश्यक आहेत). ऑटोकॉरिलेशनमध्ये, मोठा आकार वेळ ऑफसेटच्या मोठ्या श्रेणीवर पुनरावृत्ती नमुने शोधतो आणि त्यामुळे कमी वारंवारता नमुने शोधतात. एकतर अल्गोरिदमसह, निवडलेला प्रदेश निवडलेल्या आकारासाठी खूप लहान असल्यास ऑड्यासिटी चेतावणी दर्शवेल.
+</p>
+<div class="note">अनिश्चिततेच्या तत्त्वाची ध्वनि आवृत्ती आहे जी "फ्रिक्वेंसी_रिझोल्यूशन*टाइम_रिझोल्यूशन = 2" म्हणते. <b>आकार</b> तुम्हाला FFT आकार निवडू देतो जे विश्लेषण करण्यासाठी लागोपाठ ध्वनि नमुन्यांची संख्या आहे. तुम्ही १०२४ नमुने निवडल्यास, तुम्हाला ५१२ <i><b><a href="glossary.html#frequency" title="Glossary">वारंवारता</a></b></i> बिन मिळतील जे सॅम्पलिंग फ्रिक्वेन्सीच्या अर्ध्यापर्यंत वारंवारता श्रेणी व्यापतील. बहुतेक प्रकल्प 44100 Hz सॅम्पलिंग वारंवारता वापरतात. अशा प्रकारे, या उदाहरणात, Time_Resolution = 1024/44.1 = 23.2 मिलीसेकंद आणि वारंवारता रिझोल्यूशन 44100/2/512 = 43 <i><b><a href="glossary.html#hz" title="Glossary">Hz</a></b></i> आहे.</div>
+<div id="function"></div>
+<h2><span class="mw-headline" id="Function">कार्य</span></h2>
+<p>फंक्शन आयताकृती, हॅनिंग, हॅमिंग आणि इतर सारखे पर्याय ऑफर करते. आम्ही सुचवितो की तुम्ही पूर्वनियोजित हॅनिंग वापरा (खरेतर ती हॅन विंडो आहे, परंतु हॅनिंग मोठ्या प्रमाणावर स्वीकारली जाते) बहुतेक परिस्थितींसाठी. येथे काम करताना मूलभूत तत्त्व हे आहे की आपण आपल्या माहितीचे निरीक्षण करण्याच्या पद्धतीमुळे आपण जे पाहतो ते बदलते. तुमच्या प्रकल्पाचा "खरा स्पेक्ट्रम" संपूर्ण प्रकल्पावर मोजला जाईल आणि अतिशय तपशीलवार वारंवारता रिझोल्यूशन प्रदान करेल परंतु मूलत: वेळेचे निराकरण नाही. दुसऱ्या शब्दांत, हा "खरा स्पेक्ट्रम" संपूर्ण प्रकल्पावर सरासरी वारंवारता वितरण देईल. जर आम्ही ध्वनीचा एक छोटा इंटरव्हल निवडला, तर शॉर्ट-टाइम <i><b><a href="glossary.html#spectrum" title="Glossary">स्पेक्ट्रमचे</a></b></i> फ्रिक्वेंसी रिझोल्यूशन निरीक्षण विंडोच्या वेळेनुसार मर्यादित असते आणि परिणाम विंडोच्या स्पेक्ट्रमवरच परिणाम होतो. सामान्य ध्वनि विश्लेषणासाठी, आयताकृती विंडो कमीतकमी इष्ट आहे आणि इतर पर्याय थोडे वेगळे प्रभाव देतात.
+</p>
+<div class="note">
+<ul><li> सध्या, निवडलेल्या ध्वनीपैकी केवळ प्रथम 10485760 नमुने (44100 हर्ट्झ नमुना दरावरील 237.8 सेकंद) चे विश्लेषण केले जाऊ शकते.</li>
+<li> स्पेक्ट्रम विश्लेषण सर्व निवडलेल्या चॅनेलची बेरीज दाखवते, त्यामुळे स्टिरिओ गीतपट्ट्यामध्ये डाव्या आणि उजव्या चॅनेलची बेरीज दाखवते. एकसारखे ध्वनि असलेले दोन निवडक चॅनेल असल्यास, एक चॅनेल निवडले असल्यास समान शिखर 6 dB जास्त असेल. </li></ul>
+</div>
+<div id="axis"></div>
+<h2><span class="mw-headline" id="Axis">अक्ष</span></h2>
+<p>स्पेक्ट्रम वापरताना, वारंवारता <i><b><a href="glossary.html#log" title="Glossary">लॉगरिदमिक</a></b></i> पट्टी (पूर्वनियोजित) किंवा <i><b><a href="glossary.html#linear" title="Glossary">रेखीय</a></b></i> पट्टीवर प्रदर्शित केल्या जाऊ शकतात. पूर्वनियोजित लॉग पट्टी आलेखाच्या मध्यभागी असलेल्या "मध्य श्रेणी" फ्रिक्वेन्सीसह कमी आणि मध्यम-श्रेणी फ्रिक्वेन्सीला जास्त प्रदर्शन रुंदी देते. रेखीय दृश्य (जे पट्टीवर प्रत्येक <i><b><a href="glossary.html#hz" title="Glossary">"Hz"</a></b></i> वाढीला समान रुंदी देते), उच्च हार्मोनिक्स (ध्वनीची एक घटक वारंवारता जी मूलभूत वारंवारतेच्या पूर्ण संख्येच्या पटीत असते) किंवा इतर अतिशय उच्च वारंवारता सामग्री दर्शवण्यासाठी उपयुक्त ठरू शकते.
+</p>
+<div id="zoom"></div>
+<h2><span class="mw-headline" id="Zooming">झूम करत आहे</span></h2>
+<p>स्पेक्ट्रमच्या उजवीकडे स्पेक्ट्रम प्लॉटचे झूमिंग नियंत्रित करण्यासाठी दोन घसरपट्टी आहेत:
+</p>
+<ul><li>भिंगाच्या चिन्हांसह उजवीकडे झूम स्लाइडर. प्लॉट केलेल्या स्पेक्ट्रमचे उभी विस्तार वाढवण्यासाठी हे वर हलवा आणि ते कमी करण्यासाठी पुन्हा खाली करा.</li>
+<li>स्क्रोल पट्टी, झूम स्लाइडरच्या डावीकडे. पूर्वनियोजित सामान्य झूममध्ये हे स्लायडर भरते आणि ते कार्य करू शकत नाही परंतु जसे तुम्ही उभ्या विस्तार वाढवता स्क्रोलपट्टी संकुचित होतो आणि मॅग्निफाइड स्पेक्ट्रम प्लॉटचे वेगवेगळे भाग दर्शविण्यासाठी वर आणि खाली हलविले जाऊ शकते.</li></ul>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">बटणे</span></h2>
+<ul>
+<li id="export"><b><span class="button">निर्यात करा...</span></b> स्पेक्ट्रम मजकूर धारिकामध्ये निर्यात करते. पुढील विश्लेषणासाठी तुम्ही ही मजकूर धारिका दुसर्‍या अॅप्लिकेशनमध्ये उघडू शकता. लक्षात ठेवा की तुम्ही त्याच धारिकावर पुन्हा निर्यात केल्यास, नवीन स्पेक्ट्रम मागील धारिकाच्या खाली जोडला जाईल.
+<li id="replot"><b><span class="button">रिप्लॉट</span></b> निवड बदलते तेव्हा तुम्हाला स्पेक्ट्रम पुन्हा प्लॉट करण्याची परवानगी देते.
+<li id="close"><b><span class="button">बंद करा</span></b> वारंवारता विश्लेषण विंडो बंद करते आणि त्याची वर्तमान रचना जतन करते. त्यानंतर तुम्ही नवीन प्रकल्प उघडल्यास आणि त्या प्रकल्पमध्ये विश्लेषण विंडो उघडल्यास, शेवटच्या बंद केलेल्या विश्लेषण विंडोद्वारे जतन केलेली रचना वापरली जातील.
+<li id="help"> <img alt="Help Button.png" src="../m/images/d/d6/help_button.png" width="27" height="27" /> या "प्लॉट स्पेक्ट्रम" पृष्ठाच्या दुवे. </ul>
+<div class="note">तुम्ही विश्लेषण विंडो इतर कोणत्याही प्रकारे बंद केल्यास (जसे की ऑपरेटिंग सिस्टमचे विंडो बंद करा बटण किंवा <span class="menu">धारिका &gt; <a href="file_menu.html#close" title="File Menu">बंद करा</a></span>), तुम्ही विश्लेषण विंडो वापरत असलेला प्रकल्प बंद करता तेव्हा विश्लेषण रचना टाकून दिल्या जातात. तुम्ही सामान्यत: वापरत नसलेल्या रचनासह ध्वनीचे परीक्षण करत असल्यास ऑड्यासिटी <span class="button">क्लोज</span> बटणाव्यतिरिक्त इतर वापरणे उपयुक्त ठरू शकते. नवीन प्रकल्पमध्ये तुम्ही उघडलेली पुढील विश्लेषण विंडो नंतर तुमची सामान्य जतन केलेली रचना वापरेल.</div> 
+<div id="grids"></div>
+<h3><span class="mw-headline" id="Grids_.28checkbox.29">ग्रिड <i>(चेकबॉक्स)</i></span></h3>
+<p>मापन ग्रिड चालू आणि बंद करते.
+</p>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html#analyzers" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> प्रभाव, जनरेटर आणि विश्लेषकांची अनुक्रमणिका</a>
+</p><p><a href="analyze_menu.html" title="Analyze Menu"><b>|&lt;</b> विश्लेषण यादी</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>संपादनासाठी ध्वनि निर्देशित करणे आणि ओळखणे - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Navigation_Tips rootpage-Navigation_Tips skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">संपादनासाठी ध्वनि निर्देशित आणि ओळखणे</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Navigation_Tips#searchInput">शोध</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+
+
+<div class="intro">हे पृष्ठ लहरींचे स्वरूप किंवा गीतपट्टे कसे निर्देशित करायचे (प्लेबॅक स्थिती हलविण्यासह) आणि संपादन बिंदू कसे शोधायचे आणि चिन्हांकित कसे करायचे ते स्पष्ट करते, जेणेकरून तुम्हाला संपादित करायचा असलेला ध्वनि ओळखता येईल.
+<ul><li>प्लेबॅक आवाज कसा पाहायचा आणि समायोजित कसा करायचा यावरील टिपांसाठी आणि सुरळीत प्लेबॅक गुणवत्ता प्राप्त करण्यासाठी, <a href="playback_tips.html" title="Playback Tips">प्लेबॅक टिपा</a> पहा.</li>
+<li>माऊस न वापरता प्रभाव कसे नेव्हिगेट करायचे यावरील टिपांसाठी <a href="navigating_effects_without_using_a_mouse.html" title="Navigating Effects without using a mouse">माऊस न वापरता निर्देशन प्रभाव</a></div> पहा </li></ul>
+<h2><span class="mw-headline" id="Contents">सामग्री</span></h2>
+<ol><li><a href="#navigation">निर्देशन</a>
+<ul><li><a href="#play_pos">प्लेबॅक स्थिती बदलत आहे</a></li>
+<li><a href="#zoom">झूम करत आहे</a></li>
+<li><a href="#start">निवडीच्या सुरुवातीवर / शेवटा वर जा</a></li>
+<li><a href="#multitrack">अनेक गीतपट्टे निर्देशित करत आहे</a></li></ul></li>
+<li><a href="#find">आपण संपादित करू इच्छित ध्वनि शोधत आहे</a></li>
+<li><a href="#edit">संपादन प्रांत किंवा बिंदू चिन्हांकित करीत आहे</a>
+<ul><li><a href="#createmod">निवडी तयार करणे आणि सुधारित करणे</a></li>
+<li><a href="#labels">नावपपट्ट्या</a></li>
+<li><a href="#labnav">नावपट्टी गीतपट्टा वापरुन निर्देशित करत आहे</a></li>
+<li><a href="#clips">क्लिप्स</a></li></ul></li></ol>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">या विभागात नमूद केलेले सर्व कीबोर्ड सोपा मार्ग सक्षम करण्यासाठी, <a href="keyboard_preferences.html#file" title="Keyboard Preferences">कीबोर्ड प्राधान्यांमध्ये</a> <span class="button">पूर्वनियोजित</span> सोपा मार्गचा "पूर्ण" संच निवडा.
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<div id="navigation"></div>
+<h2><span class="mw-headline" id="Navigation">निर्देशन</span></h2>
+<div class="note"><b>मॅक वापरकर्ते:</b> <span class="kbrd" style="background-color: #e0e0f0">Ctrl</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984;</span> आणि <span class="kbrd" style="background-color: #e0e0f0">Alt</span> = <span class="kbrd" style="background-color: #e0e0f0">Option</span>. तर, उदाहरणार्थ, <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Alt + V</span> = <span class="kbrd" style="background-color: #e0e0f0">&#8984; + Option + V</span></div>
+<div id="play_pos"></div>
+<h3><span class="mw-headline" id="Changing_playback_position">प्लेबॅक स्थिती बदलत आहे</span></h3>
+<p>जेव्हा तुम्ही <span class="kbrd" style="background-color: #d0d0f8">स्पेस</span> दाबता किंवा प्ले बटण वापरता तेव्हा ऑड्यासिटी नेहमी <b>कर्सरची स्थिती</b> किंवा <b>निवडलेले क्षेत्र</b> कोठे आहे तेथून प्ले होते. प्लेबॅक थांबवण्यासाठी स्टॉप बटण किंवा <span class="kbrd" style="background-color: #d0d0f8">स्पेस</span> वर क्लिक करा. पुढे प्ले किंवा <span class="kbrd" style="background-color: #d0d0f8">स्पेस</span> वर क्लिक केल्याने मूळ कर्सर स्थिती किंवा मूळ निवडीच्या सुरुवातापासून प्लेबॅक पुन्हा सुरू होतो.
+</p><p>तुम्ही याद्वारे कर्सरची स्थिती मागे किंवा पुढे कुठेही दृश्यमान स्क्रीनवर हलवू शकता:
+</p>
+<ul><li> आपल्या कीबोर्डवरील <span class="kbrd" style="background-color: #d0d0f8">डाव्या</span> बाण किंवा <span class="kbrd" style="background-color: #d0d0f8">उजव्या</span> बाण की सह कर्सर हलवित आहे</li>
+<li> ((द्रुत) आपल्या माउससह इच्छित बिंदूवर गीतपट्ट्यावर क्लिक करून</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">होम</span> की किंवा प्ले बटणाच्या डावीकडील <span class="button">&lt;&lt;</span> बटण प्रकल्पच्या सुरूवातीस वगळते</li>
+<li> स्टॉप बटणाच्या उजवीकडे <span class="kbrd" style="background-color: #d0d0f8">एंड</span> की किंवा <span class="button">&gt;&gt;</span>  बटण प्रकल्पच्या शेवटी वगळते. </li></ul>
+<p>नवीन बिंदूपासून प्लेबॅक सुरू करण्यासाठी, एकदा <span class="kbrd" style="background-color: #d0d0f8">स्पेस</span> दाबा. तुम्ही आधीच दुसर्‍या स्थानावर गीतपट्टा प्ले करत असल्यास, <span class="kbrd" style="background-color: #d0d0f8">S</span> दोनदा दाबा आणि तुमच्या नवीन निवडलेल्या कर्सर स्थानावरून प्लेबॅक पुन्हा सुरू होईल.
+</p>
+<h4><span class="mw-headline" id="Shortcuts_to_change_the_ongoing_playback_position">चालू प्लेबॅक स्थिती बदलण्यासाठी शॉटकट</span></h4>
+<p>दोन सोपा मार्गच्या आज्ञा देखील आहेत ज्यांच्याशी कोणताही यादी आयटम किंवा बटण नाही, ते सोपा मार्ग म्हणून अस्तित्वात आहेत. ध्वनि प्ले होत असताना हे तुम्हाला सध्याच्या प्लेबॅक स्थिती पुढील किंवा मागील नावपट्टीवर (नावपट्टी अस्तित्त्वात असल्यास) बदलण्यास सक्षम करतात:
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> कर्सर पुढील नावपट्टी निवड (किंवा बिंदू नावपट्टी) वर हलवते आणि तेथून प्लेबॅक सुरू ठेवतो</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> कर्सर मागील नावपट्टी निवड (किंवा बिंदू नावपट्टी) वर हलविते आणि तेथून प्लेबॅक सुरू ठेवतो.</li></ul>
+<p><br />
+</p>
+<div id="zoom"></div>
+<h3><span class="mw-headline" id="Zooming">झूम करत आहे</span></h3>
+<p>माऊसच्या साहाय्याने गीतपट्ट्यामधील वेगवेगळ्या स्थानावर जाण्यासाठी, तुम्ही <span class="menu">व्ह्यू &gt; ट्रॅकसाईज &gt; <a href="view_menu_track_size.html#fittowidth" title="View Menu: Track Size">फिट टू विड्थ</a></span> आज्ञा (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + F</span>) किंवा   <a href="edit_toolbar.html" title="Edit Toolbar">संपादन साधनपट्टीच्या</a> अगदी उजवीकडे <img alt="The Fit to Width tool" src="../m/images/4/4a/zoomfit.png" title="The Fit to Width tool" width="27" height="27" /> <b>फिट टू विड्थ</b> बटण वापरून पूर्ण झूम आउट केले असल्यास ते सोपे होईल.
+</p><p>गीतपट्टा झूम इन केला असल्यास, तुम्ही प्ले करण्यासाठी नवीन स्थान शोधण्यासाठी स्क्रीनच्या तळाशी आडवे स्क्रोल पट्टी ड्रॅग करू शकता, परंतु गीतपट्टा प्ले होत असताना तुम्ही हे करू शकत नाही, जोपर्यंत तुम्ही प्राधान्यांच्या <a href="tracks_preferences.html" title="Tracks Preferences">गीतपट्टा</a> विभागात जात नाही आणि '<b> हेड अनपिन केलेले असताना ऑटोस्क्रोल'</b> अनचेक करा. जर ते वैशिष्ट्य अनचेक केले असेल तर, एकदा हिरवा प्लेबॅक कर्सर विंडोच्या उजव्या काठावर गेला की, सध्याच्या प्लेबॅक स्थिती पाहण्यासाठी तुम्हाला नेहमी आडवे स्क्रोलपट्टी ओढावा लागेल किंवा संपूर्ण प्रकल्प विंडोमध्ये बसवावा जेणेकरून तुम्ही पाहू शकता. संपूर्ण गीतपट्टा पुन्हा स्क्रोल न करता.
+</p>
+<div id="start"></div>
+<h3><span class="mw-headline" id="Go_to_Selection_Start.2FEnd">निवडीच्या सुरुवातीवर / शेवटी जा</span></h3>
+<p><span class="menu">पहा &gt; येथे जा &gt; <a href="view_menu_skip_to.html#selectionstart" title="View Menu: Skip to">निवड सुरुवात</a></span> (सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Ctrl + [&#160;</span>) आणि <span class="menu">पहा &gt; वगळा &gt; <a href="view_menu_skip_to.html#selectionend" title="View Menu: Skip to">निवड समाप्त</a></span> (सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Ctrl + ]&#160;</span>) आपल्याला स्क्रीनवर मध्यभागी, आपल्या सध्याच्या निवडलेल्या ध्वनीच्या सुरूवातीस किंवा शेवटी जाण्यास द्रुतपणे जाऊ देते, स्क्रीन न बदलता झूम पातळी जर आपण निवडीच्या एका काठावर झूम वाढवित असाल आणि तर सध्या स्क्रीन नसलेली दुसरी किनारा पाहू इच्छित असाल किंवा आपण खूपच पुढे स्क्रोल करून निवडीची दृष्टी गमावली असेल तर हे आदेश उपयुक्त आहेत.
+</p><p>झूम इन किंवा आऊट नंतर कुठलीही आज्ञा वापरणे निवड काठावर झूम इन किंवा आउट करण्यासाठी कीबोर्ड पद्धत प्रदान करते. हे अन्यथा केवळ <b>नियंत्रणाद्वारे आणि माउस व्हील स्क्रोलद्वारे</b> शक्य आहे तर माऊस पॉईंटर दोन्हीपैकी एका निवड काठावर ठेवलेले असते.
+</p>
+<div id="multitrack"></div>
+<h3><span class="mw-headline" id="Navigating_multiple_tracks">अनेक गीतपट्टे निर्देशित करणे</span></h3>
+<p>आपल्याकडे स्क्रीनवर अनेक गीतपट्टे असल्यास आपण लहरींच्या स्वरूपाच्या बाजूने कोणत्याही बिंदूच्या प्रत्येक गीतपट्ट्याच्या खालच्या काठावर ड्रॅग करून वर स्क्रोल न करता स्क्रीन वर फिट करू शकता. किंवा आपण स्क्रीनमधील सर्व गीतपट्टे फिट करण्यासाठी <span class="menu">व्ह्यू &gt; ट्रॅकसाईज &gt; <a href="view_menu_track_size.html#fittoheight" title="View Menu: Track Size">फिट टू हाइट</a></span> आज्ञा वापरू शकता .
+</p><p>आपण माऊससह गीतपट्टा नियंत्रण पटल वर क्लिक करून आणि वर किंवा खाली ड्रॅग करुन गीतपट्टा वर आणि खाली हलवू शकता. वैकल्पिकरित्या, <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">गीतपट्टा ड्रॉपडाउन यादीच्या</a> शीर्षस्थानी खालच्या दिशेने बाण क्लिक करा आणि "गीतपट्टा अप हलवा" किंवा "गीतपट्टा डाउन हलवा" निवडा.
+</p><p>ऑड्यासिटी संपूर्णपणे कीबोर्डद्वारे गीतपट्टा आणि निवडलेले क्षेत्र हाताळू शकते. गीतपट्ट्यावर लक्ष केंद्रित करण्यासाठी  गीतपट्ट्याच्या आसपास रंगीत बॉर्डर दर्शविल्याप्रमाणे कीबोर्डवरील <span class="kbrd" style="background-color: #e0e0f0">अप</span> किंवा <span class="kbrd" style="background-color: #e0e0f0">डाऊन</span> की वापरा. नंतर गीतपट्टा निवडण्यासाठी किंवा निवड रद्द करण्यासाठी <span class="kbrd" style="background-color: #e0e0f0">एंटर</span> दाबा.
+</p><p>प्रत्येक गीतपट्टा नियंत्रण पटलच्या पायथ्याशी एक अतिरिक्त "रोल-अप" बटण (अपवर्ड पॉइंटिंग बाण) आहे:<br />
+</p>
+<dl><dd><span title="Audio track rolled down - Windows 7 Basic theme"><img alt="Rolldown.png" src="../m/images/d/db/rolldown.png" width="552" height="301" /></span>     </dd></dl>
+<p>आपण यावर क्लिक केल्यास गीतपट्टा गुंडाळला जाईल जेणेकरून गीतपट्ट्याचे नाव गीतपट्टा नियंत्रण पटलमध्येच दिसून येईल, म्हणून स्क्रोल न करता बर्‍याच गीतपट्टा स्क्रीनवर बसविता येतील.<br />
+</p>
+<dl><dd><span title="Audio track rolled up - Windows 7 Basic theme"><img alt="Rollup.png" src="../m/images/7/70/rollup.png" width="546" height="39" /></span></dd></dl>
+<p>गीतपट्टा पुन्हा रोल-डाउन करण्यासाठी, खाली दिशेने निर्देशित बाणावर क्लिक करा.
+</p><p>तसेच प्राधान्यांच्या <a href="tracks_preferences.html" title="Tracks Preferences">गीतपट्टा</a> टॅबवर एक पर्याय आहे:  "<b>उभे झूम केलेले गीतपट्टे स्वयंचलितपणे बसवा</b>". हे चेक केल्याने सर्व गीतपट्टे जोडले किंवा काढले गेल्याने उभ्या स्क्रीनच्या उंचीवर आपोआप फिट होतील.
+</p><p><br /> 
+</p>
+<div id="find"></div>
+<h2><span class="mw-headline" id="Finding_the_audio_you_want_to_edit">आपण संपादित करू इच्छित ध्वनि शोधणे</span></h2>
+<ul><li> <b>प्लेबॅक दरम्यान कार्य शोधा:</b> आपल्या कीबोर्डच्या एरो कीचा वापर करून प्लेबॅक दरम्यान पूर्व-निर्धारित वेळेचा शोध घ्या. पुर्वनिर्धारित आज्ञास् आहेतः
+<ul><li>प्लेबॅक दरम्यान डावीकडे शोधा (अल्प कालावधी) - <span class="kbrd" style="background-color: #d0d0f8">डावीकडे</span></li>
+<li>प्लेबॅक दरम्यान उजवीकडे (लहान कालावधी) शोधा - <span class="kbrd" style="background-color: #d0d0f8">उजवीकडे</span></li>
+<li>प्लेबॅक दरम्यान डावीकडे (दीर्घ कालावधीसाठी) शोधा  - <span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + डावीकडे</span></li>
+<li>प्लेबॅक दरम्यान उजवीकडे (दीर्घ कालावधीसाठी) शोधा - <span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + उजवीकडे</span> . </li></ul></li></ul>
+<ul style="list-style-image: none; list-style-type: none">शोधण्याच्या कालावधीची लांबी प्राधान्यांच्या <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a> टॅबवर सेट केली जाऊ शकते. सीक आज्ञासाठी वापरलेले सोपे मार्ग प्राधान्यांच्या <a href="keyboard_preferences.html" title="Keyboard Preferences">कीबोर्ड</a> टॅबवर बदलू ​​शकतात.</ul>  
+<ul><li> <b>"प्ले / स्टॉप आणि सेट कर्सर" सोपा मार्ग<span class="kbrd" style="background-color: #d0d0f8">X</span>:</b> प्लेबॅक थांबविण्याऐवजी, कर्सर जेथे थांबला त्या जागेवर सेट केला आहे, म्हणून तिथून पुन्हा सुरू होईल याशिवाय हे स्पेससारखे कार्य करते.</li></ul>
+<ul><li> <b><a href="timeline.html#tqp" title="Timeline">द्रुत-प्ले</a>:</b> प्लेबॅक स्थिती बदलण्याचा दुसरा मार्ग म्हणजे वेव्हफॉर्मच्या वरील <a href="timeline.html" title="Timeline">टाइमलाइनवर</a> क्लिक करणे. त्या ठिकाणाहून एकाच वेळी प्लेबॅक सुरू होईल. किंवा वेळपट्टीवर क्लिक करा आणि प्रदेश ओढा (त्यांना जोडणार्‍या रेखासह एरोहेडद्वारे दर्शविलेले) एकदा प्रदेश प्ले करण्यासाठी माउस सोडा. यापूर्वीच निवडलेला प्रदेश किंवा कर्सर द्रुत-प्लेद्वारे प्रभावित झालेला नाही.</li></ul>
+<ul><li> <b><a href="scrubbing_and_seeking.html" title="Scrubbing and Seeking">स्क्रबिंग</a>:</b> स्क्रबिंग किंवा सीकिंग म्हणजे ऐकताना प्लेबॅकची स्थिती, गती किंवा दिशा समायोजित करण्यासाठी माउस पॉइंटर उजवीकडे किंवा डावीकडे हलवण्याची क्रिया आहे - आवडीची विशिष्ट घटना शोधण्यासाठी वेव्हफॉर्मवर द्रुतपणे नेव्हिगेट करण्याचा एक सोयीस्कर मार्ग. </li></ul>
+<ul><li> <b>निवड साधनपट्टी:</b> </li></ul>
+<dl><dd><span title="Selection Toolbar"><img alt="Selection Toolbar length selected.png" src="../m/images/b/b3/selection_toolbar_length_selected.png" width="507" height="56" /></span></dd></dl>
+<ul style="list-style-image: none; list-style-type: none"> आपण स्क्रीनच्या तळाशी असलेल्या "सिलेक्शन साधनपट्टी" मध्ये वेळ स्थान मूल्य प्रविष्ट करुन कर्सर हलवू शकता किंवा निवड प्रदेश परिभाषित करू शकता. मूल्ये टाइप केली जाऊ शकतात किंवा कीबोर्डच्या वर आणि खाली बाण की सह वाढविली जाऊ शकतात. </ul>
+<ul><li> <b>"कट पूर्वावलोकन" सोपा मार्ग:</b> निवड क्षेत्राच्या आधी आणि नंतर ध्वनि ऐकण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">C</span> दाबा जेणेकरून तुम्ही तो प्रदेश कापला तर तो कसा आवाज येईल याचे पूर्वावलोकन करा. ऑड्यासिटी प्राधान्यांच्या <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a> टॅबवरील कट आधी आणि नंतर आपण ध्वनि पूर्वावलोकनाची लांबी बदलू शकता.   </li></ul>
+<ul><li> <b>"निवडीसाठी वाजवा" सोपा मार्ग:</b> निवड प्रदेशाचा भाग ऐकण्यासाठी किंवा निवडीच्या आधी किंवा नंतर ध्वनि ऐकण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">B</span> दाबा. हे तुम्हाला निवड नक्की कुठे हवे आहे हे सुनिश्चित करण्यात मदत करते.
+<ul><li> निवडीच्या डाव्या अर्ध्या भागाच्या आत कुठेतरी माउस पॉईंटर हलवा, आणि हा सोपा मार्ग निवडीच्या सुरुवातापासून पॉईंटरपर्यंत जाईल. पॉईंटर निवडीच्या उजव्या अर्ध्या भागाच्या आत कुठेतरी हलवा, आणि हा सोपा मार्ग पॉईंटरकडून निवडीच्या शेवटी जाईल.</li>
+<li> पॉईंटरला निवडीच्या डावीकडे हलवा आणि हा सोपा मार्ग पॉईंटरपासून निवडीच्या सुरुवातापर्यंत प्ले होईल. निवड संपल्यानंतर पॉईंटर हलवा आणि हा सोपा मार्ग निवडीच्या शेवटी पॉईंटरपर्यंत जाईल. </li></ul></li></ul>
+<ul style="list-style-image: none; list-style-type: none">तुम्ही ऐकलेले निवड क्षेत्र तुम्हाला आवडत असल्यास, तुम्ही <span class="kbrd" style="background-color: #d0d0f8">B</span> सोपा मार्ग ने प्ले केलेल्या क्षेत्राशी निवड संकुचित करण्यासाठी योग्य <span class="kbrd" style="background-color: #d0d0f8">डावी</span> किंवा <span class="kbrd" style="background-color: #d0d0f8">उजवी</span> की सह <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift</span> वापरू शकता.
+<span class="kbrd" style="background-color: #d0d0f8">B</span> वापरण्यापूर्वी तुम्हाला निवड विस्तृत करायची असल्यास, तुम्ही <span class="kbrd" style="background-color: #d0d0f8">Shift + Left</span> किंवा <span class="kbrd" style="background-color: #d0d0f8">Shift + Right</span> वापरू शकता.</ul>
+<ul><li> <b>गतीने वाजवा साधनपट्टी:</b> </li></ul>
+<ul style="list-style-image: none; list-style-type: none"> हे संलग्न वेग स्लाइडरसह एक विशेष प्लेबॅक बटण आहे
+
+<dl><dd><span title="Play-at-Speed Toolbar"><img alt="Transtool.jpg" src="../m/images/1/14/transtool.jpg" width="141" height="30" /></span></dd></dl>
+
+जे तुम्हाला वेगवान किंवा कमी वेगाने खेळण्याची परवानगी देते (टेम्पो आणि खेळपट्टी या दोन्हीवर परिणाम करणारे). हे दृश्यमान नसल्यास, ते <span class="menu">पहा &gt; <a href="view_menu_toolbars.html" title="View Menu: Toolbars">साधनपट्टी</a></span> येथे सक्षम करा.</ul>
+<p><br />
+</p>
+<div id="edit"></div>
+<h2><span class="mw-headline" id="Marking_edit_regions_or_points">संपादित क्षेत्रे किंवा बिंदू चिन्हांकित करणे</span></h2>
+<div id="createmod"></div>
+<h3><span class="mw-headline" id="Creating_and_modifying_selections">निवडी तयार करणे आणि सुधारित करणे</span></h3>
+<p>गीतपट्ट्यामध्ये निवडलेले क्षेत्र तयार करण्यासाठी, गीतपट्ट्यावर क्लिक करा आणि आपल्या माउससह डावी किंवा उजवीकडे किंवा डाव्या किंवा उजव्या बाण कीसह ओढा. जेव्हा आपण एकदा स्पेस दाबाल, तेव्हा निवडलेले संपूर्ण क्षेत्र सुरू होईल. आधीपासूनच गीतपट्टा खेळत असताना आपण त्याच प्रकारे गीतपट्ट्यामध्ये निवडलेले क्षेत्र तयार करू शकता, अशा स्थितीत आपण सध्याच्या प्लेबॅक स्थानावरून निवडलेल्या क्षेत्राकडे जाण्यासाठी दोनदा स्पेस दाबा.
+</p><p>गीतपट्ट्यामध्ये निवडलेला क्षेत्र तयार करण्याचा दुसरा मार्ग म्हणजे आपण ज्या ठिकाणी आपली निवड सुरू करू इच्छिता त्या गीतपट्ट्यावर क्लिक करणे आणि ज्या ठिकाणी आपण आपली निवड समाप्त करू इच्छिता त्या गीतपट्ट्यावर क्लिक करताना <span class="kbrd" style="background-color: #e0e0f0">शिफ्ट</span> दाबून ठेवणे . पुन्हा, हा गीतपट्टा खेळत असताना देखील कार्य करते, म्हणून प्लेबॅक ज्या बिंदूवर आपण स्थलांतर-क्लिक केला त्या बिंदूपासून निवड प्रदेश काढला जातो.
+</p><p>आपण आपल्या माऊससह निवड प्रदेशाच्या कडा समायोजित करू शकता (माउस पॉईंटर हातात बदलल्यावर ओढा नंतर ओढा). वैकल्पिकरित्या, निवड कडा डाव्या आणि उजव्या बाण की सह समायोजित करा. <span class="kbrd" style="background-color: #e0e0f0">डाव्या</span> किंवा <span class="kbrd" style="background-color: #e0e0f0">उजव्या</span> वापरताना <span class="kbrd" style="background-color: #e0e0f0">Shift</span> दाबून ठेवल्यास अनुक्रमे डावीकडे किंवा उजवीकडे निवड धार विस्तृत होईल. <span class="kbrd" style="background-color: #d0d0f8">डाव्या</span> किंवा <span class="kbrd" style="background-color: #e0e0f0">उजव्या</span> वापरताना <span class="kbrd" style="background-color: #e0e0f0">Ctrl + Shift</span> दाबून ठेवल्यास अनुक्रमे उजव्या किंवा डाव्या निवड धार आकुंचन पवतील.
+</p><p>तुम्ही प्लेबॅक दरम्यान <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; <i>(प्लेबॅक स्थितीत डावीकडे निवडा)</i> आणि <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; <i>(प्लेबॅक स्थितीत उजवीकडे निवडा)</i> सोपा मार्गसह प्रदेश चिन्हांकित करू शकता. हे वापरण्यासाठी, प्ले करणे सुरू करा नंतर कर्सरला सध्याच्या प्लेबॅक स्थितीत हलवण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; वापरा. तुम्ही प्रदेश म्हणून चिन्हांकित करू इच्छित असलेल्या ध्वनीचा शेवट ऐकता तेव्हा, कर्सरपासून सध्याच्या प्लेबॅक स्थितीकडे प्रदेश काढण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; वापरा. त्यानंतर तुम्ही थांबू शकता आणि <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> सह (खाली पहा) प्रदेशावर नावपट्टी लावू शकता.
+</p><p>निवडलेला प्रदेश किंवा संपादन कर्सरची स्थिती संग्रहित आणि पुनर्प्राप्त केली जाऊ शकते. एका वेळी एक प्रदेश किंवा कर्सरची स्थिती <span class="menu">संपादन &gt; <a href="edit_menu.html#region_save" title="Edit Menu">स्टोअर प्रदेश</a></span> आज्ञासह संग्रहित केली जाऊ शकते आणि <span class="menu">संपादन &gt; <a href="edit_menu.html#region_restore" title="Edit Menu">क्षेत्र पुनर्प्राप्त</a></span> करून कधीही पुनर्प्राप्त केली जाऊ शकते.
+</p><p>याव्यतिरिक्त, <span class="menu">संपादन &gt; <a href="edit_menu.html#store_cursor" title="Edit Menu">स्टोअर कर्सर स्थिती</a></span> कर्सर स्थान संचयित करते
+जे ध्वनि प्ले होत नसताना, ध्वनीमुद्रण किंवा विराम दिलेला नसताना, संपादन कर्सरची किंवा निवड क्षेत्राच्या डाव्या काठाची स्थिती असते. ध्वनि सक्रिय असल्यास, संग्रहित कर्सरची स्थिती ही प्लेबॅक कर्सरची <img alt="PlaybackCursor.png" src="../m/images/d/d0/playbackcursor.png" width="13" height="10" /> किंवा ध्वनीमुद्रण कर्सरची <img alt="RecordingCursor.png" src="../m/images/b/bf/recordingcursor.png" width="13" height="10" /> स्थिती असते. संग्रहित कर्सर स्थान नंतर निवड क्षेत्र तयार करण्यासाठी किंवा सुधारित करण्यासाठी <span class="menu">संपादन &gt; निवडा &gt; <a href="edit_menu_select.html#cursor_to_stored" title="Edit Menu: Select">कर्सर ते संचयित कर्सर स्थान</a></span> आदेश वापरला जाऊ शकतो.
+</p>
+<div id="labels"></div>
+<h3><span class="mw-headline" id="Labels">नावपट्ट्या</span></h3>
+<p>अनेक निवडलेले प्रदेश आणि कर्सर बिंदू देखील <span class="menu">गीतपट्टा &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">निवडीवर नावपट्टी जोडा</a></span> आज्ञा (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span>) वापरून <a href="label_tracks.html" title="Label Tracks">नावपट्टीसह</a> चिन्हांकित केले जाऊ शकतात. संपादनासाठी संदर्भ बिंदू म्हणून नावपपट्ट्या उपयुक्त ठरू शकतात. नावपट्टीमध्ये क्लिक करून हा विभाग किंवा बिंदू कोणत्याही वेळी परत विचारला जाऊ शकतो. ध्वनि गीतपट्ट्याच्या खाली नवीन नावपट्टी गीतपट्ट्यामध्ये नावपपट्ट्या दिसतात.
+</p><p>गीतपट्टा चालू असताना आपण सद्य प्लेबॅक स्थानावर किंवा ध्वनीमुद्रणाच्या सद्यस्थितीत ध्वनीमुद्रण स्थितीवर नावपट्टी देखील जोडू शकता. हे करण्यासाठी, <span class="menu">गीतपट्टा &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">प्लेबॅक स्थितीत नावपट्टी जोडा</a></span> क्लिक करा (<span class="kbrd" style="background-color: #d0d0f8">Ctrl + M</span>). गीतपट्टा चालू असताना किंवा ध्वनीमुद्रण करताना प्रदेश बाहेर ड्रॅग करणे आणि नावपट्टी लावणे देखील उपयुक्त ठरेल. त्या प्रदेशाला नावपट्टी देण्यासाठी , गीतपट्टा थांबला असेल तर आपण <span class="menu">गीतपट्टा &gt; <a href="tracks_menu.html#add_label" title="Tracks Menu">निवडीवर नावपट्टी जोडा</a></span> वापरा.
+</p><p>अद्याप प्ले होत असताना आपल्याला नावपट्टी करायचे असल्यास , नावपट्टी बंद करण्यासाठी आणि नंतर गीतपट्ट्याकडे लक्ष परत देण्यासाठी नावपट्टी टाइप केल्यानंतर <span class="kbrd" style="background-color: #e0e0f0">एंटर</span> नंतर <span class="kbrd" style="background-color: #d0d0f8">अप</span> वापरा . इच्छित बिंदू दरम्यान दुसर्‍या प्रदेश चिन्हांकित करण्यासाठी आपण आता वरील प्रमाणे <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160; आणि <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; वापरू शकता.
+</p><p>तुम्हाला चिन्हांकित करायचे असलेले काही चुकल्यास, तुम्ही सध्या कर्सरच्या मागे प्लेबॅक स्थान जंप करण्यासाठी सीक वापरू शकत नाही, परंतु नेहमीप्रमाणे तुम्ही क्लिक पॉइंटवर प्लेबॅक पुन्हा सुरू करण्यासाठी <a href="timeline.html#tqp" title="Timeline">टाइमलाइनमध्ये</a> क्लिक करू शकता. तुम्ही संपादन कर्सरच्या डावीकडील वेळपट्टीमध्ये क्लिक केल्यास, <span class="kbrd" style="background-color: #d0d0f8">&#160;[</span>&#160;सोपा मार्ग प्लेबॅक कर्सरपासून संपादन कर्सरकडे पुढे जाणारा प्रदेश काढेल, जे तुम्हाला हवे तसे नसते. प्लेबॅक दरम्यान तुम्ही संपादनिंग कर्सर प्लेबॅक कर्सरच्या मागे ठेवण्यासाठी क्लिक करू शकता त्यानंतर <span class="kbrd" style="background-color: #d0d0f8">&#160;]</span>&#160; वापरून तेथून सध्याच्या प्लेबॅक स्थितीवर एक प्रदेश काढू शकता.
+</p>
+<div id="labnav"></div>
+<h3><span class="mw-headline" id="Navigating_using_Label_Tracks">नावपट्टी गीतपट्टा वापरुन निर्देशित करत आहे</span></h3>
+<p><b>संपादनासाठी नावपट्टी उघडण्यासाठी टॅबिंग</b> 
+</p><p>जेव्हा पिवळ्या फोकस बॉर्डरने सूचित केल्यानुसार फोकस नावपट्टी गीतपट्ट्यावर असेल:
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">टॅब</span> संपादनासाठी पुढील नावपट्टी उघडते आणि त्या नावपट्टीशी संबंधित संपादन कर्सर किंवा निवड ठेवते</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Shift + Tab</span> संपादनासाठी मागील लेबल उघडते आणि संपादन कर्सर किंवा निवड त्या लेबलशी सुसंगत ठेवते.</li></ul>
+<p>नावपट्टीचा मजकूर संपादित करण्यासाठी तुम्ही टाइप करू शकता हे सूचित करते, नावपट्टीची पार्श्वभूमी पांढरी होते. पॉइंट नावपट्टीसाठी, संपादन कर्सर हलवलेल्या नावपट्टीवर ठेवला जातो. प्रदेश नावपट्टीसाठी, हलवलेल्या नावपट्टीशी संबंधित निवड ठेवली जाते. आवश्यक असल्यास ते नावपट्टी तुम्हाला दर्शविण्यासाठी व्ह्यू स्थान हलवले जाते.
+</p><p>ऑड्यासिटी आपोआप नावपट्ट्यांमधून चक्रावून जाते, त्यामुळे शेवटच्या नावपट्टीवर गेल्यावर, पुढच्या नावपट्टीवर जाताना पहिल्या नावपट्टीवर जाते. पहिल्या नावपट्टीवर असताना, मागील नावपट्टीवर जाणे शेवटच्या नावपट्टीवर जाते.
+</p><p>हे आदेश फक्त सोपा मार्ग म्हणून अस्तित्वात आहेत - त्यांच्याकडे कोणतेही यादी आयटम किंवा बटणे नाहीत. 
+</p><p><b>नावपपट्ट्या संपादित न करता त्यांच्या दरम्यान हलविण्यासाठी सोपा मार्ग</b>
+</p><p>नावपपट्ट्या संपादनासाठी न उघडता त्यांच्या दरम्यान हलविण्यासाठी दोन सोप्या मार्गांच्या आज्ञा देखील आहेत. या सोपे मार्गना नावपट्टी गीतपट्ट्यामध्ये पिवळ्या फोकस बॉर्डरची आवश्यकता नसते:
+</p>
+<ul><li><span class="kbrd" style="background-color: #d0d0f8">Alt + Right</span> संपादन कर्सर किंवा निवड पुढील नावपट्टीशी सुसंगत ठेवते</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">Alt + Left</span> संपादन कर्सर किंवा निवड मागील नावपट्टीशी सुसंगत ठेवते.</li></ul>
+<p>दृश्याच्या मध्यभागी असलेले नावपट्टी तुम्हाला दर्शविण्यासाठी आवश्यक असल्यास दृश्य स्थिती हलते.
+</p><p>एकल नावपट्टी गीतपट्टा असल्यास, कोणत्या गीतपट्ट्यावर पिवळ्या फोकस बॉर्डर आहेत याची तुम्हाला माहिती असण्याची गरज नाही.
+</p><p>तुमच्याकडे अनेक नावपट्टी गीतपट्टा असल्यास, पिवळ्या फोकस बॉर्डरला तुम्ही वापरू इच्छित असलेल्या नावपट्टी गीतपट्ट्यामध्ये हलवण्यासाठी <span class="kbrd" style="background-color: #e0e0f0">वर</span> किंवा <span class="kbrd" style="background-color: #e0e0f0">खाली</span> बाण वापरा. जर एकापेक्षा जास्त नावपट्टी गीतपट्टा असतील आणि कोणावरही फोकस नसेल, तर फोकस केलेल्या ध्वनि गीतपट्ट्यापासून खालच्या दिशेने पहिला नावपट्टी गीतपट्टा वापरला जातो.
+</p>
+<div class="note"><a href="playback.html" title="Playback">प्लेबॅक</a> दरम्यान या "नावपट्टीवर हलवा" आज्ञा हलवलेल्या नावपट्टीच्या स्थानावर प्लेबॅक पुन्हा सुरू करतात (गीतपट्टा निवडला आहे की नाही). जर तुमच्याकडे दीर्घ ध्वनीमुद्रण असेल जे तुम्ही <a href="splitting_a_recording_into_separate_tracks.html" title="Splitting a recording into separate tracks">नावपट्टी वापरून वेगळ्या गीतपट्ट्यामध्ये विभाजित</a> करू इच्छित असाल तर हे उपयुक्त आहे. </div> 
+<p><span class="kbrd" style="background-color: #d0d0f8">टॅब</span> आणि <span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + टॅब</span> आज्ञा्सप्रमाणे, ऑड्यासिटी नावपट्टी्समधून आपोआप फिरते आणि कोणतेही संबंधित यादी आयटम किंवा बटणे नाहीत.
+</p>
+<div class="note">
+दोन्ही टॅबिंगसाठी जेणेकरुन नावपपट्ट्या उघडणे आणि नावपट्ट्यांमधील हलवणे, गीतपट्टा निवडल्यास प्रदेश नावपट्टीशी संबंधित ध्वनि निवडला जाईल.</div>
+<div id="clips"></div>
+<h3><span class="mw-headline" id="Clips">क्लिप्स</span></h3>
+<p><span class="menu">संपादन &gt; क्लिप सीमा &gt; <a href="edit_menu_clip_boundaries.html#split" title="Edit Menu: Clip Boundaries">स्प्लिट</a></span> आज्ञा (सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span>) कर्सर किंवा निवड प्रदेशात ध्वनीला वेगवेगळ्या क्लिपमध्ये विभाजित करते, स्प्लिट पॉइंट्सला वेव्हफॉर्ममध्ये काळ्या उभ्या रेषाने चिन्हांकित करते. प्रदेश शोधण्यासाठी किंवा कट करण्यासाठी तुम्ही या ओळी वापरू शकता. स्प्लिट लाइन्स वापरून प्रदेश शोधण्यासाठी आणि कट करण्यासाठी द्रुत कार्यप्रवाह याप्रमाणे कार्य करते:
+</p>
+<ol><li> आपल्या आवडीनुसार झूम वाढवा आणि वाजवा</li>
+<li> आपण हटवू इच्छित ध्वनीचा सुरुवात बिंदू ऐकता, त्या क्षणी प्लेबॅक थांबविण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">X</span> नंतर <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span> </li>
+<li> आपण जिथे थांबविले तेथून पुन्हा सुरू करण्यासाठी प्ले दाबा आणि आपण इच्छित कटच्या शेवटी पोहोचल्यावर <span class="kbrd" style="background-color: #d0d0f8">X</span> नंतर पुन्हा <span class="kbrd" style="background-color: #d0d0f8">Ctrl + I</span> again</li>
+<li> दोन विभाजित रेषांमधील प्रदेश निवडण्यासाठी आपण नुकतेच विभाजित रेषेच्या डावीकडे डबल क्लिक करा</li>
+<li> माऊसचा वापर करून आवश्यकतेनुसार प्रदेशाच्या कडा समायोजित करा (किंवा क्षेत्राचा विस्तार करण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">Shift + Left</span> किंवा <span class="kbrd" style="background-color: #d0d0f8">Shift + Right</span> वापरा किंवा <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift + Left</span> किंवा <span class="kbrd" style="background-color: #d0d0f8">Ctrl + Shift + Right</span> वापरा).</li>
+<li> <span class="menu">संपादित करा &gt; <a href="edit_menu.html#cut" title="Edit Menu">कट करा</a></span></li></ol>
+<p>जेव्हा तुम्ही क्लिप एकत्र विलीन करण्यासाठी त्यावर क्लिक करता तेव्हा स्प्लिट रेषा अदृश्य होतात, परंतु तुम्ही ध्वनि कट केलेल्या उभ्या रेषा ठेवण्यासाठी सध्याच्या ऑड्यासिटीच्या <b>कट लाइन्स</b> वैशिष्ट्याचा वापर करू शकता. कट ध्वनि पुनर्संचयित करण्यासाठी कोणत्याही वेळी ओळीवर क्लिक करा. प्राधान्यांच्या <a href="tracks_preferences.html" title="Tracks Preferences">गीतपट्टा</a> टॅबवर कट लाइन्स सक्षम केल्या जाऊ शकतात.
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

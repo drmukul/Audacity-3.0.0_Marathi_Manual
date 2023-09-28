@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>प्रशिक्षण - लूप - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Tutorial_-_Looping rootpage-Tutorial_-_Looping skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">प्रशिक्षण - लूप</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Tutorial_-_Looping#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr">
+<div class="intro">हे पृष्ठ ऑड्यासिटीसह <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Music_loop">ध्वनी लूप</a> कसा बनवायचा यावर सल्ले प्रदान करते .</div>
+<h2><span class="mw-headline" id="Contents">सामग्री</span></h2>
+<ol><li> <a href="#create">ध्वनी लूप तयार करत आहे</a></li>
+<li> <a href="#using">ऑड्यासिटी मध्ये लूप वापरणे</a></li>
+<li> <a href="#exporting">निर्यात लूप</a></li>
+<li> <a href="#tqp">लूप तयार करण्यासाठी समयरेषा क्विक-प्ले वापरणे</a></li></ol>
+<div id="create"></div>
+<h2><span class="mw-headline" id="Step_1:_Creating_an_audio_loop">चरण 1: ध्वनि लूप तयार करत आहे</span></h2>
+<p>ध्वनि गीतपट्टामधून ध्वनि लूप तयार करण्यासाठी, पहिली पायरी म्हणजे योग्य विभाग शोधणे. तद्वतच, ध्वनि शक्य तितक्या काळासाठी वाजवी स्थिर असेल. मोनो गीतपट्ट्यासह लूपिंग करणे खूप सोपे आहे, म्हणून जर तुमच्याकडे स्टिरिओ ध्वनिमुद्रण असेल परंतु मोनो गीतपट्टा पुरेसा असेल, तर प्रथम <span class="menu">गीतपट्टा &gt; मिक्स &gt; <a href="tracks_menu_mix.html#mix_stereo_down_to_mono" title="Tracks Menu: Mix">मोनोमध्ये मिक्स स्टीरिओ </a></span> वापरून रूपांतरित केले जाऊ शकते.
+</p>
+<dl><dd><span title="Loop Selection"><img alt="Loop selection.png" src="../m/images/1/13/loop_selection.png" width="566" height="161" /></span></dd></dl>
+<p>निवडीची सुरुवात निवडीच्या शेवटाशी शक्य तितक्या जवळून जुळली पाहिजे (जसे दिसते) आणि दोन्ही निवड कडा अशा स्थितीत ठेवल्या पाहिजेत जेणेकरून वेव्हफॉर्मची निळी रेषा निवडीच्या काठाला शून्य मोठेपणावर ओलांडत असेल (जेथे आडवी रेषा दिसते. ).
+</p>
+<div class="note">दृश्य यादीमध्ये असे आयटम आहेत जे झूम इन करताना निवडीच्या एका टोकापासून दुसऱ्या टोकापर्यंत जाण्याची परवानगी देतात:
+<ul><li><span class="menu">पहा &gt; वगळा &gt; <a href="view_menu_skip_to.html#selectionstart" title="View Menu: Skip to">निवड प्रारंभ</a></span> ( सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Ctrl + [&#160;</span> आहे)</li>
+<li><span class="menu">पहा &gt; येथे जा &gt; <a href="view_menu_skip_to.html#selectionend" title="View Menu: Skip to">निवड समाप्तीवर जा</a></span> ( सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Ctrl + ]&#160;</span> आहे)</div></li></ul>
+<p>योग्य लूप पॉइंट्स शोधण्यासाठी, निवडीच्या सुरूवातीस आणि नंतर निवडीच्या शेवटी क्षैतिजरित्या झूम वाढवा. झूम करण्यासाठी, निवडीच्या काठावर माउस पॉइंटर ठेवा आणि चाक किंवा बॉलसह स्क्रोल करा. निवडीच्या कडांना आवश्यकतेनुसार डावीकडे किंवा उजवीकडे ड्रॅग करा जेणेकरून समान आकार, मोठेपणा आणि उतार असलेले लूप पॉइंट्स शोधता येतील जेणेकरून लूपचा शेवट लूपच्या सुरूवातीस सहजतेने वाहू शकेल. खालील प्रतिमांमध्ये दर्शविल्याप्रमाणे, वेव्हफॉर्मच्या डावीकडे <a href="audio_tracks.html#scale" title="Audio Tracks">उभ्या पट्टीवर झूम इन करणे</a> देखील उपयुक्त असू शकते: 
+</p>
+<dl><dd><dl><dd><b>लूप निवडीची सुरुवात</b></dd></dl></dd>
+<dd><span title="Beginning of the loop selection"><img alt="Loop start.png" src="../m/images/9/9f/loop_start.png" width="566" height="161" /></span></dd></dl>
+<dl><dd><dl><dd><b>लूप निवडीचा शेवट</b></dd></dl></dd>
+<dd><span title="End of the loop selection"><img alt="Loop end.png" src="../m/images/4/4f/loop_end.png" width="566" height="161" /></span></dd></dl>
+<p>क्लिक्स (ग्लिच) टाळण्यासाठी अनेकदा <span class="menu">सिलेक्ट &gt; <a href="select_menu_at_zero_crossings.html" title="Select Menu: At Zero Crossings">अॅट झिरो क्रॉसिंग</a></span> वापरण्यास मदत होते जेणेकरून निवडीचा प्रारंभ आणि शेवट  <i>शून्य क्रॉसिंग पॉईंट</i>वर अचूकपणे असल्याची खात्री करता येईल. खालील प्रतिमेमध्ये, निवडीच्या शेवटी नमुना (बिंदूद्वारे दर्शविल्याप्रमाणे) डावीकडील उभ्या पट्टीनुसार 0.0 मोठेपणा आहे.     
+</p>
+<dl><dd><dl><dd><b>शून्य क्रॉसिंग पॉइंट</b></dd></dl></dd>
+<dd><span title="Zero crossing point"><img alt="Zero-crossing.png" src="../m/images/e/e6/zero_crossing.png" width="566" height="161" /></span></dd></dl>
+<p> <i>लूप प्ले</i> (सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">Shift + Space</span>)  वापरून लूपची चाचणी केली जाऊ शकते.
+</p>
+<div id="using"></div>
+<h2><span class="mw-headline" id="Step_2:_Using_loops_in_Audacity">चरण 2: ऑड्यासिटीमध्ये लूप वापरणे</span></h2>
+<p>जर ऑड्यासिटीमध्ये लूप वापरायचा असेल, तर निवड ट्रिम केली जाऊ शकते: <span class="kbrd" style="background-color: #d0d0f8">Ctrl + T</span>.
+Tकॉपी आणि पेस्ट वापरून लूपची पुनरावृत्ती केली जाऊ शकते, जरी <i>रिपीट</i> फंक्शन वापरणे अधिक सोयीचे असले तरी: <span class="menu">प्रभाव &gt; <a href="effect_menu.html#repeat" title="Effect Menu">पुनरावृत्ती...</a></span>.
+</p>
+<div id="exporting"></div>
+<h2><span class="mw-headline" id="Step_3:_Exporting_Loops">चरण 3: लूप निर्यात करत आहे</span></h2>
+<p> <span class="menu">फाईल &gt; निर्यात &gt; <a href="file_menu_export.html#exportselectedaudio" title="File Menu: Export">निवडलेला ध्वनि निर्यात करा...</a></span> वापरून निवड निर्यात केली जाऊ शकते.
+</p>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>निर्यात स्वरूप</b>
+<p>लॉसलेस <a href="glossary.html#wav" title="Glossary">PCM WAV</a> फॉरमॅट लूपसाठी सर्वोत्तम फॉरमॅट आहे. निर्यात करताना "WAV (Microsoft) स्वाक्षरी केलेले 16-bit PCM" निवडा.  <a href="glossary.html#mp3" title="Glossary">MP3</a>, <a href="glossary.html#wma" title="Glossary">WMA</a> आणि <a rel="nofollow" class="external text" href="http://en.wikipedia.org/wiki/Adaptive_DPCM">ADPCM WAV</a> सारख्या अनेक हानीकारक, आकार-संकुचित स्वरूपना फाईलच्या सुरूवातीस किंवा शेवटी अतिरिक्त शांतता किंवा अचूक लांबीचा आदर न करणाऱ्या इतर समस्यांमुळे ग्रस्त आहेत.  
+</p><p>सीमलेस लूप सामान्यतः <a href="glossary.html#wav" title="Glossary">WAV</a> सारख्या लॉसलेस फॉरमॅटमध्ये एक्समर्थन केले जावेत. लक्षात ठेवा की सीमलेस लूप <a href="glossary.html#mp3" title="Glossary">MP3</a> फॉरमॅटमध्ये एक्समर्थन केले जाऊ नयेत कारण एन्कोडर/डीकोडर एकूण विलंब परिभाषित केलेला नाही, याचा अर्थ गॅपलेस प्लेबॅकसाठी कोणतीही अधिकृत तरतूद नाही.
+</p><p>संकुचित धारिका स्वरूपन आवश्यक असल्यास, <a href="glossary.html#ogg" title="Glossary">OGG Vorbis</a> वापरून पहा <i>(जरी OGG Vorbis हा एक हानीकारक स्वरूप असल्याने, एन्कोड केलेला ध्वनि मूळ ध्वनिशी अगदी सारखा नसतो हे समजून घ्या)</i>. OGG व्हॉर्बिस लूप सामान्यत: स्वीकारार्ह कामगिरी करतील जर लूपचा प्रारंभ / शेवट <a href="edit_menu_find_zero_crossings.html" title="Edit Menu: Find Zero Crossings">शून्य क्रॉसिंग पॉइंट</a>वर असेल.
+</p>
+</td></tr></table>
+</div>
+<div id="tqp"></div>
+<h2><span class="mw-headline" id="Using_Timeline_Quick-Play_to_create_loops">लूप तयार करण्यासाठी समयरेषा क्विक-प्ले वापरणे</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">अखंड लूप तयार करण्यात मदत करण्यासाठी <a href="timeline.html" title="Timeline">टाइमलाइन</a> वापरून वरील प्रक्रियेस मदत केली जाऊ शकते:
+<ol><li>टाइमलाइन उजवे-क्लिक संदर्भ <a href="timeline.html#menu" title="Timeline">यादी</a>मध्ये <a href="timeline.html#tqp" title="Timeline">क्विक-प्ले</a> सक्षम असल्याची खात्री करा.</li>
+<li>टाइमलाइन राइट-क्लिक संदर्भ यादीमध्ये "<b>ड्रॅगिंग निवड सक्षम करा</b>" निवडा.</li>
+<li>लूप करण्‍यासाठी ध्वनिची अंदाजे निवड करा.</li>
+<li> निवड प्ले करण्यासाठी लूपमध्ये <span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + लेफ्ट-क्लिक</span> करा.</li>
+<li><span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + लेफ्ट-क्लिक</span> करा आणि "सीमलेस" लूपिंग स्थानेच्या जवळ निवड समायोजित करण्यासाठी आवश्यकतेनुसार निवडीचा प्रारंभ/शेवट ड्रॅग करा.</li>
+<li>आवश्यक असल्यास, प्ले क्षेत्र आणि निवडीमध्ये समायोजन करण्यासाठी प्रारंभ / शेवटच्या स्थानांवर <a href="zooming.html" title="Zooming">झूम</a> वाढवा.</li>
+<li>लक्षात घ्या की जर झूम इन केल्याने निवडलेला प्रदेश दृश्यमान गीतपट्टा क्षेत्राच्या पलीकडे वाढला, तर ऑड्यासिटी, पूर्वनियोजितनुसार, वेव्हफॉर्मला स्क्रोल करण्यास कारणीभूत ठरेल. टाइमलाइन उजवे-क्लिक संदर्भ यादीमधून स्क्रोलिंग वर्तन अक्षम केले जाऊ शकते.</li>
+<li>झूम इन करताना, निवडीचा प्रारंभ / शेवट पाहण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">Ctrl + [</span> आणि <span class="kbrd" style="background-color: #d0d0f8">Ctrl + ]</span> वापरा.</li>
+<li>जर एखादी लांबलचक निवड लूप केली जात असेल, तर <span class="kbrd" style="background-color: #e0e0f0">स्पेस</span> की दाबून प्लेबॅक कधीही थांबवला जाऊ शकतो, नंतर  टाइमलाइनवर<span class="kbrd" style="background-color: #d0d0f8">शिफ्ट + क्लिक</span> करून निवड संपण्यापूर्वी लूप केलेले क्विक-प्ले थोड्या वेळाने रीस्टार्ट केले जाऊ शकते.</li>
+<li>नंतर लूप क्षेत्राला वैकल्पिकरित्या लेबल करा ( <span class="kbrd" style="background-color: #d0d0f8">Ctrl + B</span> वापरा)</li></ol>
+<p>जेव्हा निवड अखंडपणे लूप होते, तेव्हा प्लेबॅक थांबवला जाऊ शकतो (<span class="button">स्टॉप बटण</span> किंवा त्याचा <span class="kbrd" style="background-color: #d0d0f8">स्पेस</span> सोपा मार्ग वापरून) आणि निवड निर्यात किंवा आवश्यकतेनुसार ट्रिम केली जाऊ शकते (निवड करण्यासाठी <span class="kbrd" style="background-color: #d0d0f8">Ctrl + T</span> वापरा).
+</p>
+</td></tr></table>
+</div>
+<h2><span class="mw-headline" id="Find_Loops_Online">ऑनलाइन लूप शोधा</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top"><b>इतरांनी तयार केलेले विनामूल्य लूप शोधणे</b>
+<p>प्रयत्न:
+</p>
+<ul><li><span title="Creative Commons logo"><img alt="CRC.png" src="../m/images/3/32/crc.png" width="20" height="20" /></span> <a rel="nofollow" class="external free" href="http://ibeat.org/">http://ibeat.org/</a> (लूप <a rel="nofollow" class="external text" href="http://creativecommons.org/">क्रिएटिव्ह कॉमन्स</a> परवान्याअंतर्गत उपलब्ध आहेत).  </li>
+<li> <a rel="nofollow" class="external free" href="http://www.looperman.com/">http://www.looperman.com/</a></li></ul>
+</td></tr></table>
+</div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

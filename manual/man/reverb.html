@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>रिव्हर्ब - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Reverb rootpage-Reverb skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">रिव्हर्ब</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेमधून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Reverb#searchInput">शोध</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><p><br />
+</p>
+
+<p><br />
+</p>
+
+<div class="intro"><i><b>रिव्हर्ब</b></i> प्रतिध्वनी जोडते (जलद, सुधारित पुनरावृत्ती मूळ ध्वनीसह मिश्रित ज्यामुळे वातावरणाची छाप पडते). Reverb प्रभाव मूळ "freeverb" अल्गोरिदमवर आधारित आहे. ज्या कॉन्सर्ट हॉलमध्ये खूप लहान आहेत किंवा ज्यामध्ये खूप लोक आहेत अशा कॉन्सर्ट हॉलसाठी काहीवेळा रिव्हर्बरेशन जोडणे इष्ट असते की हॉलची नैसर्गिक प्रतिध्वनी कमी होते.<p> दोन-चॅनल स्टिरिओ गीतपट्ट्यामध्ये हुबेहूब प्रत केलेल्या उपचार न केलेल्या मोनो सिग्नलवर थोड्या प्रमाणात स्टिरिओ रिव्हर्ब लागू केल्यास ते अधिक नैसर्गिक आवाज येईल.</p><p>
+या प्रभावामध्ये <a href="#presets">फॅक्टरी प्रीसेट</a> आहेत.</p></div>
+<div class="note">लक्षात घ्या की हा परिणाम आवाज वाढवू शकतो, म्हणून <i><b><a href="glossary.html#clipping" title="Glossary">क्लिपिंग</a></b></i> टाळण्यासाठी "ड्राय गेन" सामान्यतः 0 dB च्या खाली सेट केला पाहिजे. प्रभावच्या रिव्हर्ब टेलला ऐकू येण्यासाठी, ध्वनीच्या शेवटच्या पलीकडे निवड वाढवणे आवश्यक आहे, ज्यासाठी गीतपट्ट्याच्या शेवटी शांतता जोडणे आवश्यक असू शकते.</div>
+<dl><dd><b>द्वारे प्रवेश केला:</b> <span class="menu">प्रभाव &gt; रिव्हर्ब...</span></dd>
+<dd><span title="Reverb effect dialog"><img alt="Reverb.png" src="../m/images/c/c0/reverb.png" width="474" height="414" /></span></dd></dl>
+<div id="setting"></div>
+<div id="roomsize"></div>
+<h2><span class="mw-headline" id="Settings">रचना</span></h2>
+<ul><li> <b>खोलीचा आकार (%):</b> सिम्युलेटेड खोलीचा आकार सेट करते. 0% एक लहान खोली सारखे आहे, 100% एक विशाल कॅथेड्रल किंवा मोठ्या सभागृहासारखे आहे. उच्च मूल्य मोठ्या खोलीच्या पुनरावृत्ती प्रभावाचे अनुकरण करेल आणि कमी मूल्य लहान खोलीच्या प्रभावाचे अनुकरण करेल.</li></ul>
+<div id="delay"></div>
+<ul><li> <b>पूर्व-विलंब (ms):</b> मूळ इनपुट सुरू झाल्यानंतर सेट केलेल्या वेळेसाठी पुनरावृत्ती सुरू होण्यास विलंब होतो. यामुळे रिव्हर्ब शेपटी सुरू होण्यास विलंब होतो. कमाल पूर्व-विलंब 200 मिलीसेकंद आहे. या पॅरामीटरचे काळजीपूर्वक समायोजन परिणामाची स्पष्टता सुधारू शकते. </li></ul>
+<div id="reverberance"></div>
+<ul><li> <b>रिव्हर्बरन्स (%):</b> रिव्हर्बरेशन शेपटीची लांबी सेट करते. मूळ ध्वनि संपल्यानंतर किती काळ प्रतिध्वनी चालू राहते हे हे ठरवते आणि त्यामुळे खोलीतील ध्वनीशास्त्रातील "जिवंतपणा" चे अनुकरण होते. कोणत्याही दिलेल्या प्रतिवर्तन मूल्यासाठी, मोठ्या खोलीच्या आकारासाठी शेपटी मोठी असेल. </li></ul>
+<div id="damping"></div>
+<ul><li> <b>ओलसर (%):</b> ओलसर वाढल्याने अधिक "मूक" प्रभाव निर्माण होतो. रिव्हर्बरेशन तितकेसे तयार होत नाही आणि उच्च वारंवारताकमी फ्रिक्वेन्सीपेक्षा वेगाने क्षय पावतात. रिव्हर्बरेशनमध्ये उच्च फ्रिक्वेन्सीच्या शोषणाचे अनुकरण करते.</li></ul>
+<div id="tonelow"></div>
+<ul><li> <b>टोन लो (%):</b> हे नियंत्रण 100% च्या खाली सेट केल्याने रिव्हर्बरेशनचे कमी वारंवारता घटक कमी होतात, कमी "बूमी" प्रभाव निर्माण होतो.</li></ul>
+<div id="tonehigh"></div>
+<ul><li> <b>टोन उच्च (%):</b>  हे नियंत्रण 100% च्या खाली सेट केल्याने पुनरावृत्तीचे उच्च वारंवारता घटक कमी होतात, कमी "चमकदार" प्रभाव निर्माण होतो.</li></ul>
+<div id="wetgain"></div>
+<ul><li> <b>वेट गेन (dB):</b> मिक्समधील रिव्हर्बरेशन ("ओले") घटकाला व्हॉल्यूम समायोजन लागू करते. "ड्राय गेन" (खाली) च्या सापेक्ष हे मूल्य वाढवल्याने रिव्हर्बची ताकद वाढते. </li></ul>
+<div id="drygain"></div>
+<ul><li> <b>ड्राय गेन (dB):</b>  मिक्समधील मूळ ("ड्राय") ध्वनीवर व्हॉल्यूम समायोजन लागू करते. "वेट गेन" (वरील) च्या सापेक्ष हे मूल्य वाढवल्याने रिव्हर्बची ताकद कमी होते. जर वेट गेन आणि ड्राय गेन मूल्य समान असतील, तर गीतपट्ट्यावर आउटपुट करण्यासाठी वेट प्रभाव आणि ड्राय ध्वनि यांचे मिश्रण नेमके याच व्हॅल्यूने जोरात किंवा मऊ केले जाईल (खाली "केवळ ओले" हे गृहीत धरून तपासले नाही).</li></ul>
+<div id="width"></div>
+<ul><li> <b>स्टिरिओ रुंदी (%):</b> केवळ स्टिरिओ गीतपट्ट्यासाठी रिव्हर्ब प्रभावाची स्पष्ट "रुंदी" सेट करते. हे मूल्य वाढवल्याने डाव्या आणि उजव्या चॅनेलमध्ये अधिक फरक लागू होतो, अधिक "विस्तृत" प्रभाव निर्माण होतो. शून्यावर सेट केल्यावर, प्रभाव डाव्या आणि उजव्या चॅनेलवर स्वतंत्रपणे लागू केला जातो. </li></ul>
+<div id="wetonly"></div>
+<ul><li> <b>फक्त ओले:</b> जेव्हा हे नियंत्रण चेक केले जाते, तेव्हा फक्त ओले सिग्नल (जोडलेले रिव्हर्बरेशन) परिणामी आउटपुटमध्ये असेल आणि मूळ ध्वनि काढला जाईल. प्रभावाचे पूर्वावलोकन करताना हे उपयुक्त ठरू शकते, परंतु बहुतेक प्रकरणांमध्ये प्रभाव लागू करताना तुम्ही हे अनचेक केले पाहिजे. फक्त ओलेचा वापर "ओन्ली रिव्हर्ब" गीतपट्टा तयार करण्यासाठी केला जाऊ शकतो जो तुम्ही नंतर मूळ गीतपट्ट्यामध्ये जास्त किंवा कमी प्रमाणात मिसळू शकता. पूर्ण चरणांसाठी खालील <a href="#examples">उदाहरणे</a> पहा.</p></li></ul>
+<p><br />
+</p>
+<div id="presets"></div>
+<h2><span class="mw-headline" id="Factory_Presets">फॅक्टरी प्रीसेट</span></h2>
+<p>खालील प्रीसेट <a href="#buttons">व्यवस्थापित करा</a> यादीमधून उपलब्ध आहेत:
+</p>
+<ul><li>पूर्वनियोजित (पूर्वनियोजित रचना)</li>
+<li>स्वर I</li>
+<li>स्वर II</li>
+<li>स्नानगृह</li>
+<li>लहान खोली उजळ</li>
+<li>छोटी अंधारलेली खोली </li>
+<li>मध्यम खोली</li>
+<li>मोठी खोली</li>
+<li>चर्च हॉल</li>
+<li>कॅथेड्रल</li></ul>
+<p>सानुकूल प्रीसेट देखील वापरकर्त्याद्वारे परिभाषित केले जाऊ शकतात.
+</p><p><br />
+</p>
+<div id="buttons"></div>
+<h2><span class="mw-headline" id="Buttons">बटणे</span></h2>
+<p>आज्ञा बटणावर क्लिक केल्याने खालील परिणाम मिळतात:
+</p>
+<ul><li><span class="button">व्यवस्थापित करा</span> एक ड्रॉपडाउन यादी देते जे तुम्हाला साधनसाठी प्रीसेट व्यवस्थापित करण्यास आणि साधनबद्दल काही तपशील पाहण्यास सक्षम करते. तपशीलांसाठी <a href="manage_presets.html" title="Manage presets">प्रीसेट व्यवस्थापित करा</a> पहा</li>
+<li><span class="button">पूर्वावलोकन</span> ध्वनीमध्ये वास्तविक बदल न करता, वर्तमान रचनासह प्रभाव लागू केल्यास ध्वनि कसा वाटेल याचे लहान पूर्वावलोकन प्ले करते. पूर्वावलोकनाची लांबी <span class="menu">संपादन &gt; प्राधान्ये &gt; <a href="playback_preferences.html" title="Playback Preferences">प्लेबॅक</a></span> मधील आपल्या सेटिंगद्वारे निर्धारित केली जाते, पूर्वनियोजित सेटिंग 6 सेकंद आहे.</li>
+<li><span class="button">ठीक आहे</span> वर्तमान प्रभाव रचनासह निवडलेल्या ध्वनीवर प्रभाव लागू करते आणि संवाद बंद करते</li>
+<li><span class="button">रद्द करा</span> प्रभाव रद्द करते आणि ध्वनि अपरिवर्तित ठेवते, संवाद बंद करते</li>
+<li><a href="help_button.html" title="Help Button"><img alt="Help Button" src="../m/images/d/d6/help_button.png" width="27" height="27" /></a> तुम्हाला माहितीपुस्तिकेमधील योग्य पानावर, या पृष्ठावर आणते</li></ul>
+<p><br />
+</p>
+<div id="examples"></div>
+<h2><span class="mw-headline" id="Examples">उदाहरणे</span></h2>
+<div style="margin-top:12px; margin-bottom:12px; margin-left:24px; margin-right:24px">
+<table style="background:#FEFFD0; color:black; border:1px solid #999999; padding-left:12px; padding-right:12px" width="100%" align="center">
+
+<tr>
+<td width="30px" valign="top" align="center"><a href="https://alphamanual.audacityteam.org/man/File:Bulbicon.png" class="image" title="Bulb icon"><img alt="Bulb icon" src="../m/images/d/d7/bulbicon.png" width="32" height="32" /></a>
+</td>
+<td align="left" valign="top">तुम्ही ज्या गीतपट्ट्यावर रिव्हर्ब प्रभाव लागू करू इच्छित असाल त्या गीतपट्ट्यामध्ये नेहमी काही सेकंद शांतता जोडा. आवाज संपल्यानंतर रिव्हर्ब शेपटी काही सेकंदांपर्यंत चालू राहील. जर तुम्ही गीतपट्ट्याच्या शेवटी शांतता जोडली नाही तर रिव्हर्ब अनैसर्गिकपणे कापला जाईल.
+</td></tr></table>
+</div>
+<div class="example"><h3 id="preset_reverb"><span class="mw-headline" id="Apply_a_rich_and_bright_reverb_to_a_.22dry.22_vocal_recording">"कोरड्या" व्होकल ध्वनीमुद्रणावर समृद्ध आणि तेजस्वी रिव्हर्ब लागू करा</span></h3>
+<p>ही पद्धत अंगभूत प्रीसेट <b>व्होकल II</b> वापरते. वैकल्पिकरित्या, <b>व्होकल I</b> एक मऊ, कमी लक्षात येण्याजोगा रिव्हर्ब तयार करतो. प्रगत वापरकर्त्यांसाठी, कोणताही प्रीसेट नवीन प्रीसेट तयार करण्यासाठी प्रारंभ बिंदू म्हणून वापरला जाऊ शकतो.
+</p>
+
+<ol><li> ध्वनीच्या शेवटी काही सेकंद शांतता आहे याची खात्री करा जेणेकरून अंतिम नोट नैसर्गिकरित्या नाहीशी होईल. आवश्यक असल्यास, गीतपट्ट्याच्या शेवटी काही सेकंद शांतता जोडा ( <a href="#mix_reverb">खालील</a> उदाहरणात चरण 1.1 ते 1.4 पहा).</li>
+<li> व्होकल ध्वनीमुद्रण असलेला ध्वनि गीतपट्टा निवडा.</li>
+<li> रिव्हर्ब प्रभाव लाँच करण्यासाठी <span class="menu">प्रभाव &gt; रिव्हर्ब</span> वर क्लिक करा. </li>
+<li> "प्रीसेट" पटलमध्ये, <span class="button">लोड</span> बटणावर क्लिक करा, सूचीमधून <b>व्होकल II</b> निवडा आणि <span class="button">ठीक आहे</span> क्लिक करा. नियंत्रणे आता निवडलेल्या प्रीसेटनुसार समायोजित केली जातील.</li>
+<li> <span class="button">ठीक आहे</span> बटणावर क्लिक करा.</li></ol>
+<div class="note">जर व्होकल गीतपट्टा हा मोनो गीतपट्टा असेल, तर <a href="#stereo_reverb">खालील</a> चरण 1 ते 4 मध्ये वर्णन केल्याप्रमाणे रिव्हर्ब प्रभाव लागू करण्यापूर्वी गीतपट्टाला स्टिरिओ गीतपट्ट्यामध्ये बनवून अधिक "विस्तृत" रिव्हर्ब प्रभाव तयार केला जाऊ शकतो.</div>
+<h3 id="mix_reverb"><span class="mw-headline" id="Keep_the_reverb_effect_on_a_separate_track">रिव्हर्ब प्रभाव वेगळ्या गीतपट्ट्यावर ठेवा</span></h3>
+<p>या पद्धतीसह, तुम्ही रिव्हर्ब लागू करू इच्छित असलेल्या गीतपट्ट्याची हुबेहूब प्रत करा, नंतर डुहुबेहूब प्रतीवर रिव्हर्ब प्रभाव लागू करा, रिव्हर्ब संवादमधील "केवळ ओले" चेकबॉक्स चेक करा. त्यानंतर तुम्ही रिव्हर्ब्ड आणि मूळ गीतपट्ट्यावर गीतपट्टा गेन स्लाइडर समायोजित करून अंतिम मिश्रणात रिव्हर्बचे प्रमाण नियंत्रित करू शकता. हे तुम्हाला प्रभाव लागू केल्यानंतर कोणत्याही वेळी रिव्हर्बचे प्रमाण बदलण्याची लवचिकता देते.
+</p>
+
+<ol><li> गीतपट्ट्याच्या शेवटी काही सेकंद शांतता जोडा:
+<ol><li> <a href="transport_toolbar.html" title="Transport Toolbar">परिवहन साधनपट्टी</a> वरील स्किप टू एंड बटणावर क्लिक करा किंवा सोपा मार्ग <span class="kbrd" style="background-color: #d0d0f8">K</span> दाबा</li>
+<li> <span class="menu">जनरेट &gt; शांतता</span> क्लिक करा</li>
+<li> किती शांतता जोडायची ते निवडा (20 सेकंद तुम्हाला कधीही आवश्यक असतील, 5 सेकंद पुरेसे असतील)</li>
+<li> गीतपट्ट्याच्या शेवटी शांतता जोडण्यासाठी <span class="button">ठीक आहे</span> क्लिक करा.</li></ol></li>
+<li> <a href="audio_tracks.html#panel" title="Audio Tracks">गीतपट्टा नियंत्रण पटल</a> मधील रिकाम्या जागेवर क्लिक करून संपूर्ण गीतपट्टा निवडा किंवा <span class="kbrd" style="background-color: #d0d0f8">Shift + J</span> वापरा.</li>
+<li> <span class="menu">संपादित करा &gt; क्लिप सीमा &gt; सामील व्हा</span> किंवा त्याचा सोपा मार्ग  <span class="kbrd" style="background-color: #d0d0f8">Ctrl + J</span> वर क्लिक करा.</li>
+<li> गीतपट्टा निवडून गीतपट्टा हुबेहूब प्रत करा नंतर <span class="menu">संपादित करा &gt; हुबेहूब प्रत</span> क्लिक करा.</li>
+<li> हुबेहूब प्रत गीतपट्टा स्वतःच निवडा.</li>
+<li> हुबेहूब प्रत गीतपट्ट्यावर रिव्हर्ब प्रभाव लागू करा,  <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;फक्त ओल्या</span> चेकबॉक्समध्ये चेकमार्क असल्याची खात्री करा.</li>
+<li> गीतपट्टा प्ले करा नंतर रिव्हर्ब्ड (ओले) गीतपट्ट्यावर आणि मूळ गीतपट्ट्यावर आनंददायी रिव्हर्बमध्ये मिसळण्यासाठी <a href="audio_tracks.html#gain" title="Audio Tracks">गेन स्लाइडर</a> वापरा. एकत्रित लाभ पुरेसा कमी आहे याची खात्री करा जेणेकरून <a href="meter_toolbar.html#playback" title="Meter Toolbar">प्लेबॅक मीटरच्या</a> प्लेबॅक पट्टीच्या शेवटी लाल क्लिपिंग इंडिकेटर येणार नाहीत. </li></ol>
+<h3 id="stereo_reverb"><span class="mw-headline" id="Adding_stereo_reverb_to_a_mono_track">मोनो गीतपट्ट्यामध्ये स्टिरिओ रिव्हर्ब जोडत आहे</span></h3>
+<p>मोनो गीतपट्ट्यामध्ये (जसे की व्होकल) रिव्हर्ब जोडणे अनेकदा इष्ट असते परंतु रिव्हर्बमध्ये स्टिरिओ "स्प्रेड" जोडणे इष्ट असते. हे सामान्यतः अधिक आनंददायी असते आणि जेव्हा अंतिम मिश्रण स्टिरिओमध्ये असते तेव्हा ते अधिक चांगले वाटते.
+</p>
+<ol><li> गीतपट्ट्याच्या शेवटी काही सेकंदांची शांतता जोडा (वरील उदाहरणात 1.1 ते 1.5 पायऱ्या).</li>
+<li> गीतपट्टा निवडून गीतपट्टा हुबेहूब प्रत करा नंतर <span class="menu">संपादित करा &gt; हुबेहूब</span> प्रत क्लिक करा.</li>
+<li> वरच्या गीतपट्ट्यावरील <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">ध्वनी गीतपट्टा ड्रॉपडाउन यादीमधून</a> , <span class="button">स्टिरीओ गीतपट्टा बनवा &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> निवडा.</li>
+<li> नवीन स्टिरिओ गीतपट्टा निवडा.</li>
+<li> गीतपट्ट्यावर रिव्हर्ब प्रभाव लागू करा, "स्टिरीओ रुंदी" साठी एक आनंददायी मूल्य निवडून आणि <span class="button"><img alt="unchecked checkbox" src="../m/images/a/a8/checkboxnotchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;फक्त ओला</span> चेकबॉक्स अनचेक केल्याचे सुनिश्चित करा.</li></ol>
+<p><b>ही पद्धत खालीलप्रमाणे वेगळ्या गीतपट्ट्यावर रिव्हर्ब समाविष्ट करण्यासाठी विस्तृत केली जाऊ शकते.</b>
+</p>
+<ol><li> गीतपट्ट्याच्या शेवटी काही सेकंद शांतता जोडा (पहिल्या उदाहरणात 1.1 ते 1.5 पायऱ्या).</li>
+<li> गीतपट्ट्याची हुबेहूब प्रत करा (गीतपट्टा निवडा नंतर <span class="menu">संपादित करा &gt; हुबेहूब</span> प्रत क्लिक करा).</li>
+<li> वरच्या गीतपट्ट्यावरील <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">ध्वनी गीतपट्टा ड्रॉपडाउन यादीमधून</a> ,<span class="button"> स्टिरीओ गीतपट्टा बनवा &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> निवडा.</li>
+<li> नवीन स्टिरिओ गीतपट्टा निवडा.</li>
+<li> गीतपट्टा निवडून गीतपट्ट्याची हुबेहूब प्रत करा नंतर <span class="menu">संपादित करा &gt; हुबेहूब</span> क्लिक करा.</li>
+<li> हुबेहूब गीतपट्टा स्वतःच निवडा. </li>
+<li> हुबेहूब गीतपट्ट्यावर रिव्हर्ब प्रभाव लागू करा, <span class="button"><img alt="checked checkbox" src="../m/images/8/85/checkboxchecked.png" width="13" height="13" style="vertical-align: text-top" />&#160;फक्त ओल्या</span> चेकबॉक्समध्ये चेकमार्क असल्याची खात्री करा.</li>
+<li> मूळ गीतपट्ट्याच्या <a href="audio_track_dropdown_menu.html" title="Audio Track Dropdown Menu">ध्वनी गीतपट्टा ड्रॉपडाउन यादीमधून</a>, <span class="button">स्प्लिट स्टीरिओ ते मोनो &#160;<img alt="menu dropdown" src="../m/images/e/ed/menudownarrow.png" width="9" height="6" style="vertical-align: middle" /></span> निवडा.</li>
+<li> गीतपट्टा क्लोज बटणावर <a href="https://alphamanual.audacityteam.org/man/File:TrackClose.png" class="image" title="Track Close Button"><img alt="Track Close Button" src="../m/images/4/4e/trackclose.png" width="16" height="16" /></a> क्लिक करून दोन परिणामी मोनो गीतपट्टा्सपैकी एक हटवा किंवा तो गीतपट्टा निवडा त्यानंतर <span class="menu">गीतपट्टा &gt; गीतपट्टा काढा</span> निवडा <i>(ही शेवटची पायरी कठोरपणे आवश्यक नाही, परंतु गीतपट्टा गोंधळ कमी करते आणि मूळ गीतपट्टा मोनो असल्याचे स्पष्ट करते)</i></li>
+<li>  गीतपट्टा प्ले करा नंतर पहिल्या उदाहरणाप्रमाणे, रिव्हर्ब्ड (ओले) आणि मूळ गीतपट्ट्याचे <a href="audio_tracks.html#gain" title="Audio Tracks">गेन स्लाइडर</a> समायोजित करा जेणेकरून परिणाम क्लिप होणार नाही याची खात्री करून आनंददायी प्रमाणात मिसळा.</div></li></ol>
+<h2><span class="mw-headline" id="Links">दुवे</span></h2>
+<p><a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><b>|&lt;</b> प्रभाव, जनरेटर आणि विश्लेषकांची अनुक्रमणिका</a> <br />
+</p><p><a href="effect_menu.html" title="Effect Menu"><b>|&lt;</b> प्रभाव यादी</a>
+</p>
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>

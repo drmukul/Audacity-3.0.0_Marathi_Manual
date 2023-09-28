@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>समस्या निवारण: यूएसबी टर्नटेबल्स किंवा कॅसेट डेकसह ध्वनिमुद्रण - ऑड्यासिटी माहितीपुस्तिका</title>
+
+
+
+
+
+<meta name="ResourceLoaderDynamicStyles" content=""/>
+
+<meta name="generator" content="MediaWiki 1.28.2"/>
+<link rel="shortcut icon" href="../favicon.ico"/>
+<link rel="search" type="application/opensearchdescription+xml" href="https://alphamanual.audacityteam.org/m/opensearch_desc.php" title="Audacity Development Manual (en)"/>
+<link rel="EditURI" type="application/rsd+xml" href="https://alphamanual.audacityteam.org/m/api.php?action=rsd"/>
+<link rel="copyright" href="http://creativecommons.org/licenses/by/3.0/"/>
+
+<link rel="stylesheet" href="../m/skins/monobook/main.css/303.css" media="screen" />
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Troubleshooting_Recording_with_USB_turntables_or_cassette_decks rootpage-Troubleshooting_Recording_with_USB_turntables_or_cassette_decks skin-monobook action-view"><div id="globalWrapper">
+		<div id="column-content">
+			<div id="content" class="mw-body" role="main">
+				<a id="top"></a>
+				
+				<div class="mw-indicators">
+</div>
+				<h1 id="firstHeading" class="firstHeading" lang="en">समस्या निवारण: यूएसबी टर्नटेबल किंवा कॅसेट डेकसह ध्वनिमुद्रण</h1>
+				
+				<div id="bodyContent" class="mw-body-content">
+					<div id="siteSub">ऑड्यासिटी विकास माहितीपुस्तिकेवरून</div>
+					<div id="contentSub"></div>
+										<div id="jump-to-nav" class="mw-jump">येथे जा: <a href="#column-one">निर्देशक</a>, <a href="https://alphamanual.audacityteam.org/man/Troubleshooting:_Recording_with_USB_turntables_or_cassette_decks#searchInput">शोधा</a></div>
+
+					
+					<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div id="notrecognized"></div>
+<div id="toc" class="toc"><div id="toctitle"><h2>सामग्री</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Turntable_not_recognized_by_operating_system"><span class="tocnumber">१</span> <span class="toctext">टर्नटेबल ऑपरेटिंग प्रणालीद्वारे ओळखले जाऊ शकत नाही</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#Recorded_waveform_is_not_centered_on_the_horizontal_line_at_0.0"><span class="tocnumber">२</span> <span class="toctext">ध्वनिमुद्रण केलेले तरंगरूप ०.० वर क्षैतिज रेषेवर केंद्रित नाही</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#White_Noise"><span class="tocnumber">३</span> <span class="toctext">पांढरा गोंगाट</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#No_signal_in_one_stereo_channel"><span class="tocnumber">४</span> <span class="toctext">एका स्टिरिओ वाहिनीमध्ये कोणतेही संकेत नाही</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#Recordings_freeze_up_or_have_dropouts"><span class="tocnumber">५</span> <span class="toctext">ध्वनिमुद्रण गोठलेले आहेत किंवा ड्रॉपआउट आहेत</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#Speed_too_fast_or_slow_or_erratic"><span class="tocnumber">६</span> <span class="toctext">वेग खूप वेगवान किंवा संथ किंवा अनियमित</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#Recordings_too_loud_or_soft"><span class="tocnumber">७</span> <span class="toctext">ध्वनिमुद्रण खूप जोरात किंवा मऊ</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#Windows"><span class="tocnumber">८</span> <span class="toctext">विंडोज</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#Stereo_recording"><span class="tocnumber">८.१</span> <span class="toctext">स्टिरिओ ध्वनिमुद्रण</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Microsoft_Sound_Mapper"><span class="tocnumber">८.२</span> <span class="toctext">मायक्रोसॉफ्ट आवाज मॅपर</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Playback_of_recordings"><span class="tocnumber">८.३</span> <span class="toctext">ध्वनिमुद्रणचे प्लेबॅक</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Turntable_not_recognized_by_operating_system">कार्य प्रणालीद्वारे टर्नटेबल ओळखले जाऊ शकत नाही</span></h2>
+<p>जर यूएसबी ध्वनि कोडेक ऑड्यासिटी <span class="menu">डिव्‍हाइस साधनपट्टी</span>मध्‍ये ओळखला गेला नसेल, तर तुम्ही ते ध्वनीमुद्रित करू शकत नाही. ऑड्यासिटी आधीच चालू असताना तुम्ही टर्नटेबल कनेक्ट केले असल्यास <span class="menu">परिवहन &gt; रिस्कॅन ध्वनि उपकरणेस</span> वापरून पहा किंवा ऑड्यासिटीमधून बाहेर पडा आणि ते पुन्हा लाँच करा.
+</p><p>टर्नटेबल मेनमध्ये प्लग इन केलेले आहे आणि ते चालू केले आहे आणि त्याची युएसबी केबल संगणकाशी जोडलेली असल्याची खात्री करा. तुम्ही युएसबी हब नसून स्पेअर युएसबी पोर्टमध्ये प्लग इन करत असल्याची खात्री करा. भिन्न युएसबी पोर्ट वापरून पहा. दुसरी युएसबी केबल वापरून पहा - काहीवेळा सदोष केबलमुळे ही समस्या उद्भवू शकते.
+</p><p>हे अनुसरण करण्यास मदत करत नसल्यास, हा क्रम आणि पुन्हा सुरू करा
+</p>
+<ol><li> ऑड्यासिटीमधून बाहेर पडा</li>
+<li> इतर सर्व युएसबी उपकरणे अनप्लग करा (विंडोजवर, सिस्टम ट्रे मधील "सुरक्षितपणे हार्डवेअर काढा" चिन्ह वापरा) </li>
+<li> युएसबी कनेक्शनवर आणि मुख्य ठिकाणी टर्नटेबल बंद करा आणि अनप्लग करा</li>
+<li> ते परत युएसबी पोर्टमध्ये प्लग करा आणि ते चालू करा </li>
+<li> काही मिनिटे प्रतीक्षा करा आणि संगणक पूर्णपणे बंद करा आणि पुन्हा सुरू करा </li></ol>
+<p>संगणक पुन्हा सुरू करणे पूर्ण झाल्यावर, ऑड्यासिटी उघडा आणि युएसबी उपकरण आता <span class="menu">ध्वनीमुद्रण उपकरण</span> सूचीमध्ये आहे का ते पहा.
+</p>
+<div class="note">जर हे आवश्यक असेल तर तुम्ही टर्नटेबलच्या वेळीच दुसरे युएसबी उपकरण चालवा आणि ते आधीपासून कनेक्ट केलेले नसेल, युएसबी टर्नटेबल कनेक्ट करण्या <b>पूर्वी</b> ते कनेक्ट करा, नंतर नाही.</div>
+<p>समस्या कायम राहिल्यास, टर्नटेबल निर्मात्याकडून समर्थनाची विनंती करा.
+</p><p><br />
+</p>
+<div id="dc"></div>
+<h2><span class="mw-headline" id="Recorded_waveform_is_not_centered_on_the_horizontal_line_at_0.0">ध्वनीमुद्रित केलेले तरंग उभ्या रेषेवर 0.0 वर केंद्रित नाही</span></h2>
+<p>हे <a href="dc_offset.html" title="DC offset">डीसी ऑफसेट</a> म्हणून ओळखले जाते. यूएसबी टर्नटेबल्स किंवा इंटरफेसमध्ये अंगभूत आवाज कार्डच्या तुलनेत हे कमी सामान्य आहे. ऑफसेट उपस्थित असल्यास, ध्वनीमुद्रण संपादित किंवा निर्यात करण्यापूर्वी कोणताही डीसी ऑफसेट काढून टाकण्यासाठी <span class="menu">प्रभाव &gt;  <a href="normalize.html" title="Normalize">सामान्यीकरण</a></span> वापरा. हे करण्यासाठी, "कोणताही डीसी ऑफसेट काढा..." मध्ये एक खूण ठेवा परंतु "जास्तीत जास्त मोठेपणा सामान्य करा..." अनचेक सोडा.
+</p><p><br />
+</p>
+<div id="noise"></div>
+<h2><span class="mw-headline" id="White_Noise">पांढरा आवाज</span></h2>
+<p>काहीवेळा "पांढरा आवाज" ध्वनीमुद्रणच्या संपूर्ण फ्रिक्वेंसी श्रेणीला त्रास देऊ शकतो किंवा इतर विरुपण असू शकते. टोनआर्ममधून काडतूस/हेडशेल काढा आणि घट्ट आणि सुरक्षितपणे पुन्हा बसवा. एक सैल काडतूस पांढरा आवाज एक ज्ञात स्रोत आहे. खराब फिटिंग किंवा सदोष युएसबी केबलमुळे देखील आवाज समस्या उद्भवू शकतात. नवीन युएसबी केबल वापरून पहा आणि दोन्ही टोके घट्ट असल्याची खात्री करा.
+</p><p><br />
+</p>
+<div id="channel"></div>
+<h2><span class="mw-headline" id="No_signal_in_one_stereo_channel">एका स्टिरिओ चॅनेलमध्ये सिग्नल नाही</span></h2>
+<p>बहुधा स्पष्टीकरण म्हणजे सैल काडतूस/हेडशेल. टोनआर्ममधून काडतूस आणि हेडशेल पूर्णपणे काढून टाका आणि घट्ट आणि सुरक्षितपणे पुन्हा बसवा. एक सैल किंवा सदोष युएसबी केबल देखील ही समस्या निर्माण करू शकते. दुसरी केबल वापरून पहा.
+</p><p><br />
+</p>
+<div id="freeze"></div>
+<h2><span class="mw-headline" id="Recordings_freeze_up_or_have_dropouts">ध्वनीमुद्रण फ्रीज होतात किंवा ड्रॉपआउट होतात</span></h2>
+<p>यूएसबी टर्नटेबल्स गोठवल्या जाणाऱ्या किंवा सोडल्या गेलेल्या ध्वनीमुद्रणाचे अहवाल असामान्य नाहीत. सामान्यतः ते ऑड्यासिटीमुळे होत <b>नाहीत</b>, तर खराब दर्जाची उपकरणे आणि केबल्स किंवा पुरेशा युएसबी बँडविड्थच्या अभावामुळे होतात.
+</p>
+<ul><li> ऑड्यासिटी स्क्रीनच्या तळाशी डावीकडे प्रकल्प दर तपासा एकतर 44 100 किंवा 48 000 Hz वर सेट केला आहे - खूप उच्च दर सेट केल्याने युएसबी बँडविड्थ ओव्हरलोड होऊ शकते आणि ट्रान्समिशन समस्या उद्भवू शकतात. </li>
+<li> दोन्ही टोकांना घट्टपणासाठी युएसबी केबल तपासा आणि त्याऐवजी वेगळी केबल वापरून पहा</li>
+<li> नेहमी स्पेअर यूएसबी पोर्ट वापरा, हब नाही</li>
+<li> इतर यूएसबी उपकरणे वापरून ध्वनीमुद्रण करताना युएसबी बँडविड्थ मर्यादित करा उदा. जर तुम्ही इंटरनेट अॅक्सेससाठी युएसबी मोडेम वापरत असाल तर फक्त इंटरनेटपासून डिस्कनेक्ट केल्याने मदत होऊ शकते. </li>
+<li> युनिव्हर्सल सीरिअल बस नियंत्रकांबद्दल कोणत्याही सिस्टम चेतावणी (उदा. विंडोजमधील उपकरण मॅनेजरमध्ये) तपासा. </li>
+<li> युनिटच्या आरसीए केबल्स होम स्टिरिओसारख्या बाह्य इनपुटशी जोडलेल्या असताना ध्वनीमुद्रणचा प्रयत्न केल्यास ते गोठवल्या जातात, असे वेगळे अहवाल आले आहेत, जरी समवर्ती ध्वनीमुद्रण आणि बाह्य उपकरणांद्वारे प्ले करणे शक्य आहे असे सूचित केले गेले आहे. </li></ul>
+<p>सामान्यतः, जर तुम्हाला आढळले की तुम्ही तुमच्या संगणकाच्या मायक्रोफोन पोर्टमध्ये मायक्रोफोन प्लग केलेल्या अन्य स्त्रोताकडून व्यत्ययाशिवाय ऑड्यासिटीमध्ये ध्वनीमुद्रित करू शकता, तर हे टर्नटेबल किंवा युएसबी केबलला सूचित करते. इतर स्त्रोत समाधानकारकपणे ध्वनीमुद्रित करतात की नाही हे तपासण्यासाठी, <a href="preferences.html" title="Preferences">प्राधान्यांच्या</a> <a href="devices_preferences.html" title="Devices Preferences">उपकरणेस</a> टॅबवरील <span class="menu">ध्वनीमुद्रण उपकरण</span> तुमच्या इनबिल्ट ध्वनीमध्ये बदला.
+</p><p>इतर स्त्रोतांकडील ध्वनीमुद्रण चांगले कार्य करत असल्यास, <a rel="nofollow" class="external text" href="https://web.audacityteam.org/download/">ऑड्यासिटीची नवीनतम आवृत्ती</a> वापरण्याचा प्रयत्न करा जर तुम्ही असे करत नसाल तर:  हे शक्य आहे की अगदी अलीकडील टर्नटेबल्स सर्वात आधुनिक ऑड्यासिटी आवृत्तीसह चांगले कार्य करू शकतात. अन्यथा, <a href="#Further_support_from_the_turntable_manufacturer">टर्नटेबल निर्मात्याकडून समर्थनाची</a> विनंती करा.
+</p><p>टर्नटेबल व्यतिरिक्त इतर स्त्रोतांकडील ध्वनीमुद्रण देखील गोठत असल्यास किंवा ड्रॉपआउट असल्यास, अपर्याप्त संगणक संसाधनांसह समस्या असू शकतात. हे दुरुस्त करण्याच्या टिपांसाठी कृपया ऑड्यासिटी विकीमधील <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Managing_Computer_Resources_and_Drivers">संगणक संसाधने आणि ड्रायव्हर्सचे व्यवस्थापन</a> पृष्ठ पहा. जर तुम्ही "<b>सॉफ्टवेअर प्लेथ्रू</b>"वापरत असाल, तर तुमच्या इनबिल्ट ध्वनि उपकरणातील समस्यांमुळे (तुम्ही ते करत असताना तुमचे ध्वनीमुद्रण प्ले बॅक करण्यासाठी वापरलेले) ध्वनीमुद्रणमध्ये व्यत्यय आणण्याची शक्यता आहे. कृपया मदतीसाठी विकी मधील <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">आवाज उपकरण ड्रायव्हर्स अद्यतनित</a> करण्याच्या आमच्या टिप्सची सूची पहा.
+</p><p><br />
+</p>
+<div id="pitch"></div>
+<h2><span class="mw-headline" id="Speed_too_fast_or_slow_or_erratic">वेग खूप वेगवान किंवा मंद किंवा अनियमित</span></h2>
+<p>लक्षात घ्या की यूएसबी टर्नटेबलचे काही मॉडेल उदा. नुमार्कमध्ये व्हेरिएबल पिच स्लाइडर आहे जो खेळपट्टीला 10% पर्यंत वाढवण्याची किंवा कमी करण्यास अनुमती देतो. स्लायडर मध्यवर्ती स्थानावर असताना नुमार्क मॉडेलमध्ये खेळपट्टी अपरिवर्तित असते. जेव्हा स्लाइडर मध्यभागी आणि टोन आर्मच्या दिशेने हलविला जातो तेव्हा खेळपट्टी कमी होते (प्लेटरची गती कमी होते), आणि जेव्हा स्लाइडर टोन आर्मपासून दूर हलविला जातो तेव्हा यामुळे खेळपट्टी वाढते (प्लेटरचा वेग वाढतो.)
+</p><p>समस्या वेगवान गतीची असल्यास, हे अयोग्यरित्या स्थापित केलेल्या बेल्टमुळे होऊ शकते. टर्नटेबल फिरत असताना बेल्ट खोबणीतून बाहेर पडल्यास आणि स्पिंडलवर वर किंवा खाली जाऊ शकत असल्यास, ताट खूप वेगाने फिरेल. तुम्हाला ताटाच्या आतील रिंगवर बेल्टची स्थिती समायोजित करण्याची आवश्यकता असेल. थाळीची आतील रिंग बेल्टपेक्षा थोडी रुंद असते. पट्टा आतील रिंगच्या मधल्या भागाभोवती गुंडाळला पाहिजे. जर ते आतील रिंगभोवती खूप उंच किंवा खूप कमी गुंडाळले गेले असेल, तर त्यामुळे पट्ट्याचा दुसरा अर्धा भाग स्पिंडलवर वर किंवा खाली जाऊ शकतो. बेल्ट योग्य संरेखनासाठी तपासण्यासाठी या चरणांचे अनुसरण करा:
+</p>
+<ol><li>टर्नटेबलमधून ध्वनीमुद्रित आणि स्लिप मॅट दोन्ही काढा.</li>
+<li>ताट फिरवा जेणेकरून तुम्हाला ताटातील एका छिद्रातून पितळी मोटर स्पिंडल दिसेल (ते टर्नटेबलच्या तळाशी-डाव्या कोपऱ्यात असले पाहिजे).</li>
+<li>बेल्टची पुनर्स्थित करा जेणेकरून ते स्पिंडलच्या खोबणीभोवती गुंडाळले जाईल.</li></ol>
+<p>बेल्ट किंवा कोणतेही व्हेरिएबल पिच स्लाइडर समायोजित केल्याने मदत होत नसल्यास, कृपया टर्नटेबल उत्पादकाकडून समर्थनाची विनंती करा].
+</p><p><br />
+</p>
+<div id="loud">
+<h2><span class="mw-headline" id="Recordings_too_loud_or_soft">ध्वनीमुद्रण खूप जोरात किंवा मऊ</span></h2>
+<p>जर ध्वनीमुद्रण खूप उच्च पातळीवर येत असतील, जेणेकरून ते <a href="meter_toolbar.html#recording" title="Meter Toolbar">ध्वनीमुद्रण मीटर साधनपट्टी</a>वर क्लिपिंग दर्शवतील, टर्नटेबलवरील कोणतेही नियंत्रण पहा जे तुम्हाला त्याचे आउटपुट व्हॉल्यूम कमी करण्यास अनुमती देते. उदाहरणार्थ आयन आणि न्यूमार्क मॉडेल्समध्ये चेसिसच्या खाली एक "गेन नॉब" असतो जो आउटपुट स्तर नियंत्रित करतो. तथापि, चेतावणी द्या की काही वापरकर्ते तक्रार करतात की हा लाभ नॉब कार्य करत नाही. सुमारे –6.0 dB (किंवा जर तुम्ही तुमचे मीटर dB ऐवजी रेखीय वर सेट केले असेल तर 0.5) चे कमाल शिखर लक्ष्य करण्याचा प्रयत्न करा. टीप: क्लिक करून आणि ड्रॅग करून मीटर साधनपट्टी मोठा करणे या कार्यात मदत करते.
+</p><p>वैकल्पिकरित्या, तुम्हाला आढळेल की टर्नटेबलमधील इनपुट पातळी इतकी कमी आहे की ऑड्यासिटीवरील इनपुट स्लाइडरचे समायोजन -6 dB जवळ येण्यासाठी पुरेसा फायदा देत नाही.
+</p>
+<b>Windows:</b> ऑड्यासिटी <a href="mixer_toolbar.html" title="Mixer Toolbar">मिक्सर साधनपट्टी</a> वरील इनपुट स्लाइडर समायोजित केल्याने मदत होत नसल्यास, सिस्टम मिक्सरमध्ये इनपुट पातळी वर किंवा खाली (योग्य म्हणून) वळवण्याचा प्रयत्न करा - सामान्यतः सिस्टम क्लॉकद्वारे <span class="menu">स्पीकर चिन्हा</span>वर उजवे-क्लिक करून आणि <span class="menu">ध्वनी </span> निवडून प्रवेश केला जातो, त्यानंतर <span class="menu">ध्वनीमुद्रितिंग</span> टॅबवर क्लिक करा, सूचीतील USB उपकरणवर क्लिक करा आणि नंतर <span class="button">गुणधर्म</span> बटणावर क्लिक करा, नंतर <span class="menu">स्तर</span> टॅबवर क्लिक करा, नंतर "USB ध्वनि कोडेक" साठी इनपुट पातळी खाली करा. <p>Windows साठी वरील चरणांच्या अधिक तपशीलवार वॉक-थ्रूसाठी <i>(किंवा ते आपल्या Windows च्या आवृत्तीसाठी कार्य करत नसल्यास)</i>, <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: Windows ध्वनि नियंत्रण ऍक्सेस करणे</a> पहा.</p></b>
+<p><b>Mac:</b> अनेकदा युएसबी उपकरणांची इनपुट पातळी नियंत्रित करण्याचा कोणताही मार्ग प्रदान करत नाही, परंतु खात्री करण्यासाठी, Finder उघडा नंतर <span class="menu">Go &gt;  Utilities</span> वापरा आणि Audio-MIDI सेटअप अॅप उघडा. टर्नटेबलसाठी यूएसबी ध्वनि कोडेक निवडा नंतर इनपुट पातळी समायोजित करण्यासाठी व्हॉल्यूम स्लाइडर उपलब्ध आहे का ते पहा.
+</p>
+<div class="note"><b>जास्त आउटपुट व्हॉल्यूमसाठी अतिरिक्त उपाय:</b>
+<ul><li> <b>तुमच्याकडे अनेक युएसबी पोर्ट असल्यास</b> भिन्न पोर्ट वापरून पहा.</li>
+<li> <b>काडतूस बदलण्यायोग्य असल्यास</b>, ते हाय-फाय दुकानात घेऊन जा आणि तुम्हाला कमी आउटपुट काडतूस मिळेल का ते पहा. जर काडतूस सिरॅमिक असेल (स्वस्त यूएसबी टर्नटेबल्स बहुतेकदा हे वापरतात) त्याचे आउटपुट जास्त असेल. हे चुंबकीय काडतूस सह पुनर्स्थित केल्यास कमी उत्पादन आणि चांगली गुणवत्ता मिळेल. </li>
+<li> <b>टर्नटेबलमध्ये</b> स्पीकर्सला जोडण्यासाठी <b> RCA लीड्स असल्यास </b>, लीड्सला RCA स्टिरीओ &gt; 1/8 इंच TRS अडॅप्टर (कोणत्याही इलेक्ट्रिकल विक्रेत्याकडून मिळू शकणारे) मध्ये प्लग करा, त्यानंतर अॅडॉप्टरला संगणकाच्या लाइन-इन (निळ्या) इनपुटशी कनेक्ट करा. टर्नटेबलचा फोनो/लाइन स्विच लाईनवर सेट करा आणि लाइन-इनमधून ध्वनीमुद्रित करण्यासाठी ऑड्यासिटी सेट करा. लाइन-इनचे इनपुट नंतर ऑड्यासिटी इनपुट स्लाइडर वापरून नियंत्रित केले जाऊ शकते.
+<ul><li> तुमच्या काँप्युटरमध्ये फक्त मायक्रोफोन इनपुट असल्यास, हे इनपुट मोनो असू शकते किंवा स्वतःच जास्त प्रवर्धन जोडू शकते. जर जास्त आवाजामुळे ध्वनीमुद्रण विरूपित होत असेल, तर तुम्ही टर्नटेबलवर फोन/लाइन फोनोवर सेट करण्याचा प्रयत्न करू शकता, परंतु ध्वनीमुद्रण नंतर "टिन्नी" वाटू शकते आणि <a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/RIAA_equalization">RIAA समानीकरण</a> लागू न केल्यामुळे बासची कमतरता भासू शकते. ध्वनीमुद्रणनंतर RIAA समानीकरणाची कमतरता दूर करण्यासाठी, <span class="menu">Effect &gt; <a href="filter_curve_eq.html" title="Filter Curve EQ">Filter Curve EQ</a></span> किंवा <span class="menu">Effect &gt; <a href="graphic_eq.html" title="Graphic EQ">Graphic EQ</a></span> उघडा आणि ध्वनीमुद्रणवर "RIAA" वक्र लागू करा. </div>   </li></ul></li></ul>
+<p><br />
+</p>
+<div id="windows"></div>
+<h2><span class="mw-headline" id="Windows">विंडोज</span></h2>
+<h3><span class="mw-headline" id="Stereo_recording">स्टिरिओ ध्वनीमुद्रण</span></h3>
+<p>यूएसबी टर्नटेबल्स सारखी बाह्य उपकरणे सहसा Windows Vista आणि नंतरच्या मोनो ध्वनीमुद्रणसाठी पूर्वनियोजित असतात. याचा अर्थ असा की जर तुम्ही स्टिरिओ LP चे स्टिरिओ ऑड्यासिटी गीतपट्टामध्ये ध्वनीमुद्रण करत असाल, तर LP चे फक्त एक चॅनल ट्रान्सफर केले जाईल आणि हे गीतपट्टाच्या दोन्ही चॅनेलमध्ये डुप्लिकेट केले जाईल. स्टिरिओमध्ये ध्वनीमुद्रित करण्यासाठी:
+</p>
+<ol><li> ऑड्यासिटीमध्ये, <a href="device_toolbar.html" title="Device Toolbar">उपकरण साधनपट्टी</a>वर जा, "ध्वनीमुद्रण उपकरण" ड्रॉपडाउनमध्ये "युएसबी ध्वनि कोडेक" निवडा आणि चॅनेल ड्रॉपडाउनमध्ये "2 (स्टिरीओ)" निवडा.</li>
+<li> सिस्टम क्लॉकद्वारे <span class="menu">स्पीकर चिन्हावर</span> उजवे-क्लिक करा, <span class="menu">ध्वनी</span>निवडा, नंतर <span class="menu">ध्वनीमुद्रितिंग</span> टॅब.</li>
+<li> यूएसबी ध्वनि कोडेकवर उजवे-क्लिक करा आणि <span class="button">गुणधर्म</span> दाबा</li>
+<li> प्रगत टॅबवर, "पूर्वनियोजित स्वरूप" विभागात, ड्रॉपडाउन यादी "2 चॅनेल 16-बिट 44100 Hz" वर बदला. </li>
+<li> ऑड्यासिटी इनपुट लेव्हल स्लायडर वापरत असताना देखील ऑड्यासिटीमधील इनपुट खूप मोठा असेल किंवा विरूपित होत असेल तर, युएसबी ध्वनि कोडेकसाठी "ध्वनी" मधील "लेव्हल्स" टॅबवर देखील क्लिक करा आणि स्लाइडर डावीकडे हलवा.</li></ol>
+<p>Windows साठी वरील चरणांच्या अधिक तपशीलवार वॉक-थ्रूसाठी <i>(किंवा ते आपल्या Windows च्या आवृत्तीसाठी कार्य करत नसल्यास)</i>, <b><a href="windows_accessing_the_windows_sound_controls.html" title="Windows: accessing the Windows Sound controls">Windows: Windows ध्वनि नियंत्रण ऍक्सेस करणे</a> पहा.</b>
+</p>
+<h3><span class="mw-headline" id="Microsoft_Sound_Mapper">मायक्रोसॉफ्ट आवाज मॅपर</span></h3>
+<p>असे काही अहवाल आहेत की ऑड्यासिटी Windows Vista वर किंवा नंतर जेव्हा "युएसबी ध्वनि कोडेक" हे प्राधान्यांच्या ध्वनि I/O टॅबवर "ध्वनीमुद्रण उपकरण" म्हणून निवडले जाते तेव्हा टर्नटेबल इनपुट शोधत नाही. त्याऐवजी प्राधान्यांमध्ये "Microsoft Sound Mapper" निवडण्याचा प्रयत्न करा, Windows Control Panel मधील "Sound" च्या ध्वनीमुद्रण टॅबमध्ये "युएसबी ध्वनि कोडेक" निवडलेला असल्याची खात्री करा. या टॅबमध्ये प्रवेश करण्यासाठी, सिस्टम क्लॉकद्वारे <span class="menu">स्पीकर चिन्हावर</span> उजवे-क्लिक करा, <span class="menu">ध्वनी</span> निवडा, नंतर <span class="menu">ध्वनीमुद्रितिंग</span> टॅब निवडा.
+</p>
+<h3><span class="mw-headline" id="Playback_of_recordings">ध्वनीमुद्रणाचे प्लेबॅक</span></h3>
+<p>ऑड्यासिटीमध्ये तुमचे ध्वनीमुद्रण बनवल्यानंतर ते प्ले करण्यात तुम्हाला अडचणी येत असल्यास, तुमच्या कॉम्प्युटरच्या ध्वनि उपकरणाच्या ड्रायव्हर्समध्ये समस्या असू शकतात. हे कदाचित तुमच्या विंडोज आवृत्तीशी पूर्णपणे अद्ययावत किंवा सुसंगत नसतील.
+</p>
+तुमच्या कॉम्प्युटरचे आवाज डिव्हाईस ड्रायव्हर्स अपडेट करण्यासाठी मदतीसाठी कृपया ऑड्यासिटी विकीमध्ये <a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Updating_Sound_Device_Drivers">आवाज उपकरण ड्रायव्हर्स अपडेट करणे</a> पहा.</div>
+
+
+
+
+
+
+</div>
+										
+										<div class="visualClear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="column-one">
+			
+					
+				
+			<div class="portlet" id="p-logo" role="banner">
+				<a href="../index.html" class="mw-wiki-logo" title="Visit the main page"></a>
+			</div>
+					
+		<div class="generated-sidebar portlet" id="p-Navigation" role="navigation">
+		<h3>निर्देशक</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html" title="Main Page"><span title="Front page, complete with clickable image of Audacity screen.">माहितीपुस्तिकेचे मुखपृष्ठ</span></a></li>
+<li> <a href="../index.html#using" title="Main Page"><span title="Quick Help, Audacity Foundations, Editing with Audacity, Help with Advanced Topics">ऑड्यासिटी वापरताना</span></a>
+<ul><li> <a href="audacity_tour_guide.html" title="Audacity Tour Guide"><span title="A quick tour of selected features of Audacity. It doesn't tell you how to use features it would be much too long if it did. Rather it tells you about some of the features that exist in Audacity and will help you learn a little about those.">सहल मार्गदर्शक</span></a></li>
+<li> <a href="new_features_in_this_release.html" title="New features in this release"><span title="An overview of the key new functionality that has been introduced in this release">नवीन वैशिष्ट्ये</span></a></li>
+<li> <a href="../quick_help.html" title="Quick Help"><span title="A brief guide to help you get started with Audacity">सुरुवात करताना</span></a></li>
+<li> <a href="tutorials.html" title="Tutorials"><span title="A guide to the tutorials that provide step-by-step instructions for performing common tasks in Audacity">शिकवणी</span></a></li>
+<li> <a href="tips.html" title="Tips"><span title="A guide to particular aspects of working with Audacity: Navigation. Playback, Audio Alignment">सल्ले</span></a></li></ul></li>
+<li> <a href="../index.html#reference" title="Main Page"><span title="The components of the Audacity Graphical User Interface">ऑड्यासिटी जि.यु.आय.</span></a>
+<ul><li> <a href="menu_reference.html" title="Menu Reference"><span title="A guide to the menus and submenus in Audacity">यादी पट्टी</span></a></li>
+<li> <a href="toolbars_overview.html" title="Toolbars Overview"><span title="A guide to the various Toolbars used in Audacity">साधनपट्टी</span></a></li>
+<li> <a href="tracks_menu_add_new.html" title="Tracks Menu: Add New"><span title="A guide to the various types of track">संगीतपट्टे</span></a></li>
+<li> <a href="index_of_effects_generators_and_analyzers.html" title="Index of Effects, Generators and Analyzers"><span title="A quick index to the Effects, Generators and Analyzers that are shipped with Audacity">परिणाम</span></a></li></ul></li>
+<li> <a href="customization.html" title="Customization"><span title="Adjust settings, change keyboard shortcuts, add plug-ins">कस्टममाइजिंग ऑड्यासिटी</span></a>
+<ul><li> <a href="preferences.html" title="Preferences"><span title="A guide to Preferences, which let you change most of the default behaviors of Audacity">प्राधान्ये</span></a></li>
+<li> <a href="keyboard_shortcut_reference.html" title="Keyboard Shortcut Reference"><span title="A list of all the commands in the Audacity menus and all pre-defined keyboard shortcuts">सोपे मार्ग</span></a></li>
+<li> <a href="customization.html#plug-ins" title="Customization"><span title="You can download and install plug-ins to add extra functionality to Audacity. Plug-ins can give you extra effects, or more audio generation and analysis capability.">प्लग-इन्स</span></a></li>
+<li> <a href="themes.html" title="Themes"><span title="Audacity now comes supplied with four pre-configured, user-selectable themes. This enables you to choose the look and feel you prefer for Audacity&#39;s interface.">संकल्पना</span></a></li>
+<li> <a href="customizing_toolbar_layout.html" title="Customizing Toolbar Layout"><span title="Audacity&#39;s toolbars can all be re-positioned (in the tooldocks or free-floating) and some can be resized.">साधनपट्टी</span></a></li></ul></li></ul>
+		</div>
+		</div>
+		<div class="generated-sidebar portlet" id="p-Reference" role="navigation">
+		<h3>संदर्भ</h3>
+		<div class='pBody'>
+			<ul><li> <a href="../index.html#reference" title="Main Page"><span title="Reference guide to the Audacity project window - you can hover over and click on the image to learn more">संदर्भ</span></a>
+<ul><li> <a href="searching_the_manual.html" title="Searching the Manual"><span title="Tips on how to Search the Audacity Manual">माहितीपुस्तिका बघा</span></a></li>
+<li> <a href="digital_audio.html" title="Digital Audio"><span title="A beginner&#39;s guide to digital audio">डिजिटल ध्वनी</span></a></li>
+<li> <a href="glossary.html" title="Glossary"><span title="Brief explanations of technical terms related to digital audio, with some links to Wikipedia for much more comprehensive explanations">शब्दकोष</span></a></li>
+<li> <a href="scripting_reference.html" title="Scripting Reference"><span title="Audacity Commands that are in menus, that can be used from Macros, Nyquist and Python">सर्व आज्ञा</span></a></li>
+<li> <a href="faq_errors.html" title="FAQ:Errors"><span title="FAQ on common errors encountered when using Audacity">त्रुटी</span></a></li>
+<li> <a href="subject_index.html" title="Subject Index"><span title="A short, limited, index of the Manual">अनुक्रमणिका</span></a></li></ul></li>
+<li> <a href="faq.html" title="FAQ"><span title="Frequently Asked Questions - most common questions are answered in the FAQ">वारंवार विचारले जाणारे प्रश्न</span></a></li></ul>
+		</div>
+		</div>
+		
+		<div class="generated-sidebar portlet" id="p-Useful_Links" role="navigation">
+		<h3>उपयुक्त दुवे</h3>
+		<div class='pBody'>
+			<ul><li> <span title="Audacity Forum (best place for support requests)"><a rel="nofollow" class="external text" href="https://forum.audacityteam.org/index.php">मंच</a></span></li>
+<li> <span title="Audacity Wiki Home Page"><a rel="nofollow" class="external text" href="https://wiki.audacityteam.org/wiki/Audacity_Wiki_Home_Page">विकी</a></span></li>
+<li> <span title="Audacity Latest Release"><a rel="nofollow" class="external text" href="https://www.audacityteam.org/download/">नवीनतम प्रकाशन</a></span></li></ul>
+		</div>
+		</div>
+		
+			
+			</div>
+		<div class="visualClear"></div>
+					<div id="footer" role="contentinfo">
+						<div id="f-copyrightico">
+									
+							</div>
+					<div id="f-poweredbyico">
+									<a href="https://www.mediawiki.org/"><img src="../m/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/m/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /m/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"/></a>
+							</div>
+					
+		<div align="center"><ul id="f_list"><li>ही आवृत्ती २०२१-०३-०९ रोजी तयार केली गेली - <a href="https://alphamanual.audacityteam.org/man/Bass_and_Treble">या पानाची चालू आवृत्ती तपासा (विकास पुस्तिका)</a></li></ul></div>
+</div>
+		</div>
+		</body></html>
